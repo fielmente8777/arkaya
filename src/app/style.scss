@@ -1,0 +1,600 @@
+@layer utilities {
+  p {
+    @media (width > 768px) {
+      font-size: 1.125rem; // 18px
+    }
+  }
+  a,
+  button {
+    cursor: pointer;
+  }
+  .demo {
+    .swiper {
+      pointer-events: none;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+  }
+
+  .box-shadow {
+    box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+  }
+
+  .md-box-shadow {
+    @media (min-width: 768px) {
+      box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+    }
+  }
+
+  .image-border {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0.5rem;
+      border: 2px solid #fff;
+      z-index: 10;
+      @media (width <= 768px) {
+        inset: 0.25rem;
+        border: 0.5px solid #fff;
+      }
+    }
+  }
+  // container sizes
+
+  .max_screen_width {
+    max-width: 1600px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  // container sizes for xl, lg, md, sm screens
+
+  .max_width {
+    max-width: 100%;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    @media (min-width: 768px) {
+      max-width: 720px;
+      padding-inline: 1rem;
+    }
+    @media (min-width: 992px) {
+      max-width: 960px;
+      padding-inline: 1rem;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+      padding-inline: 1rem;
+    }
+    @media (min-width: 1400px) {
+      max-width: 1320px;
+      padding-inline: 0;
+    }
+  }
+  // mobile desktop and across all devices
+
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.background {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--background);
+    z-index: -3;
+  }
+}
+// customize scrollbar
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+// hide scrollbar
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center; /* vertical center */
+  gap: 32px; /* spacing like image */
+  margin-right: 32px;
+  // font-size: 42px;
+  // font-weight: 600;
+  // text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // color: var(--color-primary); /* or Tailwind text-primary */
+  // font-size: 1em;              /* same height as text */
+  // line-height: 1;
+}
+
+.bold-color {
+  strong {
+    color: var(--dark);
+    padding-inline: 2px;
+  }
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bg-experience {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 200;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  /* Desktop vertical lines */
+  &::after {
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: 32%;
+    background-image: url("/Image.png");
+  }
+
+  &::before {
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 32%;
+    background-image: url("/Image.png");
+  }
+
+  /* ✅ Mobile behavior */
+  @media (max-width: 768px) {
+    &::after,
+    &::before {
+      background-image: url("/home-page/divide2.png");
+      width: 100%;
+      height: 24px;
+      left: 0;
+    }
+
+    &::after {
+      top: 32%;
+    }
+
+    &::before {
+      top: 66.4%;
+    }
+  }
+}
+
+.bg-pillar {
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 200;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Desktop vertical lines */
+  &::after {
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: -31px;
+    background-image: url("/home-page/divide.png");
+    @media (max-width: 768px) {
+      background-image: url("/home-page/divide2.png");
+      width: 100%;
+      height: 20px;
+      left: 0;
+      top: 103%;
+    }
+  }
+}
+
+.menu-item {
+  position: fixed;
+  height: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #7c5a50;
+    transition: opacity 0.3s ease;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    transform: translateY(-80%);
+    left: 1rem;
+    right: 1rem;
+    height: 80%;
+    background: url("/menu_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+  }
+}
+
+/* sectorThumbs.scss */
+
+.sector-index {
+  width: 2.25rem; // w-9
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+  color: var(--color-secondary);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Swiper adds this class automatically */
+.swiper-slide-thumb-active {
+  .sector-index {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+}
+
+.line {
+  h1,
+  h2,
+  h3,
+  h4 {
+    i {
+      position: relative;
+      overflow-y: auto;
+      padding-bottom: 0.6rem;
+      &::before {
+        content: "";
+        position: absolute;
+        // border: 1px solid black;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        background: url("/line.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .line {
+    h1,
+    h2,
+    h3,
+    h4 {
+      i {
+        &::before {
+          height: 7px;
+        }
+      }
+    }
+  }
+}
+
+
+
+// custom swiper pagination styles
+
+.custom-pagination {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--p5);
+    border-radius: 50%;
+  }
+
+  // .swiper-pagination-bullet-active {
+    
+  //   background-color: transparent;
+  // }
+}
+
+.custom-pagination-white {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 12.5px;
+    height: 12.5px;
+    background: url("/white.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+}
+
+.blog-data {
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.1vw, 1.125rem); // 16px → 18px
+
+  /* Reset */
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+    color: #111827;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem); // 32 → 44
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.125rem); // 26 → 34
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem); // 22 → 28
+  }
+
+  h4 {
+    font-size: clamp(1.15rem, 2vw, 1.4rem); // 18 → 22
+  }
+
+  /* Paragraphs */
+  p {
+    margin-bottom: 1.25rem;
+    font-size: inherit;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  li {
+    // margin-bottom: 0.6rem;
+    line-height: 1.65;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  /* Images inside content */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+  }
+  /* ---------- Tables ---------- */
+  table {
+    width: max-content;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+    /* Mobile safety */
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  thead {
+    background-color: #f9fafb;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+  }
+
+  th {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+  }
+
+  td {
+    color: #374151;
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Zebra striping */
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+
+  /* Hover (desktop only) */
+  @media (hover: hover) {
+    tbody tr:hover {
+      background-color: #f3f4f6;
+    }
+  }
+
+  /* Compact tables (optional utility) */
+  table.compact {
+    th,
+    td {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Caption */
+  caption {
+    caption-side: bottom;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: left;
+  }
+
+  td[data-align="center"],
+  th[data-align="center"] {
+    text-align: center;
+  }
+
+  td.highlight {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* Blockquote */
+  blockquote {
+    margin: 2rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid #e5e7eb;
+    color: #374151;
+    font-style: italic;
+  }
+
+  /* Small text */
+  small {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+}
+
+.contact-us {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.2% 10%;
+    background: url("/Naad-Logo-4.png");
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    @media (width < 768px) {
+      background-position: top right;
+      top: 40px;
+    }
+  }
+}
+
+.healing-programmes {
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #f5f2ef;
+    inset: 0;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.2% 10%;
+    background: url("/Naad-Logo-4.png");
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    @media (width < 768px) {
+      background-position: top right;
+      top: 40px;
+    }
+  }
+}

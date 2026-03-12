@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Disallow system or private paths if any
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important assets
+Allow: /images/
+Allow: /assets/
+
+# Sitemap
+Sitemap: https://arkaya.com/sitemap.xml
