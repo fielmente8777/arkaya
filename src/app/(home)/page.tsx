@@ -1,4 +1,4 @@
-import { Section } from "@/components/sectionComponants";
+import { Section, SectionWithContainer } from "@/components/sectionComponants";
 import Adventure from "./Components/Adventure";
 import Experience from "./Components/Experience";
 import HomeAbout from "./Components/HomeAbout";
@@ -10,6 +10,11 @@ import LinkButton from "@/components/buttons/LinkButton";
 export default function HomePage() {
   return (
     <main>
+      <SectionWithContainer>
+        <div className="relative w-full aspect-4/2">
+        <Image src='/home-banner.png' alt="bnr" fill className="object-cover" />
+        </div>
+      </SectionWithContainer>
       <HomeAbout {...homePageData.aboutData} />
       <Section>
         <div className="w-full relative aspect-4/2.25">
