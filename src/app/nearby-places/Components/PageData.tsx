@@ -1,4 +1,5 @@
 import { contact } from "@/utils/constent";
+import { ClockIcon, EasySccess, GuidedWalk, NatureTrail, PeakThrills, Sunrise } from "@/utils/PageIcons";
 import { MdClose } from "react-icons/md";
 
 export const nearbyPageData = {
@@ -26,9 +27,9 @@ export const nearbyPageData = {
         description:
           "The 350-year-old Mukteshwar Temple, dedicated to Shiva, sits atop a hill with stunning views of Nanda Devi. The temple houses a white marble Shiva Linga with a copper yoni and idols of Vishnu and Brahma.",
         details: [
-          { title: "10 mins drive", icon: <MdClose /> },
-          { title: "Easy access", icon: <MdClose /> },
-          { title: "Best at sunrise", icon: <MdClose /> },
+          { title: "10 mins drive", icon: <ClockIcon /> },
+          { title: "Easy access", icon: <EasySccess /> },
+          { title: "Best at sunrise", icon: <Sunrise /> },
         ],
         image: "/nearby/mukteshwar-temple.png",
       },
@@ -38,9 +39,9 @@ export const nearbyPageData = {
         description:
           "Chauli Ki Jali, near Mukteshwar Dham in Mukteshwar, is a striking cliffside rock formation known for sweeping views of the Kumaon valley and the Himalayan ranges. Linked to legends of Shiva, it offers short treks, stunning sunsets, and a peaceful connection with nature.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "Peak thrills", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "Peak thrills", icon: <PeakThrills /> },
         ],
         image: "/nearby/chauli-ki-jali.png",
       },
@@ -50,9 +51,9 @@ export const nearbyPageData = {
         description:
           "Mukteshwar is home to several beautiful waterfalls tucked within forests and rocky landscapes, where clear pools invite a refreshing swim. Popular ones include Tarikhet Waterfall, Bhalu Ghaad Waterfall, Dhokaney Waterfall, and Rudradhari Waterfall.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/bhalugaad-waterfall.png",
       },
@@ -62,9 +63,9 @@ export const nearbyPageData = {
         description:
           "Kainchi Dham, dedicated to Neem Karoli Baba, is a revered spiritual site near Nainital, known for its peaceful surroundings and global following.Arkaya Mukteshwar is conveniently located nearby and offers shuttle service to the temple along with breakfast for a comfortable visit.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/kainchi-dham.png",
       },
@@ -74,9 +75,9 @@ export const nearbyPageData = {
         description:
           "Bhimtal is a scenic lake town known for its boating experiences and thrilling paragliding, offering stunning views of the surrounding hills.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/bhimtal.png",
       },
@@ -86,9 +87,9 @@ export const nearbyPageData = {
         description:
           "Mukteshwar is known for its breathtaking Himalayan panoramas that once captivated Jim Corbett. Witnessing the sunrise over Nanda Devi is a must, while nearby Sitla offers views of snow-capped peaks like Panchachuli and Trishul.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/sitla.png",
       },
@@ -98,9 +99,9 @@ export const nearbyPageData = {
         description:
           "Mukteshwar offers peaceful village walks through nearby Kumaon hamlets, where traditional homes, terraced farms, and orchards reflect the simple rhythm of Himalayan life in Uttarakhand.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/local-village-walk.png",
       },
@@ -110,9 +111,9 @@ export const nearbyPageData = {
         description:
           "Kilmora Shop is a charming stop for local shopping, offering handcrafted Kumaoni garments, shawls, accessories, and aromatic spices made by artisans from the Kumaon region.",
         details: [
-          { title: "30 min trek", icon: <MdClose /> },
-          { title: "Nature trail", icon: <MdClose /> },
-          { title: "1 2 hrs guided walk", icon: <MdClose /> },
+          { title: "30 min trek", icon: <ClockIcon /> },
+          { title: "Nature trail", icon: <NatureTrail /> },
+          { title: "1-2 hrs guided walk", icon: <GuidedWalk /> },
         ],
         image: "/nearby/kilmora-shop-stop.png",
       },

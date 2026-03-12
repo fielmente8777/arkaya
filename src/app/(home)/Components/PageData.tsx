@@ -1,3 +1,12 @@
+import {
+  BalanceSeclusionAccessibility,
+  BoutiqueResidencesWithBespokeDetailing,
+  CuratedMountainAndAdventureExperiences,
+  ElevatedDiningAt180Restobar,
+  PrivatePanoramicHimalayanViews,
+  SeamlessAttentiveHospitality,
+  StayPet,
+} from "@/utils/PageIcons";
 import { MdClose } from "react-icons/md";
 
 export const homePageData = {
@@ -16,33 +25,42 @@ export const homePageData = {
     },
   },
 
-  discoveryData:{
-    image:"/home/discovery.png",
-    link:{
-      label:"Discover 180°",
-      href:"/restobar/"
-    }
+  discoveryData: {
+    image: "/home/discovery.png",
+    link: {
+      label: "Discover 180°",
+      href: "/restobar/",
+    },
   },
 
   experienceData: {
     title: "THE ARKAYA EXPERIENCE",
     points: [
-      { title: "Private panoramic Himalayan views", icon: <MdClose /> },
+      {
+        title: "Private panoramic Himalayan views",
+        icon: <PrivatePanoramicHimalayanViews />,
+      },
       {
         title: "Boutique residences with bespoke detailing",
-        icon: <MdClose />,
+        icon: <BoutiqueResidencesWithBespokeDetailing />,
       },
-      { title: "Elevated dining at 180° Restobar", icon: <MdClose /> },
+      {
+        title: "Elevated dining at 180° Restobar",
+        icon: <ElevatedDiningAt180Restobar />,
+      },
       {
         title: "Curated mountain and adventure experiences",
-        icon: <MdClose />,
+        icon: <CuratedMountainAndAdventureExperiences />,
       },
-      { title: "Seamless, attentive hospitality", icon: <MdClose /> },
+      {
+        title: "Seamless, attentive hospitality",
+        icon: <SeamlessAttentiveHospitality />,
+      },
       {
         title: "A rare balance of seclusion and accessibility",
-        icon: <MdClose />,
+        icon: <BalanceSeclusionAccessibility />,
       },
-      { title: "A stay your pet will love too", icon: <MdClose /> },
+      { title: "A stay your pet will love too", icon: <StayPet /> },
     ],
   },
 
