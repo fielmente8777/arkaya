@@ -1,6 +1,6 @@
-export const enCodeText = encodeURIComponent(`Hello Naad Wellness Team   
-I’m interested in booking a wellness retreat at Naad Wellness.  
-Please share details about suitable packages, availability, and next steps.  
+export const enCodeText = encodeURIComponent(`Hello Arkaya Team   
+I’m interested in booking at Arkaya.  
+Please share details about rooms availability, and next steps.  
 Thank you.`);
 export const contact = {
   email: "reservations@arkayamukteshwar.com",
