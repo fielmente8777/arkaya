@@ -46,7 +46,7 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
   return (
     <div className={`flex flex-col gap-2 line ${wrapperClassName}`}>
       <div
-        className={`${line && "flex items-center flex-col gap-7 mx-auto"} ${logo && "flex items-center gap-4 mx-auto"}`}
+        className={`${line && "flex items-center flex-col gap-7 mx-auto"} ${logo && "flex max-md:flex-col items-center gap-4 mx-auto"}`}
       >
         {title && (
           <Headings
@@ -58,7 +58,7 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
               smTextCenter ? "max-md:text-center" : ""
             } ${
               titleColor ? `text-${titleColor}` : "text-primary"
-            } md:text-5xl/tight text-2xl font-primary uppercase ${fontPrimary ? "primary-font" : "secondary-font"}`}
+            } md:text-5xl/tight text-[2rem] font-primary uppercase ${fontPrimary ? "primary-font" : "secondary-font"}`}
           />
         )}
         {logo && (
@@ -86,13 +86,18 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
         <div className={`${textCenter && "flex items-center gap-7 mx-auto "}`}>
           {line2 && (
             <span className="">
-              <LineIcon2 />
+              <span className="md:block hidden">
+                <LineIcon2 />
+              </span>
+              <span className="md:hidden">
+                <LinkIcon4 />
+              </span>
             </span>
           )}
 
           <Headings
             level={subTitleLevel}
-            className={`text-[1.063rem] lg:text-nowrap ${fontPrimary ? "primary-font" : "secondary-font"} ${subTitleClassName} ${subTitleColor ? `text-${subTitleColor}` : "text-primary"} ${
+            className={`text-[1.063rem] text-nowrap ${fontPrimary ? "primary-font" : "secondary-font"} ${subTitleClassName} ${subTitleColor ? `text-${subTitleColor}` : "text-primary"} ${
               mdTextCenter ? "md:text-center" : ""
             } ${textCenter ? "text-center mx-auto" : ""} ${
               smTextCenter ? "max-md:text-center" : ""
@@ -101,8 +106,15 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
           />
 
           {line2 && (
-            <span className="rotate-180">
-              <LineIcon2 />
+            <span className="rotate-180 ">
+              <span className="">
+                <span className="md:block hidden">
+                  <LineIcon2 />
+                </span>
+                <span className="md:hidden">
+                  <LinkIcon4 />
+                </span>
+              </span>
             </span>
           )}
         </div>
@@ -188,6 +200,36 @@ export const LineIcon2 = ({ ...props }) => (
       >
         <stop stopColor="#E94128" />
         <stop offset={0.928} stopColor="#FCF8F7" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const LinkIcon4 = () => (
+  <svg
+    width="60"
+    height="1"
+    viewBox="0 0 60 1"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      width="60"
+      height="1"
+      transform="matrix(-1 0 0 1 60 0)"
+      fill="url(#paint0_linear_361_1061)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_361_1061"
+        x1="0"
+        y1="0.5"
+        x2="60"
+        y2="0.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#E94128" />
+        <stop offset="0.927885" stop-color="#FCF8F7" />
       </linearGradient>
     </defs>
   </svg>

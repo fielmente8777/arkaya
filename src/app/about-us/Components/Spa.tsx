@@ -17,7 +17,7 @@ const Spa: React.FC<SpaProps> = ({ title, description, image, link }) => {
   return (
     <Section
       defaultPadding={false}
-      className="grid grid-cols-2 md:gap-16 gap-8 bg-white items-center"
+      className="grid md:grid-cols-2 md:gap-16 gap-8 max-md:py-8 bg-white items-center"
     >
       <div className="relative w-full aspect-4/3">
         <Image src={image} alt={title} fill className="object-cover" />

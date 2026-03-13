@@ -19,8 +19,8 @@ const Residential: React.FC<ResidentialProps> = ({
 }) => {
   return (
     <SectionWithContainer containerClassName="space-y-8 ">
-      <div className="max-w-3xl mx-auto space-y-5">
-        <SectionHeading title={title} titleColor="p2" textCenter line />
+      <div className="md:max-w-3xl w-full mx-auto space-y-5">
+        <SectionHeading title={title}  textCenter line />
         <p
           className="text-center text-p2 "
           dangerouslySetInnerHTML={{ __html: description }}
@@ -29,7 +29,7 @@ const Residential: React.FC<ResidentialProps> = ({
       <div className="max-w-4xl mx-auto space-y-3">
         {items.map((item, index) => (
           <div key={index} className="grid grid-cols-[auto_1fr] gap-4">
-            <div className="relative w-12 block aspect-square">
+            <div className="relative md:w-12 w-10 block aspect-square">
               <Image
                 src={item.image}
                 alt={item.title}

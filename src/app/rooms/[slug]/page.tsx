@@ -10,6 +10,7 @@ import Banner from "@/components/Banner/Banner";
 import { DotIcon } from "@/utils/icons";
 import React from "react";
 import GallerySlider from "./GallerySlider";
+import Form2 from "@/components/forms/Form2";
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -58,7 +59,14 @@ const page = async (props: Params) => {
 
   return (
     <main className="bg-background">
-      <Banner {...pageProps.bannerData} wrapperClassName="md:aspect-4/2"  showForm/>
+      <Banner
+        {...pageProps.bannerData}
+        wrapperClassName="md:aspect-4/2"
+        showForm
+      />
+      <Container className="my-8 md:hidden">
+        <Form2 />
+      </Container>
       <Container className="my-8">
         {pageProps?.description?.map((item, index) => (
           <p className="text-lg text-p2 text-center" key={index}>
@@ -66,7 +74,7 @@ const page = async (props: Params) => {
           </p>
         ))}
       </Container>
-      <ul className="my-8 max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
+      <ul className="my-8 max-w-7xl mx-auto flex max-md:flex-col items-center justify-between flex-wrap gap-4">
         {pageProps?.roomHighlights?.map((item, index) => (
           <React.Fragment key={index}>
             <li

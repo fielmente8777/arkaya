@@ -23,19 +23,19 @@ const Dining: React.FC<DiningProps> = ({
   link,
 }) => {
   return (
-    <SectionWithContainer containerClassName="md:space-y-16 space-y-8">
+    <SectionWithContainer containerClassName="md:space-y-16 space-y-8 max-md:px-0!">
       <SectionHeading
         title={title}
         subTitle={subtitle}
         line2
         textCenter
-        wrapperClassName="max-w-[39.5rem] mx-auto"
+        wrapperClassName="max-w-[39.5rem] mx-auto max-md:px-4"
       />
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="w-full relative aspect-4/5.5">
           <Image src={images[0]} alt={title} fill className="object-cover" />
         </div>
-        <div className="bg-background2 flex flex-col justify-center items-center gap-4 h-fit py-8 px-4 md:px-6 box-shadow mt-auto">
+        <div className="bg-background2 flex flex-col justify-center items-center gap-4 h-fit py-8 max-md:py-12 px-6  box-shadow mt-auto">
           <span>
             <LineIcon />
           </span>

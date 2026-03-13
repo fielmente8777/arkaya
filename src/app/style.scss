@@ -146,12 +146,6 @@
   // line-height: 1;
 }
 
-.bold-color {
-  strong {
-    color: var(--dark);
-    padding-inline: 2px;
-  }
-}
 
 input:focus {
   outline: none;
@@ -168,177 +162,6 @@ input:focus {
   }
 }
 
-.bg-experience {
-  position: relative;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 200;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  /* Desktop vertical lines */
-  &::after {
-    width: 20px;
-    height: 100%;
-    top: 0;
-    left: 32%;
-    background-image: url("/Image.png");
-  }
-
-  &::before {
-    width: 20px;
-    height: 100%;
-    top: 0;
-    right: 32%;
-    background-image: url("/Image.png");
-  }
-
-  /* ✅ Mobile behavior */
-  @media (max-width: 768px) {
-    &::after,
-    &::before {
-      background-image: url("/home-page/divide2.png");
-      width: 100%;
-      height: 24px;
-      left: 0;
-    }
-
-    &::after {
-      top: 32%;
-    }
-
-    &::before {
-      top: 66.4%;
-    }
-  }
-}
-
-.bg-pillar {
-  position: relative;
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 200;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* Desktop vertical lines */
-  &::after {
-    width: 20px;
-    height: 100%;
-    top: 0;
-    right: -31px;
-    background-image: url("/home-page/divide.png");
-    @media (max-width: 768px) {
-      background-image: url("/home-page/divide2.png");
-      width: 100%;
-      height: 20px;
-      left: 0;
-      top: 103%;
-    }
-  }
-}
-
-.menu-item {
-  position: fixed;
-  height: 100%;
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: #7c5a50;
-    transition: opacity 0.3s ease;
-    z-index: -2;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 80%;
-    transform: translateY(-80%);
-    left: 1rem;
-    right: 1rem;
-    height: 80%;
-    background: url("/menu_bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.8;
-  }
-}
-
-/* sectorThumbs.scss */
-
-.sector-index {
-  width: 2.25rem; // w-9
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--primary);
-  color: var(--color-secondary);
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* Swiper adds this class automatically */
-.swiper-slide-thumb-active {
-  .sector-index {
-    background-color: var(--secondary);
-    color: var(--primary);
-  }
-}
-
-.line {
-  h1,
-  h2,
-  h3,
-  h4 {
-    i {
-      position: relative;
-      overflow-y: auto;
-      padding-bottom: 0.6rem;
-      &::before {
-        content: "";
-        position: absolute;
-        // border: 1px solid black;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 12px;
-        background: url("/line.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        z-index: 1;
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .line {
-    h1,
-    h2,
-    h3,
-    h4 {
-      i {
-        &::before {
-          height: 7px;
-        }
-      }
-    }
-  }
-}
 
 
 
@@ -358,25 +181,6 @@ input:focus {
   // }
 }
 
-.custom-pagination-white {
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background-color: #fff;
-    opacity: 1;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-
-  .swiper-pagination-bullet-active {
-    width: 12.5px;
-    height: 12.5px;
-    background: url("/white.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
-}
 
 .blog-data {
   line-height: 1.7;
@@ -555,46 +359,33 @@ input:focus {
   }
 }
 
-.contact-us {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0.2% 10%;
-    background: url("/Naad-Logo-4.png");
-    z-index: -1;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5;
-    @media (width < 768px) {
-      background-position: top right;
-      top: 40px;
-    }
-  }
-}
 
-.healing-programmes {
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: #f5f2ef;
-    inset: 0;
-    z-index: -2;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0.2% 10%;
-    background: url("/Naad-Logo-4.png");
-    z-index: -1;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5;
+.room-card,
+.near-by,
+.testimonial-card {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      color: var(--p1);
+      width: 20px;
+      height: 20px;
+    }
     @media (width < 768px) {
-      background-position: top right;
-      top: 40px;
+      width: 30px;
+      height: 30px;
+    }
+    &::after {
+      font-size: 14px;
+      color: var(--p1);
     }
   }
 }

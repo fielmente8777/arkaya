@@ -23,7 +23,7 @@ const WeddingSection: React.FC<WeddingSectionProps> = ({
         <Section className="space-y-10">
             <SectionHeading title={title} line wrapperClassName="max-md:px-4 " />
             <p className="text-lg text-p2 text-center max_width">{description[0]}</p>
-            <div className="w-full relative aspect-4/2">
+            <div className="w-full relative md:aspect-4/2 aspect-square">
                 <Image src={image} alt={title} fill className="object-cover" />
             </div>
             <div className="flex flex-col items-center gap-4 max_width md:px-8!">

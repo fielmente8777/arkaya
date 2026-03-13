@@ -24,7 +24,7 @@ const BannerSlider = ({
         className="w-full"
         renderSlide={(src) => (
           <div
-            className={`w-full relative ${wrapperClassName ? wrapperClassName : "md:aspect-4/2.5 aspect-4/3"}`}
+            className={`w-full relative ${wrapperClassName ? wrapperClassName : "md:aspect-4/2.5 aspect-4/4.5"} aspect-4/4.5`}
           >
             <Image src={src} alt="Image" fill className="object-cover" />
           </div>

@@ -36,7 +36,7 @@ const Banner: React.FC<BannerProps> = ({
         >
           {title && (
             <h1
-              className="text-2xl text-center md:text-[3.5rem]/[3.5rem] font-primary uppercase"
+              className="text-3xl text-center md:text-[3.5rem]/[3.5rem] font-primary uppercase"
               dangerouslySetInnerHTML={{ __html: title }}
             />
           )}
@@ -44,7 +44,7 @@ const Banner: React.FC<BannerProps> = ({
             <p className="text-center md:text-lg mt-5">{description}</p>
           )}
           {actions && (
-            <div className="grid grid-cols-2 gap-5 mt-5">
+            <div className="lg:grid hidden grid-cols-2 md:gap-5 gap-4 mt-5">
               {actions.map((action, index) => (
                 <LinkButton
                   key={index}
@@ -56,9 +56,21 @@ const Banner: React.FC<BannerProps> = ({
             </div>
           )}
         </Container>
+        {actions && (
+            <div className="grid lg:hidden absolute bottom-10 inset-x-0 px-6 grid-cols-2 md:gap-5 gap-4">
+              {actions.map((action, index) => (
+                <LinkButton
+                  key={index}
+                  href={action.href}
+                  label={action.label}
+                  className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
+                />
+              ))}
+            </div>
+          )}
 
         {showForm && (
-          <div className="absolute bottom-12 inset-x-0 w-full z-10">
+          <div className="absolute bottom-12 inset-x-0 w-full z-10 md:block hidden">
             <Container>
               <Form2 />
             </Container>

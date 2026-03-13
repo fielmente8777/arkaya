@@ -34,13 +34,13 @@ const Grid: React.FC<GalleryPageData> = ({ title, link, galleryImages }) => {
     <>
       <SectionWithContainer
         defaultPadding={false}
-        containerClassName="flex items-center justify-between py-4"
+        containerClassName="flex md:items-center md:justify-between gap-6 max-md:overflow-x-auto py-4"
       >
         {category.map((category, index) => (
           <button
             key={index}
             onClick={() => setSelectCategory(category)}
-            className={` hover:text-p1 hover:underline text-lg ${selectCategory === category ? "underline underline-offset-2 text-p1" : "border-transparent text-p2"}`}
+            className={` hover:text-p1 text-nowrap hover:underline text-lg ${selectCategory === category ? "underline underline-offset-2 text-p1" : "border-transparent text-p2"}`}
           >
             {category}
           </button>

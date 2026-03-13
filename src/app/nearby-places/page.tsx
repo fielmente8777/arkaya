@@ -16,7 +16,7 @@ export default function NearbyPlacesPage() {
       <Experiences {...nearbyPageData.experiencesData} />
       <SectionWithContainer containerClassName="space-y-12">
         <SectionHeading title={nearbyPageData.mapData.title} textCenter />
-        <div className="w-full aspect-4/2">
+        <div className="w-full md:aspect-4/2 aspect-4/3">
           <LazyLoadedMap src={nearbyPageData.mapData.mapPlaceholder} />
         </div>
       </SectionWithContainer>

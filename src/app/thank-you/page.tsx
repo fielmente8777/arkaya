@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <main className="bg-background h-dvh flex justify-center items-center">
-      <SectionWithContainer containerClassName="space-y-6">
+    <main className=" h-dvh flex justify-center items-center">
+      <SectionWithContainer containerClassName="space-y-6 bg-background py-12 backdrop-blur-sm border border-p1">
         <div className="max-w-[12.5rem] w-full mx-auto relative aspect-4/4">
           <Image
             src="/arkaya-logo.png"
@@ -21,7 +21,7 @@ const page = () => {
           <p className="md:text-lg text-p2 text-center">
             Your message has been sent.
           </p>
-          <LinkButton href="/" label="Back to Home" className="mx-auto" />
+          <LinkButton href="/" label="Back to Home" className="mx-auto py-4! mt-6 px-8" />
         </div>
       </SectionWithContainer>
     </main>

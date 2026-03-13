@@ -19,7 +19,7 @@ export default function HomePage() {
       </SectionWithContainer>
       <HomeAbout {...homePageData.aboutData} />
       <Section>
-        <div className="w-full relative aspect-4/2.25">
+        <div className="w-full relative md:aspect-4/2.25 aspect-4/2.5">
           <Image
             src={homePageData.discoveryData.image}
             alt="Image"

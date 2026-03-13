@@ -19,7 +19,7 @@ export const petWelcomingPageData = {
   },
 
   staySection: {
-    title: "A Stay They ll Love Too",
+    title: "A Stay They’ll Love Too",
     description: [
       "At Arkaya, we believe journeys are more meaningful when shared with every member of the family — including your pets. Surrounded by open mountain landscapes and fresh Himalayan air, our retreat offers a peaceful setting where both you and your furry companions can relax and explore together. With spacious outdoor areas for gentle walks, comfortable pet-friendly rooms, and a calm nature-rich environment away from city noise, Arkaya ensures a welcoming stay with attentive hospitality for you and your four-legged companion.",
     ],

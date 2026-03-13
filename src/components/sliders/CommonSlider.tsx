@@ -19,7 +19,7 @@ const CommonSlider: React.FC<Props> = ({
       <div className={`space-y-6 ${wrapperSliderClassName}`}>
         <SwiperCarousel
           data={images}
-          slidesPerView={1.5}
+          slidesPerView={1}
           spaceBetween={16}
           loop
           modules={[Autoplay]}
@@ -36,7 +36,7 @@ const CommonSlider: React.FC<Props> = ({
             },
           }}
           renderSlide={(src) => (
-            <div className="w-full relative aspect-4/3">
+            <div className="w-full relative aspect-4/4.5">
               <Image
                 src={src}
                 alt={title}

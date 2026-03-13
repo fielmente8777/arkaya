@@ -20,7 +20,7 @@ const CorporateSection: React.FC<CorporateSectionProps> = ({
   link,
 }) => {
   return (
-    <SectionWithContainer containerClassName="space-y-12">
+    <SectionWithContainer containerClassName="md:space-y-12 space-y-8">
       <SectionHeading
         title={title}
         textCenter

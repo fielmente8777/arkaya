@@ -8,11 +8,11 @@ const WebSiteFooter = () => {
     <footer className="max_screen_width bg-background">
       <Container>
         <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] gap-10 ">
-          <div className=" flex flex-col gap-6">
+          <div className=" flex flex-col max-sm:items-center gap-6">
             <Link
               href="/"
               className={`relative 
-                  w-full aspect-square md:max-w-38 block`}
+                  w-[18rem] aspect-square md:max-w-38 block`}
             >
               <Image
                 src={websiteFooterData.logo}

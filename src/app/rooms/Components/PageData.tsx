@@ -2,7 +2,7 @@ export const accommodationPageData = {
   bannerData: {
     title: `
     DISCOVER THE ESSENCE OF <span class='text-p1 inline-flex items-center gap-2'>LUXURY LIVING
-    <div class="w-16 aspect-square relative">
+    <div class="md:w-16 w-10 aspect-square relative">
                 <img
                   src="/logo-2.png"
                   alt="logo"

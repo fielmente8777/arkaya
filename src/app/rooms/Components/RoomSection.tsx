@@ -15,7 +15,7 @@ const RoomSection: React.FC<RoomSectionProps> = ({ items }) => {
   return (
     <Section
       defaultPadding={false}
-      className="grid md:grid-cols-2 pb-16 md:gap-y-6 max-md:gap-8 max-md:px-4"
+      className="grid md:grid-cols-2 pb-16 md:gap-y-6 max-md:gap-8"
     >
       {items.map((item, index) => (
         <RoomCard key={index} {...item} index={index} />
@@ -32,12 +32,12 @@ export const RoomCard: React.FC<
   return (
     <Link
       href={`/rooms/${title.replace(/\s/g, "-").toLowerCase()}`}
-      className={`w-full relative block ${index === 4 ? "md:col-span-2 aspect-4/1.5" : "aspect-4/3"}`}
+      className={`w-full relative block ${index === 4 ? "md:col-span-2 md:aspect-4/1.5 aspect-4/3" : "aspect-4/3"}`}
     >
       <Image src={image} alt={title} fill className="object-cover" />
       <div className="absolute inset-0 bg-linear-to-t from-black/50 from-2% to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 text-center p-4 text-white space-y-3.5">
-        <h2 className="text-[1.75rem] font-primary font-semibold uppercase">
+      <div className="absolute inset-x-0 bottom-0 text-center p-4 text-white md:space-y-3.5 space-y-1">
+        <h2 className="md:text-[1.75rem] text-[1.375rem] font-primary font-semibold uppercase">
           {title}
         </h2>
         <p className="text-lg">{description}</p>

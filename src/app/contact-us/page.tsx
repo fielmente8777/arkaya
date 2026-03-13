@@ -15,7 +15,7 @@ export default function ContactUsPage() {
         wrapperClassName="md:aspect-4/2"
       />
       <SectionWithContainer>
-        <div className="grid md:grid-cols-[1fr_.95fr] gap-16">
+        <div className="grid md:grid-cols-[1fr_.95fr] gap-16 px-4">
           <div className="space-y-6">
             <SectionHeading
               title={contactPageData.visitData.title}
@@ -61,7 +61,7 @@ export default function ContactUsPage() {
       </SectionWithContainer>
       {/* Travel info */}
       <SectionWithContainer>
-        <div className="grid md:grid-cols-[1fr_1.3fr] gap-16 items-center">
+        <div className="grid md:grid-cols-[1fr_1.3fr] gap-16 items-center px-4">
           <div className="space-y-6 w-fit">
             <SectionHeading
               title={contactPageData.travelInfo.title}
@@ -84,7 +84,7 @@ export default function ContactUsPage() {
               </p>
             </div>
           </div>
-          <div className="w-full aspect-4/2.25">
+          <div className="w-full md:aspect-4/2.25 aspect-4/3">
             <LazyLoadedMap src={contactPageData.travelInfo.mapUrl} />
           </div>
         </div>

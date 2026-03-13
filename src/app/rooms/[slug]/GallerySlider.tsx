@@ -44,15 +44,15 @@ const GallerySlider: React.FC<GallerySliderProps> = ({ images, link }) => {
           renderSlide={(src, index) => (
             <div
               className={`w-full relative ${
-                index === activeIndex ? "aspect-4/2.5" : "aspect-[4/2.2]"
+                index === activeIndex ? "md:aspect-4/2.5 aspect-4/3" : "md:aspect-[4/2.2] aspect-4/3"
               }`}
             >
               <Image src={src} alt="Image" fill className="object-cover" />
             </div>
           )}
         />
-        <div className="md:absolute md:top-[50%] md:left-[50%] -translate-x-[50%] max-w-272 w-full z-10">
-          <div className="flex items-center justify-between gap-4">
+        <div className="lg:absolute lg:top-[50%] lg:left-[50%] lg:-translate-x-[50%] max-lg:mt-6 lg:max-w-272 w-full z-10">
+          <div className="flex items-center md:justify-between justify-center gap-4">
             <button className="rooms-section-prev flex items-center justify-center w-10 aspect-square bg-p1 rounded-full">
               <BtnIcon />
             </button>

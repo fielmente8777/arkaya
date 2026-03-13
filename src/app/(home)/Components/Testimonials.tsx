@@ -11,11 +11,14 @@ const Testimonials: React.FC<TestimonialDataType> = ({
 }) => {
   return (
     <SectionWithContainer containerClassName="grid md:grid-cols-2 grid-cols-1 gap-12">
-      <div className="w-full relative aspect-4/2.5">
+      <div className="w-full relative aspect-4/2.5 md:block hidden">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col justify-between gap-6">
         <SectionHeading title={title} line />
+        <div className="w-full relative aspect-4/2.5 md:hidden">
+          <Image src={image} alt={title} fill className="object-cover" />
+        </div>
         <TestimonialsSlider cards={testimonials} />
       </div>
     </SectionWithContainer>
