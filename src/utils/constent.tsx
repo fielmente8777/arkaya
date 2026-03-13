@@ -16,8 +16,8 @@ export const contact = {
     linkedin: "https://in.linkedin.com/",
   },
   WhatsappCta: `https://wa.me/+919700376000?text=${enCodeText}`,
-  // formDomain: "naadwellness",
-  formDomain: "testmulti", //for testing
+  formDomain: "arkayamukteshwar",
+  // formDomain: "testmulti", //for testing
   formHid:"",
 };
 

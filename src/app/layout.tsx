@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import Whatsapp from "@/components/ContactButton/WhatsApp";
 import { contact } from "@/utils/constent";
 import Call from "@/components/ContactButton/Call";
+import Script from "next/script";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -55,6 +56,18 @@ export default function RootLayout({
         <Footer />
         <Whatsapp whatsAppNumber={contact.phone[0]} />
         <Call callNumber={contact.phone[0]} />
+        <Script id="chatbot-config" strategy="afterInteractive">
+          {`
+            window.eazbotConfig = {
+              ndid: "4c2f9cbf-5d53-4386-98a1-c571509a54c4",
+              hid: "56303324",
+            };
+          `}
+        </Script>
+        <Script
+          src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
