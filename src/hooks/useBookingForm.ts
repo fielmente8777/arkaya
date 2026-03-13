@@ -1,6 +1,7 @@
+import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
-import axios from "axios";
+import { contact } from "@/utils/constent";
 
 interface BookingFormData {
   name: string;
@@ -18,12 +19,14 @@ interface FormErrors {
   email?: string;
   checkIn?: string;
   checkOut?: string;
+  [key: string]: string | undefined;
 }
 
 interface UseBookingFormProps {
   includeCheckIn?: boolean;
   includeCheckOut?: boolean;
   includeMessage?: boolean;
+  formHid?: string;
   onSubmitSuccess?: () => void;
 }
 
@@ -41,6 +44,7 @@ const useBookingForm = ({
   includeCheckIn,
   includeCheckOut,
   includeMessage,
+  formHid,
   onSubmitSuccess,
 }: UseBookingFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -199,18 +203,20 @@ const useBookingForm = ({
       const { data } = await axios.post(
         "https://nexon.eazotel.com/eazotel/addcontacts",
         {
-          name: formData.name,
+          Domain: contact.formDomain,
+          Name: formData.name,
           email: formData.email,
-          phone: formData.countryCode + formData.phone,
-          checkIn: formData.checkIn,
-          checkOut: formData.checkOut,
+          Contact: formData.countryCode + formData.phone,
+          check_in: formData.checkIn,
+          check_out: formData.checkOut,
           Description: description,
           created_from: "webform",
           source_url: window.location.href,
+          hId: contact.formHid ? contact.formHid : formHid,
         }
       );
 
-      if (data.success) {
+      if (data.Status) {
         setSubmitSuccess(true);
         resetForm();
         if (onSubmitSuccess) {

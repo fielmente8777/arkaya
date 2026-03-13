@@ -16,12 +16,12 @@ const WebSiteNavbar = () => {
 
   return (
     <>
-      <header className="max_screen_width bg-background">
+      <header className="max_screen_width bg-background max-md:border-b-[0.5px] border-p5">
         {/* upper nav */}
-        <Container className="flex items-center justify-between py-4">
+        <Container className="flex items-center justify-between py-4 ">
           <Link
             href={navUpper.link.href}
-            className="flex items-center gap-2 text-lg text-p2"
+            className="lg:flex items-center gap-2 text-lg text-p2  hidden "
           >
             <span className="sr-only">Location</span>
             <span className="">{navUpper.link.icon}</span>
@@ -29,7 +29,7 @@ const WebSiteNavbar = () => {
           </Link>
           <Link
             href="/"
-            className="block md:mr-50 md:w-32 w-28 aspect-square relative"
+            className="block md:mr-50 md:w-32 w-18 aspect-square relative"
           >
             <Image
               src={navUpper.logo}
@@ -38,10 +38,16 @@ const WebSiteNavbar = () => {
               className="object-contain"
             />
           </Link>
-          <span className="flex items-center gap-2 text-lg text-p2">
+          <span className="lg:flex hidden items-center gap-2 text-lg text-p2">
             <TemIcon />
             {temp}°C
           </span>
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="lg:hidden flex items-center gap-2 text-lg text-p2"
+          >
+            <MenuIcon />
+          </button>
         </Container>
         {/* nav links */}
         <nav className="border-y-[0.5px] border-p5 lg:block hidden">
@@ -144,5 +150,22 @@ export const TemIcon = () => (
         <rect width={20} height={20} fill="white" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const MenuIcon = () => (
+  <svg
+    width={32}
+    height={20}
+    viewBox="0 0 32 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M0 1.5C0 1.10218 0.158035 0.720644 0.43934 0.43934C0.720644 0.158035 1.10218 0 1.5 0H30.5C30.8978 0 31.2794 0.158035 31.5607 0.43934C31.842 0.720644 32 1.10218 32 1.5C32 1.89782 31.842 2.27936 31.5607 2.56066C31.2794 2.84196 30.8978 3 30.5 3H1.5C1.10218 3 0.720644 2.84196 0.43934 2.56066C0.158035 2.27936 0 1.89782 0 1.5ZM0 10C0 9.60218 0.158035 9.22064 0.43934 8.93934C0.720644 8.65804 1.10218 8.5 1.5 8.5H30.5C30.8978 8.5 31.2794 8.65804 31.5607 8.93934C31.842 9.22064 32 9.60218 32 10C32 10.3978 31.842 10.7794 31.5607 11.0607C31.2794 11.342 30.8978 11.5 30.5 11.5H1.5C1.10218 11.5 0.720644 11.342 0.43934 11.0607C0.158035 10.7794 0 10.3978 0 10ZM1.5 17C1.10218 17 0.720644 17.158 0.43934 17.4393C0.158035 17.7206 0 18.1022 0 18.5C0 18.8978 0.158035 19.2794 0.43934 19.5607C0.720644 19.842 1.10218 20 1.5 20H30.5C30.8978 20 31.2794 19.842 31.5607 19.5607C31.842 19.2794 32 18.8978 32 18.5C32 18.1022 31.842 17.7206 31.5607 17.4393C31.2794 17.158 30.8978 17 30.5 17H1.5Z"
+      fill="#E94128"
+    />
   </svg>
 );

@@ -1,4 +1,5 @@
 import LinkButton from "../buttons/LinkButton";
+import Form2 from "../forms/Form2";
 import { Container, Section } from "../sectionComponants";
 import BannerSlider from "../sliders/BannerSlider";
 
@@ -12,6 +13,7 @@ interface BannerProps {
   }[];
   wrapperClassName?: string;
   contentWrapperClassName?: string;
+  showForm?: boolean;
 }
 const Banner: React.FC<BannerProps> = ({
   title,
@@ -20,10 +22,13 @@ const Banner: React.FC<BannerProps> = ({
   actions,
   wrapperClassName,
   contentWrapperClassName,
+  showForm = false,
 }) => {
   return (
     <Section defaultPadding={false} className="relative">
-      {images && <BannerSlider images={images} wrapperClassName={wrapperClassName} />}
+      {images && (
+        <BannerSlider images={images} wrapperClassName={wrapperClassName} />
+      )}
       <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.3)] z-10" />
       <div className="absolute  inset-0 flex items-center justify-center w-full text-white z-20">
         <Container
@@ -36,9 +41,7 @@ const Banner: React.FC<BannerProps> = ({
             />
           )}
           {description && (
-            <p className="text-center md:text-lg mt-5">
-              {description}
-            </p>
+            <p className="text-center md:text-lg mt-5">{description}</p>
           )}
           {actions && (
             <div className="grid grid-cols-2 gap-5 mt-5">
@@ -53,6 +56,14 @@ const Banner: React.FC<BannerProps> = ({
             </div>
           )}
         </Container>
+
+        {showForm && (
+          <div className="absolute bottom-12 inset-x-0 w-full z-10">
+            <Container>
+              <Form2 />
+            </Container>
+          </div>
+        )}
       </div>
     </Section>
   );

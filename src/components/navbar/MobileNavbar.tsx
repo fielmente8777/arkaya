@@ -5,30 +5,16 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import { websiteFooterData } from "../footer/footerdata";
+import { navLinks } from "./navData";
+import { usePathname } from "next/navigation";
 
 interface MobileNavbarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Programs", href: "/experiences-at-naad/" },
-  { label: "Therapies", href: "/therapies/" },
-  { label: "Living", href: "/rooms/" },
-  { label: "About Us", href: "/about-us/" },
-  { label: "Offers", href: "/offers/" },
-  { label: "Gallery", href: "/gallery/" },
-  { label: "Dining & Cuisine", href: "/dining-cuisine/" },
-  { label: "Contact Us", href: "/contact-us/" },
-  { label: "Media Coverage", href: "/media-coverage/" },
-  { label: "Blog", href: "/blog/" },
-  { label: "Terms of Stay", href: "/centre-policy/" },
-];
-
 const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
-  const currentYear = new Date().getFullYear();
-  // 🔒 Lock body scroll when sidebar open
+  const pathName = usePathname();
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -53,49 +39,54 @@ const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full w-80 md:w-90  z-50 transform transition-transform duration-300 ease-in-out bg-[#7c5a50]
-        ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-80 md:w-90  z-50 transform transition-transform duration-300 ease-in-out border-l-2 border-p1 bg-[#FFF9F0]
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="menu-item flex flex-col gap-8 max-md:p-8 pl-16 pr-10 py-4  overflow-y-auto ">
+        <div className="flex flex-col gap-8 max-md:p-8 pl-16 pr-10 py-4 ">
           {/* Header */}
           <div className="flex gap-4 items-center">
             <IoClose
-              size={28}
-              className="text-white cursor-pointer"
+              size={34}
+              className="text-p1 cursor-pointer"
               onClick={onClose}
             />
-            <Link href="/" className="relative w-18 aspect-[4/1.45] block">
+            {/* <Link href="/" className="relative w-18 aspect-[4/1.45] block">
               <Image
                 src="/logo.png"
                 alt="logo"
                 fill
                 className="object-contain"
               />
-            </Link>
+            </Link> */}
           </div>
 
           {/* Links */}
-          <div className="flex flex-col gap-6 text-white text-base">
+          <div className="flex flex-col gap-4 ">
             {navLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
                 onClick={onClose}
-                className="text-sm"
+                className={`text-lg  ${
+                  pathName === link.href
+                    ? "text-p1 font-semibold"
+                    : "text-p2 hover:text-p1 transition-colors duration-300 ease-in-out"
+                }`}
               >
-                {link.label}
+                {link.name}
               </Link>
             ))}
           </div>
 
           <ul className="flex items-center gap-6 w-full">
-            {websiteFooterData?.lists[2]?.links?.slice(0).map((link, index) => (
+            {websiteFooterData?.socialMedia?.slice(0).map((link, index) => (
               <li key={index}>
                 {link.href && (
                   <Link
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="w-11 aspect-square bg-white text-p1 flex items-center justify-center rounded-xs hover:text-white hover:bg-p1 transition-colors duration-300 ease-in-out"
                   >
                     {link.icon}
                     <span className="sr-only">{link.label}</span>
@@ -104,11 +95,6 @@ const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
               </li>
             ))}
           </ul>
-
-          {/* Footer */}
-          <p className=" text-white text-sm">
-            Copyright © {currentYear} Naad Wellness, Inc. All Rights Reserved.
-          </p>
         </div>
       </aside>
     </>

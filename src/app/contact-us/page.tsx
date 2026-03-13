@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/typography";
 import { DotIcon } from "@/utils/icons";
 import Link from "next/link";
 import { contactPageData } from "./Components/PageData";
+import Form1 from "@/components/forms/Form1";
 
 export default function ContactUsPage() {
   return (
@@ -50,6 +51,11 @@ export default function ContactUsPage() {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="space-y-4 box-shadow py-6 px-4 bg-white rounded-lg">
+            <h2 className="text-2xl text-[#110D3C] uppercase font-primary">{contactPageData.enquiryForm.title}</h2>
+            <Form1 />
+            <p className=" text-p2">{contactPageData.enquiryForm.privacyNote}</p>
           </div>
         </div>
       </SectionWithContainer>

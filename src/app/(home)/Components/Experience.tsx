@@ -1,16 +1,18 @@
 import { ExperienceDataType } from "@/@types/type";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
+import ExperienceSlider from "./ExperienceSlider";
 
 const Experience: React.FC<ExperienceDataType> = ({ title, points }) => {
   return (
     <SectionWithContainer containerClassName="md:space-y-16 space-y-8">
       <SectionHeading title={title} line />
-      <div className="flex flex-wrap items-center justify-center gap-x-36 gap-y-12">
+      <div className="lg:flex hidden flex-wrap items-center justify-center gap-x-36 gap-y-12">
         {points.map((item, index) => (
           <ExperienceCard key={index} title={item.title} icon={item.icon} />
         ))}
       </div>
+      <ExperienceSlider points={points} />
     </SectionWithContainer>
   );
 };

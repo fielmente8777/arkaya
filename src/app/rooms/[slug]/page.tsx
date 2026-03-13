@@ -58,7 +58,7 @@ const page = async (props: Params) => {
 
   return (
     <main className="bg-background">
-      <Banner {...pageProps.bannerData} wrapperClassName="md:aspect-4/2" />
+      <Banner {...pageProps.bannerData} wrapperClassName="md:aspect-4/2"  showForm/>
       <Container className="my-8">
         {pageProps?.description?.map((item, index) => (
           <p className="text-lg text-p2 text-center" key={index}>

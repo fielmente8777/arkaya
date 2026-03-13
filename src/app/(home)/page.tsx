@@ -6,14 +6,16 @@ import { homePageData } from "./Components/PageData";
 import Testimonials from "./Components/Testimonials";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
+import Form2 from "@/components/forms/Form2";
 
 export default function HomePage() {
   return (
-    <main>
-      <SectionWithContainer>
-        <div className="relative w-full aspect-4/2">
+    <main className="bg-background">
+      <SectionWithContainer defaultPadding={false} sectionClassName="md:py-12 py-8">
+        <div className="relative w-full md:aspect-4/2 aspect-square">
         <Image src='/home-banner.png' alt="bnr" fill className="object-cover" />
         </div>
+        <Form2 />
       </SectionWithContainer>
       <HomeAbout {...homePageData.aboutData} />
       <Section>
