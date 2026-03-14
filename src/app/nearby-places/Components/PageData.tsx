@@ -1,6 +1,5 @@
 import { contact } from "@/utils/constent";
 import { ClockIcon, EasySccess, GuidedWalk, NatureTrail, PeakThrills, Sunrise } from "@/utils/PageIcons";
-import { MdClose } from "react-icons/md";
 
 export const nearbyPageData = {
   bannerData: {
@@ -10,11 +9,12 @@ export const nearbyPageData = {
     actions: [
       {
         label: "View on Map",
-        href: "#",
+        href: "https://maps.app.goo.gl/UNE7MTPTh84gEPhW7",
       },
       {
         label: "Plan Your Stay",
         href: "#",
+        openPopUpForm: true,
       },
     ],
   },

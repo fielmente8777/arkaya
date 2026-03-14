@@ -4,7 +4,7 @@ export const galleryPageData = {
     description: ["Where the Himalayas meet refined comfort."],
     images: ["/gallery/bnr.png"],
     actions: [
-      { label: "Check Availability", href: "#" },
+      { label: "Check Availability", href: "#", openPopUpForm: true },
       { label: "Explore Rooms", href: "/rooms/" },
     ],
   },

@@ -14,8 +14,8 @@ export default function PetWelcomingPage() {
       />
       <WelcomeKit {...petWelcomingPageData.welcomeKitData} />
       <StaySection {...petWelcomingPageData.staySection} />
-      <PetDiningMenu {...petWelcomingPageData.petDiningMenu} />
-      <PetPolicyFaq  {...petWelcomingPageData.petPolicyFaq}/>
+      <PetDiningMenu items={petWelcomingPageData.petDiningMenu} />
+      <PetPolicyFaq {...petWelcomingPageData.petPolicyFaq} />
     </main>
   );
 }

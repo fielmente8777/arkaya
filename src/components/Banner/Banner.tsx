@@ -1,4 +1,5 @@
 import LinkButton from "../buttons/LinkButton";
+import PopUpFormBtn from "../buttons/PopUpFormBtn";
 import Form2 from "../forms/Form2";
 import { Container, Section } from "../sectionComponants";
 import BannerSlider from "../sliders/BannerSlider";
@@ -10,6 +11,8 @@ interface BannerProps {
   actions?: {
     label: string;
     href: string;
+    openPopUpForm?: boolean;
+    [key: string]: unknown;
   }[];
   wrapperClassName?: string;
   contentWrapperClassName?: string;
@@ -45,29 +48,45 @@ const Banner: React.FC<BannerProps> = ({
           )}
           {actions && (
             <div className="lg:grid hidden grid-cols-2 md:gap-5 gap-4 mt-5">
-              {actions.map((action, index) => (
-                <LinkButton
-                  key={index}
-                  href={action.href}
-                  label={action.label}
-                  className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
-                />
-              ))}
+              {actions.map((action, index) =>
+                action.openPopUpForm ? (
+                  <PopUpFormBtn
+                    key={index}
+                    cta={action.label}
+                    className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
+                  />
+                ) : (
+                  <LinkButton
+                    key={index}
+                    href={action.href}
+                    label={action.label}
+                    className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
+                  />
+                )
+              )}
             </div>
           )}
         </Container>
         {actions && (
-            <div className="grid lg:hidden absolute bottom-10 inset-x-0 px-6 grid-cols-2 md:gap-5 gap-4">
-              {actions.map((action, index) => (
+          <div className="grid lg:hidden absolute bottom-10 inset-x-0 px-6 grid-cols-2 md:gap-5 gap-4">
+            {actions.map((action, index) =>
+              action.openPopUpForm ? (
+                <PopUpFormBtn
+                  key={index}
+                  cta={action.label}
+                  className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
+                />
+              ) : (
                 <LinkButton
                   key={index}
                   href={action.href}
                   label={action.label}
                   className={`w-full items-center justify-center ${index === 0 ? "" : "bg-white! text-p2!"}`}
                 />
-              ))}
-            </div>
-          )}
+              )
+            )}
+          </div>
+        )}
 
         {showForm && (
           <div className="absolute bottom-12 inset-x-0 w-full z-10 md:block hidden">

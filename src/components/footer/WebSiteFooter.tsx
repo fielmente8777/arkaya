@@ -16,12 +16,12 @@ const WebSiteFooter = () => {
   return (
     <footer className="max_screen_width bg-background">
       <Container>
-        <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] md:gap-10 gap-6">
+        <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] md:gap-10 gap-8">
           {/* LOGO */}
-          <div className="flex flex-col max-sm:items-center gap-6">
+          <div className="flex flex-col max-sm:items-center gap-6 max-md:mb-4" >
             <Link
               href="/"
-              className="relative w-[18rem] aspect-square md:max-w-38 block"
+              className="relative w-48 aspect-square md:max-w-38 block"
             >
               <Image
                 src={websiteFooterData.logo}
@@ -55,7 +55,7 @@ const WebSiteFooter = () => {
               <div className="lg:hidden">
                 <button
                   onClick={() => setIsOpen(isOpen === index ? null : index)}
-                  className="text-[2rem] text-p2 font-primary uppercase flex  items-center justify-between w-full"
+                  className="text-2xl text-p2 font-primary uppercase flex  items-center justify-between w-full"
                 >
                   {list.title}
 
@@ -114,7 +114,7 @@ const WebSiteFooter = () => {
 
           {/* CONTACT US (ALWAYS VISIBLE) */}
           <div className="flex flex-col gap-4">
-            <h2 className="text-[2rem] text-p2 font-primary uppercase">
+            <h2 className="text-2xl text-p2 font-primary uppercase">
               {contactList.title}
             </h2>
 

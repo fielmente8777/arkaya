@@ -88,12 +88,15 @@ const Form2 = ({ gridView }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${gridView ? "flex flex-col" : "grid md:grid-cols-5 items-center gap-3.5"} py-3 px-4 bg-white box-shadow max-md:divide-y divide-p1`}
+      className={`${gridView ? "flex flex-col divide-y divide-p1" : "grid md:grid-cols-5 items-center gap-3.5 box-shadow"} py-3 px-4 bg-white  max-md:divide-y divide-p1`}
     >
       {formFields.map((field, index) => (
         <>
           {field.type === "date" ? (
-            <div className="flex items-center gap-2.5 max-md:pb-4 max-md:pt-2" key={index}>
+            <div
+              className={`flex items-center gap-2.5 ${gridView ? "py-4" : "max-md:pb-4 max-md:pt-2"}`}
+              key={index}
+            >
               <label className="text-p2">{field.icon}</label>
               <DatePicker
                 selected={startDate}
@@ -104,12 +107,15 @@ const Form2 = ({ gridView }: Props) => {
                 minDate={minDate}
                 maxDate={maxDate}
                 placeholderText={field.label}
-                className="outline-none w-full h-full bg-transparent text-base text-dark  placeholder:text-[#7F7F7F] focus:outline-none text-p2 border-p1  md:border-r"
+                className={`${gridView ? "" : "border-p1  md:border-r"} outline-none w-full h-full bg-transparent text-base text-dark  placeholder:text-[#7F7F7F] focus:outline-none text-p2 `}
                 wrapperClassName="w-full h-full !flex items-center"
               />
             </div>
           ) : field.type === "tel" ? (
-            <div className="flex items-center gap-2.5 max-md:pb-4 max-md:pt-2" key={index}>
+            <div
+              className={`flex items-center gap-2.5 ${gridView ? "py-4" : "max-md:pb-4 max-md:pt-2"}`}
+              key={index}
+            >
               <label className="text-p2">{field.icon}</label>
               <div className="relative">
                 <select
@@ -133,20 +139,23 @@ const Form2 = ({ gridView }: Props) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className=" md:border-r border-p1 w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2"
+                className={`w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />
             </div>
           ) : (
-            <div className="flex items-center gap-2.5 max-md:pb-4 max-md:pt-2" key={index}>
+            <div
+              className={`flex items-center gap-2.5 ${gridView ? "py-4" : "max-md:pb-4 max-md:pt-2"}`}
+              key={index}
+            >
               <label className="text-p2">{field.icon}</label>
               <input
                 key={index}
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className=" md:border-r border-p1  w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2"
+                className={`w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />

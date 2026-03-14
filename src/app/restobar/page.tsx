@@ -7,12 +7,12 @@ import Dining from "./Components/Dining";
 export default function RestobarPage() {
   return (
     <main>
-      <Section defaultPadding={false} className="w-full relative md:aspect-4/2.25 aspect-square">
+      <Section defaultPadding={false} className="w-full relative md:aspect-[4/2.18] aspect-square">
         <Image
           src={restobarPageData.bannerData.images[0]}
           alt="Image"
           fill
-          className="object-cover"
+          className="object-cover "
         />
         <LinkButton
           href={restobarPageData.bannerData.actions[0].href}

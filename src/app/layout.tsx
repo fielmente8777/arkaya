@@ -9,6 +9,8 @@ import Whatsapp from "@/components/ContactButton/WhatsApp";
 import { contact } from "@/utils/constent";
 import Call from "@/components/ContactButton/Call";
 import Script from "next/script";
+import { WebProvider } from "@/context-api/WebContext";
+import PopUpForm from "@/components/popUps/PopUpForm";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -51,11 +53,14 @@ export default function RootLayout({
         className={`${cinzel.variable} ${montserrat.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <NavBar />
-        {children}
-        <Footer />
-        <Whatsapp whatsAppNumber={contact.phone[0]} />
-        <Call callNumber={contact.phone[0]} />
+        <WebProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <Whatsapp whatsAppNumber={contact.phone[0]} />
+          <Call callNumber={contact.phone[0]} />
+          <PopUpForm />
+        </WebProvider>
         <Script id="chatbot-config" strategy="afterInteractive">
           {`
             window.eazbotConfig = {

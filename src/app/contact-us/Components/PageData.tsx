@@ -9,8 +9,8 @@ export const contactPageData = {
     ],
     images: ["/contact-banner.png"],
     actions: [
-      { label: "Check Availability", href: "#" },
-      { label: "Call Now", href: "tel:" + contact.phone[0] },
+      { label: "Check Availability", href: "#" , openPopUpForm: true},
+      { label: "Call Now", href: "tel:" + contact.phone[0], target: "_blank" , rel: "noreferrer"},
     ],
   },
 

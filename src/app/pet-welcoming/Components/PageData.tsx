@@ -6,7 +6,7 @@ export const petWelcomingPageData = {
     ],
     images: ["/pet/bnr.jpg"],
     actions: [
-      { label: "Check Availability", href: "#" },
+      { label: "Check Availability", href: "#", openPopUpForm: true },
       { label: "Explore Rooms", href: "/rooms/" },
     ],
   },
@@ -30,13 +30,13 @@ export const petWelcomingPageData = {
     },
   },
 
-  petDiningMenu: {
-    title: "Pet Dining Menu",
-    description: [
-      "All meals are freshly prepared with no salt, no spices, no onion or garlic, and only pet-safe ingredients.",
-    ],
-    items: [
-      [
+  petDiningMenu: [
+    {
+      title: "Pet Dining Menu",
+      description: [
+        "All meals are freshly prepared with no salt, no spices, no onion or garlic, and only pet-safe ingredients.",
+      ],
+      items: [
         "Himalayan Chicken & Rice Bowl",
         "Boneless chicken, steamed rice, carrots & peas — light and digestible.",
         "Salmon & Sweet Potato Bowl",
@@ -46,28 +46,29 @@ export const petWelcomingPageData = {
         "Seasonal Veggie Medley",
         "Carrot, beans, peas & sweet potato tgar are suitable for pets with protein sensitivities.",
       ],
-      [
-        "Himalayan Chicken & Rice Bowl",
-        "Boneless chicken, steamed rice, carrots & peas — light and digestible.",
-        "Salmon & Sweet Potato Bowl",
-        "Omega-rich salmon with sweet potato mash — gentle and nourishing.",
-        "Cottage Cheese & Pumpkin Mash",
-        "Soft paneer with pumpkin puree — ideal for sensitive stomachs.",
-        "Seasonal Veggie Medley",
-        "Carrot, beans, peas & sweet potato tgar are suitable for pets with protein sensitivities.",
+    },
+    {
+      title: "Treats & Snacks",
+      description: [
+        "All meals are freshly prepared with no salt, no spices, no onion or garlic, and only pet-safe ingredients.",
       ],
-      [
-        "Himalayan Chicken & Rice Bowl",
-        "Boneless chicken, steamed rice, carrots & peas — light and digestible.",
-        "Salmon & Sweet Potato Bowl",
-        "Omega-rich salmon with sweet potato mash — gentle and nourishing.",
-        "Cottage Cheese & Pumpkin Mash",
-        "Soft paneer with pumpkin puree — ideal for sensitive stomachs.",
-        "Seasonal Veggie Medley",
-        "Carrot, beans, peas & sweet potato tgar are suitable for pets with protein sensitivities.",
+      items: [
+        "Mini Chicken Jerky Strips (no additives)",
+        "Himalayan Cheese Bite Snacks",
+        "Dried Banana Chips (unsweetened)",
       ],
-    ],
-  },
+    },
+    {
+      title: "Hydration & Comfort",
+      description: [
+        "All meals are freshly prepared with no salt, no spices, no onion or garlic, and only pet-safe ingredients.",
+      ],
+      items: [
+        "Fresh drinking water (refreshed daily)",
+        "Pet-safe cooling ice cubes (seasonal)",
+      ],
+    },
+  ],
 
   petPolicyFaq: {
     title: "Pet Hospitality – FAQs",

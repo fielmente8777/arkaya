@@ -1,15 +1,14 @@
 "use client";
 import { useWebContext } from "@/context-api/WebContext";
 
-const PopUpFormBtn = ({ cta }: { cta: string }) => {
+const PopUpFormBtn = ({ cta, className }: { cta: string , className?: string}) => {
   const { setIsOpenPopUpForm } = useWebContext();
   return (
     <button
       onClick={() => setIsOpenPopUpForm(true)}
-      className="text-primary border secondary-font italic text-lg font-medium flex items-center gap-2 md:px-5 px-4 md:py-3 py-1 rounded-full bg-white active:scale-95 transition-all duration-300 ease-in-out hover:shadow-lg mx-auto"
+      className={`flex text-nowrap whitespace-nowrap items-center gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
     >
       {cta}
-      <ArrowIcon />
     </button>
   );
 };

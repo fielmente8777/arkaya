@@ -21,7 +21,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   return (
     <Link
       href={href}
-      className={`flex items-center gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
+      className={`flex items-center text-nowrap gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
       {...props}
     >
       {/* {whatsAppIcon && <WhatsAppIcon />} */}

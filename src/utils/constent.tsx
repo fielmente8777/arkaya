@@ -15,7 +15,7 @@ export const contact = {
     instagram: "https://www.instagram.com/",
     linkedin: "https://in.linkedin.com/",
   },
-  WhatsappCta: `https://wa.me/+919700376000?text=${enCodeText}`,
+  WhatsappCta: `https://wa.me/+918869817528?text=${enCodeText}`,
   formDomain: "arkayamukteshwar",
   // formDomain: "testmulti", //for testing
   formHid:"",
