@@ -87,7 +87,7 @@ export const websiteFooterData: WebsiteFooterData = {
     {
       title: "Policies",
       links: [
-        { label: "check in Policy", href: "/check-in-policy" },
+        // { label: "check in Policy", href: "/check-in-policy" },
         { label: "Privacy Policy", href: "/privacy-policy" },
         { label: "Terms & Conditions", href: "/terms-and-conditions" },
       ],

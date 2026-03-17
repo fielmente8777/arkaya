@@ -2,6 +2,28 @@ import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import { accommodationPageData } from "./Components/PageData";
 import RoomSection from "./Components/RoomSection";
+import { Metadata } from "next";
+import { seoMetadata } from "@/utils/metadata";
+
+export const metadata: Metadata = {
+  title: seoMetadata.accommodation.title,
+  description: seoMetadata.accommodation.description,
+  keywords: seoMetadata.accommodation.keywords,
+  alternates: {
+    canonical: seoMetadata.accommodation.canonical,
+  },
+  openGraph: {
+    title: seoMetadata.accommodation.title,
+    description: seoMetadata.accommodation.description,
+    images: [seoMetadata.accommodation.ogImage],
+    type: "website",
+    url: seoMetadata.accommodation.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RoomsPage() {
   return (

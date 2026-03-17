@@ -51,6 +51,10 @@ const page = async (props: Params) => {
     <main className="bg-background">
       <SectionWithContainer>
         <SectionHeading title={pageProps.title} textCenter line />
+        <div
+          className="blog-data"
+          dangerouslySetInnerHTML={{ __html: pageProps.content }}
+        />
       </SectionWithContainer>
     </main>
   );

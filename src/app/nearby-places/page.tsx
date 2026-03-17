@@ -4,6 +4,29 @@ import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import LazyLoadedMap from "@/components/map/LazyLoadedMap";
 import Experiences from "./Components/Experiences";
+import { Metadata } from "next";
+import { seoMetadata } from "@/utils/metadata";
+
+
+export const metadata: Metadata = {
+  title: seoMetadata.nearby.title,
+  description: seoMetadata.nearby.description,
+  keywords: seoMetadata.nearby.keywords,
+  alternates: {
+    canonical: seoMetadata.nearby.canonical,
+  },
+  openGraph: {
+    title: seoMetadata.nearby.title,
+    description: seoMetadata.nearby.description,
+    images: [seoMetadata.nearby.ogImage],
+    type: "website",
+    url: seoMetadata.nearby.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function NearbyPlacesPage() {
   return (

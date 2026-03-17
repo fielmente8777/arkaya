@@ -18,7 +18,7 @@ const WebSiteFooter = () => {
       <Container>
         <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] md:gap-10 gap-8">
           {/* LOGO */}
-          <div className="flex flex-col max-sm:items-center gap-6 max-md:mb-4" >
+          <div className="flex flex-col max-sm:items-center gap-6 max-md:mb-4">
             <Link
               href="/"
               className="relative w-48 aspect-square md:max-w-38 block"
@@ -145,21 +145,22 @@ const WebSiteFooter = () => {
       {/* BOTTOM BAR */}
       <div className="bg-p1">
         <Container className="py-4 flex max-md:flex-col items-center gap-3 justify-center">
-          <div className="text-white text-center flex gap-2 flex-wrap">
+          <p className="text-white text-center items-center justify-center flex gap-2 flex-wrap">
             <span>© {new Date().getFullYear()} Arkaya</span>
             <span>|</span>
             <span>All Rights Reserved</span>
-          </div>
+            <span className="md:block hidden">|</span>
 
-          <p className="text-white text-sm">
-            Powered by{" "}
-            <Link
-              href="https://www.fielmente.com/"
-              target="_blank"
-              className="font-bold"
-            >
-              Fielmente
-            </Link>
+            <span className="text-white ">
+              Powered by{" "}
+              <Link
+                href="https://www.fielmente.com/"
+                target="_blank"
+                className="font-bold"
+              >
+                Fielmente
+              </Link>
+            </span>
           </p>
         </Container>
       </div>

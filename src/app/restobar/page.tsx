@@ -3,6 +3,28 @@ import { Section } from "@/components/sectionComponants";
 import { restobarPageData } from "./Components/PageData";
 import Image from "next/image";
 import Dining from "./Components/Dining";
+import { Metadata } from "next";
+import { seoMetadata } from "@/utils/metadata";
+
+export const metadata: Metadata = {
+  title: seoMetadata.restobar.title,
+  description: seoMetadata.restobar.description,
+  keywords: seoMetadata.restobar.keywords,
+  alternates: {
+    canonical: seoMetadata.restobar.canonical,
+  },
+  openGraph: {
+    title: seoMetadata.restobar.title,
+    description: seoMetadata.restobar.description,
+    images: [seoMetadata.restobar.ogImage],
+    type: "website",
+    url: seoMetadata.restobar.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RestobarPage() {
   return (

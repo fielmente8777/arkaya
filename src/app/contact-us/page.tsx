@@ -6,6 +6,29 @@ import { DotIcon } from "@/utils/icons";
 import Link from "next/link";
 import { contactPageData } from "./Components/PageData";
 import Form1 from "@/components/forms/Form1";
+import { Metadata } from "next";
+import { seoMetadata } from "@/utils/metadata";
+
+
+export const metadata: Metadata = {
+  title: seoMetadata.contact.title,
+  description: seoMetadata.contact.description,
+  keywords: seoMetadata.contact.keywords,
+  alternates: {
+    canonical: seoMetadata.contact.canonical,
+  },
+  openGraph: {
+    title: seoMetadata.contact.title,
+    description: seoMetadata.contact.description,
+    images: [seoMetadata.contact.ogImage],
+    type: "website",
+    url: seoMetadata.contact.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function ContactUsPage() {
   return (
