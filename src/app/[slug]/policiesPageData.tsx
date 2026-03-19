@@ -5,10 +5,9 @@ export const policiesPageData = [
       title: "Privacy Policy",
       description: "Privacy Policy",
     },
-    title: "Privacy Policy",
+    title: "Arkaya Mukteshwar – Resort Policies & Guest Information",
     content: `
       <div>
-        <h2>Arkaya Mukteshwar – Resort Policies & Guest Information</h2>
 
         <h3>1. Resort Policies</h3>
         <p>
@@ -94,20 +93,7 @@ export const policiesPageData = [
         <p>
           Arkaya Mukteshwar reserves the right to update or modify policies at any time without prior notice.
         </p>
-      </div>
-    `,
-  },
-
-  {
-    slug: "terms-and-conditions",
-    metaData: {
-      title: "Terms and Conditions",
-      description: "Terms and Conditions",
-    },
-    title: "Terms and Conditions",
-    content: `
-    <div>
-      <h3>2. Booking Terms & Conditions</h3>
+        <h3>2. Booking Terms & Conditions</h3>
 
       <ul>
         <li>Reservations are confirmed only upon receipt of the required advance payment.</li>
@@ -140,7 +126,53 @@ export const policiesPageData = [
         <li>Many attractions in Mukteshwar are a short drive from the resort.</li>
         <li>Wi-Fi is available for guests.</li>
       </ul>
-    </div>
-  `,
+      </div>
+    `,
   },
+
+  // {
+  //   slug: "terms-and-conditions",
+  //   metaData: {
+  //     title: "Terms and Conditions",
+  //     description: "Terms and Conditions",
+  //   },
+  //   title: "Terms and Conditions",
+  //   content: `
+  //   <div>
+  //     <h3>2. Booking Terms & Conditions</h3>
+
+  //     <ul>
+  //       <li>Reservations are confirmed only upon receipt of the required advance payment.</li>
+  //       <li>Remaining balance must be cleared prior to or at the time of check-in.</li>
+  //       <li>Free cancellation up to 7 days before arrival.</li>
+  //       <li>Date modifications are subject to availability and current pricing.</li>
+  //       <li>The resort shall not be liable for interruptions caused by natural disasters, government restrictions, road closures, or extreme weather.</li>
+  //       <li>Management reserves the right to refuse accommodation to guests whose conduct disrupts other guests.</li>
+  //     </ul>
+
+  //     <h3>3. House Rules</h3>
+  //     <ul>
+  //       <li>Maintain a peaceful and respectful environment.</li>
+  //       <li>Loud music and parties are not permitted.</li>
+  //       <li>Smoking allowed only in designated areas.</li>
+  //       <li>Guests are responsible for any damages to property or furnishings.</li>
+  //       <li>Pets are welcome with prior notice and must be supervised.</li>
+  //       <li>Respect the natural surroundings and avoid littering.</li>
+  //       <li>Outside visitors allowed only with prior approval from management.</li>
+  //     </ul>
+
+  //     <h3>4. Frequently Asked Questions (FAQs)</h3>
+  //     <ul>
+  //       <li>Check-in is from 2:00 PM and check-out is by 11:00 AM.</li>
+  //       <li>Arkaya Mukteshwar is a pet-welcoming retreat for well-behaved pets with prior notice.</li>
+  //       <li>Parking is available for guests staying at the property.</li>
+  //       <li>The resort welcomes families and children.</li>
+  //       <li>Freshly prepared meals are available at the resort.</li>
+  //       <li>Outside food is generally discouraged unless approved by management.</li>
+  //       <li>Many attractions in Mukteshwar are a short drive from the resort.</li>
+  //       <li>Wi-Fi is available for guests.</li>
+  //     </ul>
+  //   </div>
+  // `,
+  // },
 ];
