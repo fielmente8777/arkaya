@@ -32,13 +32,13 @@ const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
       {/* Overlay */}
       <div
         onClick={onClose}
-        className={`fixed inset-0 bg-black/60 z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/60 z-40 transition-opacity lg:hidden duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       />
 
       {/* Sidebar */}
-      <aside
+      <div
         className={`fixed top-0 right-0 h-full w-80 md:w-90  z-50 transform transition-transform duration-300 ease-in-out border-l-2 border-p1 bg-[#FFF9F0]
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -50,6 +50,7 @@ const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
               className="text-p1 cursor-pointer"
               onClick={onClose}
             />
+            <div className="sr-only">close btn</div>
             {/* <Link href="/" className="relative w-18 aspect-[4/1.45] block">
               <Image
                 src="/logo.png"
@@ -96,7 +97,7 @@ const MobileNavbar = ({ isOpen, onClose }: MobileNavbarProps) => {
             ))}
           </ul>
         </div>
-      </aside>
+      </div>
     </>
   );
 };

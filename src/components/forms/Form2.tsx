@@ -124,6 +124,7 @@ const Form2 = ({ gridView }: Props) => {
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
                   style={{ width: `${formData.countryCode.length * 2}ch` }}
+                   aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
                     <option key={index} value={country.code} className="">

@@ -46,6 +46,8 @@ const WebSiteNavbar = () => {
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden flex items-center gap-2 text-lg text-p2"
           >
+            <div className="sr-only">Menu</div>
+
             <MenuIcon />
           </button>
         </Container>

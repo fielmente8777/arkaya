@@ -41,6 +41,7 @@ const WebSiteFooter = () => {
                     rel="noopener noreferrer"
                     className="w-11 aspect-square bg-white text-p1 flex items-center justify-center rounded-xs hover:text-white hover:bg-p1 transition-colors duration-300"
                   >
+                    <span className="sr-only">{item.label}</span>
                     {item.icon}
                   </Link>
                 </li>

@@ -69,6 +69,7 @@ const Form1 = () => {
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
                   style={{ width: `${formData.countryCode.length * 3}ch` }}
+                  aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
                     <option
