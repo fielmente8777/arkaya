@@ -7,18 +7,21 @@ import {
   SeamlessAttentiveHospitality,
   StayPet,
 } from "@/utils/PageIcons";
-import { MdClose } from "react-icons/md";
 
 export const homePageData = {
   aboutData: {
     title: "A Boutique Retreat in the Himalayas",
     description: [
       "Set high among the whispering forests of Mukteshwar, Arkaya unfolds with the grace of mountain light. Named after Arka, the sun, our retreat moves in harmony with dawn’s first glow and the lingering gold of evening.",
-      "Stay in residences inspired by the sacred peaks of Nandakot, Nanda Devi, Trishul, and Panchachuli. Stroll through Bugyal, our orchard garden of apple, plum, peach, persimmon, and walnut. Restore at Buransh Spa, strengthen at Summit Studio, gather with vision at Shikhar Hall, linger in stillness at Himadri Lounge, and dine suspended above the horizon at 180 Degree.",
+      "Stay in residences inspired by the sacred peaks of Nandakot, Nanda Devi, Trishul, and Panchachuli. Stroll through Bugyal, our orchard garden of apple, plum, peach, persimmon, and walnut. Restore at Buransh Spa, strengthen at Summit Studio, gather with vision at Shikhar Hall, linger in stillness at Himadri Lounge, and dine suspended above the horizon at 180°.",
       "Guided by sustainability and mountain wisdom, Arkaya lives lightly — harnessing solar energy, composting with care, and honoring water as a sacred resource.",
       "Arkaya is not simply a place to stay.",
-      "It is a place to align with the Himalaya. Gently, consciously, and deeply.",
     ],
+    ctaSection: {
+      title: "Arkaya is not simply a place to stay.",
+      description:
+        "It is a place to align with the Himalaya. Gently, consciously, and deeply.",
+    },
     link: {
       label: "Discover Arkaya",
       href: "/about-us/",

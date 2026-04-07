@@ -17,20 +17,22 @@ const Spa: React.FC<SpaProps> = ({ title, description, image, link }) => {
   return (
     <Section
       defaultPadding={false}
-      className="grid md:grid-cols-2 md:gap-16 gap-8 max-md:py-8 bg-white items-center"
+      className="grid md:grid-cols-2 max-md:gap-8 max-md:py-8"
     >
       <div className="relative w-full aspect-4/3">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
-      <div className="max-w-133.25 max-md:px-4 mx-auto">
-        <SectionHeading title={title} />
-        <div className="flex flex-col justify-between mt-8">
-          {description.map((item, index) => (
-            <p key={index} className="text-lg text-p2 mb-4">
-              {item}
-            </p>
-          ))}
-          <LinkButton href={link.href} label={link.label} />
+      <div className="md:border-y border-b max-md:pb-8 border-p1 flex items-center justify-center">
+        <div className="max-w-133.25 max-md:px-4 mx-auto ">
+          <SectionHeading title={title} />
+          <div className="flex flex-col justify-between md:mt-8 mt-4">
+            {description.map((item, index) => (
+              <p key={index} className="text-lg text-p2 mb-4">
+                {item}
+              </p>
+            ))}
+            <LinkButton href={link.href} label={link.label} />
+          </div>
         </div>
       </div>
     </Section>

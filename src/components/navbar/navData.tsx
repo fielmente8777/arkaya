@@ -7,8 +7,7 @@ export const navUpper = {
     href: contact.addressLink,
     icon: <FillLocationIcon />,
   },
-  // temperature: "28.842226212813753, 78.77063805100687",
-  temperature: "29.396563726867253, 79.6496019576717",
+  temperature: "29.396657201082572, 79.6496019576717",
 };
 
 export const navLinks = [

@@ -101,8 +101,9 @@ const WebSiteFooter = () => {
                       {item.href && (
                         <Link
                           href={item.href}
-                          target={item.href.includes("http") ? "_blank" : "_self"}
-                          
+                          target={
+                            item.href.includes("http") ? "_blank" : "_self"
+                          }
                           className="text-p2 md:text-lg capitalize"
                         >
                           {item.label}
@@ -149,7 +150,7 @@ const WebSiteFooter = () => {
 
       {/* BOTTOM BAR */}
       <div className="bg-p1">
-        <Container className="py-4 flex max-md:flex-col items-center gap-3 justify-center">
+        <Container className="py-4 flex max-md:flex-col items-center gap-3 justify-between">
           <p className="text-white text-center items-center justify-center flex gap-2 flex-wrap">
             <span>© {new Date().getFullYear()} Arkaya</span>
             <span>|</span>
@@ -167,6 +168,9 @@ const WebSiteFooter = () => {
               </Link>
             </span>
           </p>
+          <Link href="/privacy-policy" className="text-white">
+            Privacy Policy
+          </Link>
         </Container>
       </div>
     </footer>

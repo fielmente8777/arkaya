@@ -77,21 +77,27 @@ export const websiteFooterData: WebsiteFooterData = {
         { label: "About Us", href: "/about-us/" },
         { label: "Rooms", href: "/rooms/" },
         { label: "Gallery", href: "/gallery/" },
-        { label: "180° Restobar", href: "/restobar/" },
-        { label: "Meeting & Events", href: "/meetings-and-events/" },
-        { label: "Pet Welcoming", href: "/pet-welcoming/" },
-        { label: "Nearby Places", href: "/nearby-places/" },
+
         { label: "Contact Us", href: "/contact-us/" },
       ],
     },
     {
-      title: "Policies",
+      title: "Explore",
       links: [
-        // { label: "check in Policy", href: "/check-in-policy" },
-        { label: "Privacy Policy", href: "/privacy-policy" },
-        // { label: "Terms & Conditions", href: "/terms-and-conditions" },
+        { label: "180° Restobar", href: "/restobar/" },
+        { label: "Meeting & Events", href: "/meetings-and-events/" },
+        { label: "Pet Welcoming", href: "/pet-welcoming/" },
+        { label: "Nearby Places", href: "/nearby-places/" },
       ],
     },
+    // {
+    //   title: "Policies",
+    //   links: [
+    //     // { label: "check in Policy", href: "/check-in-policy" },
+    //     { label: "Privacy Policy", href: "/privacy-policy" },
+    //     // { label: "Terms & Conditions", href: "/terms-and-conditions" },
+    //   ],
+    // },
     {
       title: "Contact Us",
       links: [
