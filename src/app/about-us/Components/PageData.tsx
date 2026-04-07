@@ -14,6 +14,7 @@ export const aboutPageData = {
 
   residentialBlocksData: {
     title: "Our Residential Blocks",
+    subTitle:"DECKS & LOUNGES",
     description: [
       "Our four residential blocks are named after the majestic Himalayan peaks visible from the property: <b>Mount Nandakot, Mount Nanda Devi, Mount Trishul, and Mount Panchachuli</b>. Each inspires tranquility, grounding your experience in the rhythm of nature."
     ],
@@ -53,7 +54,7 @@ export const aboutPageData = {
 
   sustainabilityData: {
     description: [
-      "Even water carries intention here. Inspired by the ancient Naulas (stone springs protected by local communities), Arkaya offers purified, alkaline water bottled on site eliminating plastic and honoring mountain stewardship. Arkaya does not compete with the Himalaya it aligns."
+      "Even water carries intention here. Inspired by the ancient Naulas (stone springs protected by local communities), Arkaya offers purified, alkaline water bottled on-site—eliminating plastic and honoring mountain stewardship. Arkaya does not compete with the Himalaya—it aligns."
     ]
   },
 

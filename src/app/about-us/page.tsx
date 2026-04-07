@@ -26,11 +26,23 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUsPage() {
-    return (
-        <main className="bg-background">
-            <Banner {...aboutPageData.bannerData} />
-            <Residential {...aboutPageData.residentialBlocksData} />
-            <Spa {...aboutPageData.spaData} />
-        </main>
-    );
+  return (
+    <main className="bg-background">
+      <Banner {...aboutPageData.bannerData} />
+      <Residential {...aboutPageData.residentialBlocksData} />
+      <section className="pb-20 px-4">
+        <div className="md:py-12 py-10 md:px-10 px-6 max-w-6xl mx-auto bg-p4 border-l-8 border-p1 box-shadow">
+          {aboutPageData.sustainabilityData.description.map((item, index) => (
+            <p
+              key={index}
+              className="md:text-lg text-p2 text-center"
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+      </section>
+      <Spa {...aboutPageData.spaData} />
+    </main>
+  );
 }
