@@ -101,6 +101,8 @@ const WebSiteFooter = () => {
                       {item.href && (
                         <Link
                           href={item.href}
+                          target={item.href.includes("http") ? "_blank" : "_self"}
+                          
                           className="text-p2 md:text-lg capitalize"
                         >
                           {item.label}
@@ -125,6 +127,8 @@ const WebSiteFooter = () => {
                   {item.href ? (
                     <Link
                       href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex gap-2 text-p2 md:text-lg"
                     >
                       <span className="mt-1">{item.icon}</span>

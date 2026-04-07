@@ -7,7 +7,8 @@ export const navUpper = {
     href: contact.addressLink,
     icon: <FillLocationIcon />,
   },
-  temperature: "29.3966478536649, 79.64959122883585",
+  // temperature: "28.842226212813753, 78.77063805100687",
+  temperature: "29.396563726867253, 79.6496019576717",
 };
 
 export const navLinks = [
@@ -17,5 +18,6 @@ export const navLinks = [
   { name: "Meeting & Events", href: "/meetings-and-events/" },
   { name: "Pet Welcoming", href: "/pet-welcoming/" },
   { name: "180° Restobar", href: "/restobar/" },
+  { name: "Nearby Places", href: "/nearby-places/" },
   { name: "Contact Us", href: "/contact-us/" },
 ];

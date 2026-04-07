@@ -378,14 +378,16 @@ input:focus {
       color: var(--p1);
       width: 20px;
       height: 20px;
+
     }
     @media (width < 768px) {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
+      svg{
+        width: 12px;
+        height: 12px;
+      }
     }
-    &::after {
-      font-size: 14px;
-      color: var(--p1);
-    }
+   
   }
 }

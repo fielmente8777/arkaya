@@ -40,7 +40,7 @@ const WebSiteNavbar = () => {
           </Link>
           <span className="lg:flex hidden items-center gap-2 text-lg text-p2">
             <TemIcon />
-            {temp}°C
+            {temp?.toFixed(2)}°C
           </span>
           <button
             onClick={() => setIsMenuOpen(true)}
@@ -58,9 +58,9 @@ const WebSiteNavbar = () => {
               <li key={index} className="md:text-lg text-p5 uppercase">
                 <Link
                   href={link.href}
-                  className={
+                  className={` ${
                     pathName === link.href ? "font-medium text-p1" : ""
-                  }
+                  }`}
                 >
                   {link.name}
                 </Link>
