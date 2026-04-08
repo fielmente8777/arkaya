@@ -33,7 +33,7 @@ const Form1 = () => {
     },
     {
       name: "email",
-      label: "Email Id",
+      label: "Email ID",
       type: "email",
       value: formData.email,
       onChange: handleChange,

@@ -69,7 +69,7 @@ const Form2 = ({ gridView }: Props) => {
     },
     {
       name: "email",
-      label: "Email Id",
+      label: "Email ID",
       type: "email",
       value: formData.email,
       onChange: handleChange,
