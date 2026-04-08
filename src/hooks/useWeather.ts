@@ -83,8 +83,8 @@ export const useWeather = ({
         setLoading(true);
         setError(null);
 
-        const apiKey = "AIzaSyD043NL0Pt1EB_TXknm3QTSgt-5c73rfhQ";
-        // const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+        // const apiKey = "AIzaSyD043NL0Pt1EB_TXknm3QTSgt-5c73rfhQ";
+        const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
         const [lat, lon] = altitude.split(",");
 

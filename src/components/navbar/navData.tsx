@@ -8,6 +8,7 @@ export const navUpper = {
     icon: <FillLocationIcon />,
   },
   temperature: "29.396657201082572, 79.6496019576717",
+  // temperature: "29.146027515778144, 75.70353074035758", // test
 };
 
 export const navLinks = [
