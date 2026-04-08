@@ -22,7 +22,7 @@ export const accommodationPageData = {
       },
       {
         title: "Himalayan Panorama Room",
-        description: "King Room with Panasoma View",
+        description: "King Room with Panorama View",
         image: "/rooms/himalayan-panorama/himalayan-panorama-1.jpg",
       },
       {
