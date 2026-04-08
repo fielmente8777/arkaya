@@ -15,7 +15,6 @@ export const homePageData = {
       "Set high among the whispering forests of Mukteshwar, Arkaya unfolds with the grace of mountain light. Named after Arka, the sun, our retreat moves in harmony with dawn’s first glow and the lingering gold of evening.",
       "Stay in residences inspired by the sacred peaks of Nandakot, Nanda Devi, Trishul, and Panchachuli. Stroll through Bugyal, our orchard garden of apple, plum, peach, persimmon, and walnut. Restore at Buransh Spa, strengthen at Summit Studio, gather with vision at Shikhar Hall, linger in stillness at Himadri Lounge, and dine suspended above the horizon at 180°.",
       "Guided by sustainability and mountain wisdom, Arkaya lives lightly — harnessing solar energy, composting with care, and honoring water as a sacred resource.",
-      "Arkaya is not simply a place to stay.",
     ],
     ctaSection: {
       title: "Arkaya is not simply a place to stay.",

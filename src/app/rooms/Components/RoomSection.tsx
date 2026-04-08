@@ -15,7 +15,7 @@ const RoomSection: React.FC<RoomSectionProps> = ({ items }) => {
   return (
     <Section
       defaultPadding={false}
-      className="grid md:grid-cols-2 pb-16 md:gap-y-6 max-md:gap-8"
+      className="grid md:grid-cols-2 md:pb-16 md:gap-y-6 max-md:gap-8"
     >
       {items.map((item, index) => (
         <RoomCard key={index} {...item} index={index} />

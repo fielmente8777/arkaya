@@ -23,7 +23,7 @@ const Dining: React.FC<DiningProps> = ({
   link,
 }) => {
   return (
-    <SectionWithContainer containerClassName="md:space-y-16 space-y-8 max-md:px-0!">
+    <SectionWithContainer sectionClassName="max-md:pb-0!" containerClassName="md:space-y-16 space-y-8 max-md:px-0!">
       <SectionHeading
         title={title}
         subTitle={subtitle}
