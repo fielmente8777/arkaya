@@ -8,7 +8,7 @@ import { contactPageData } from "./Components/PageData";
 import Form1 from "@/components/forms/Form1";
 import { Metadata } from "next";
 import { seoMetadata } from "@/utils/metadata";
-
+import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 
 export const metadata: Metadata = {
   title: seoMetadata.contact.title,
@@ -44,41 +44,53 @@ export default function ContactUsPage() {
               title={contactPageData.visitData.title}
               titleClassName="md:text-[2rem]!"
             />
-            <ul className="space-y-2 max-w-md">
-              {contactPageData.visitData.links.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className="flex gap-2.5 md:text-lg text-p2 text-wrap"
-                  >
-                    <span>{item.icon}</span>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <AnimateOnScroll direction="right">
+              <ul className="space-y-2 max-w-md">
+                {contactPageData.visitData.links.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="flex gap-2.5 md:text-lg text-p2 text-wrap"
+                    >
+                      <span>{item.icon}</span>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </AnimateOnScroll>
             <SectionHeading
               title={contactPageData.reservationsData.title}
               titleClassName="md:text-[2rem]!"
             />
-            <ul className="space-y-2">
-              {contactPageData.reservationsData.items.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-2.5 text-lg text-p2"
-                >
-                  <span className="text-p1">
-                    <DotIcon />
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <AnimateOnScroll direction="right">
+              <ul className="space-y-2">
+                {contactPageData.reservationsData.items.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-2.5 text-lg text-p2"
+                  >
+                    <span className="text-p1">
+                      <DotIcon />
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </AnimateOnScroll>
           </div>
           <div className="space-y-4 box-shadow py-6 px-4 bg-white rounded-lg">
-            <h2 className="text-2xl text-[#110D3C] uppercase font-primary">{contactPageData.enquiryForm.title}</h2>
+            <AnimateOnScroll direction="bottom">
+              <h2 className="text-2xl text-[#110D3C] uppercase font-primary">
+                {contactPageData.enquiryForm.title}
+              </h2>
+            </AnimateOnScroll>
             <Form1 />
-            <p className=" text-p2">{contactPageData.enquiryForm.privacyNote}</p>
+            <AnimateOnScroll direction="right">
+              <p className=" text-p2">
+                {contactPageData.enquiryForm.privacyNote}
+              </p>
+            </AnimateOnScroll>
           </div>
         </div>
       </SectionWithContainer>
@@ -88,24 +100,28 @@ export default function ContactUsPage() {
           <div className="space-y-6 w-fit">
             <SectionHeading
               title={contactPageData.travelInfo.title}
-              titleClassName="md:text-[2rem]!"
+              titleClassName="md:text-[2rem]! text-xl!"
             />
-            <ul className="space-y-2">
-              {contactPageData.travelInfo.details.map((item, index) => (
-                <li key={index} className="flex items-center gap-2.5">
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <AnimateOnScroll direction="right">
+              <ul className="space-y-2">
+                {contactPageData.travelInfo.details.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2.5">
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </AnimateOnScroll>
             <div className="w-full h-px bg-p2" />
-            <div className="space-y-2">
-              <p className="text-[1.375rem] text-p2">
-                {contactPageData.travelInfo.rating}
-              </p>
-              <p className="text-lg text-p2">
-                {contactPageData.travelInfo.description}
-              </p>
-            </div>
+            <AnimateOnScroll direction="right">
+              <div className="space-y-2">
+                <p className="text-[1.375rem] text-p2">
+                  {contactPageData.travelInfo.rating}
+                </p>
+                <p className="text-lg text-p2">
+                  {contactPageData.travelInfo.description}
+                </p>
+              </div>
+            </AnimateOnScroll>
           </div>
           <div className="w-full md:aspect-4/2.25 aspect-4/3.5">
             <LazyLoadedMap src={contactPageData.travelInfo.mapUrl} />

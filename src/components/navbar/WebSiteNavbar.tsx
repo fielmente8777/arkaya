@@ -4,7 +4,7 @@ import { useWeather } from "@/hooks/useWeather";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container } from "../sectionComponants";
 import MobileNavbar from "./MobileNavbar";
 import { navLinks, navUpper } from "./navData";
@@ -14,19 +14,72 @@ const WebSiteNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { temp } = useWeather({ altitude: navUpper.temperature });
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+  const lastScrollY = useRef(0);
+
+  // ✅ Detect screen size (below lg)
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+    const handleResize = () => {
+      setIsMobileOrTablet(mediaQuery.matches);
+    };
+
+    handleResize(); // initial check
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
+  // ✅ Scroll logic ONLY for mobile/tablet
+  useEffect(() => {
+    if (!isMobileOrTablet) return;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY.current) < 10) return;
+
+      if (currentScrollY < 50) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobileOrTablet]);
+
   return (
     <>
-      <header className="max_screen_width bg-background max-md:border-b-[0.5px] border-p5">
+      {/* HEADER */}
+      <header
+        className={`max_screen_width bg-background max-md:border-b-[0.5px] border-p5 
+        ${
+          isMobileOrTablet
+            ? `fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+                showNavbar ? "translate-y-0" : "-translate-y-full"
+              }`
+            : "relative"
+        }`}
+      >
         {/* upper nav */}
-        <Container className="flex items-center justify-between py-4 ">
+        <Container className="flex items-center justify-between py-4">
           <Link
             href={navUpper.link.href}
-            className="lg:flex items-center gap-2 text-lg text-p2  hidden "
+            className="lg:flex items-center gap-2 text-lg text-p2 hidden"
           >
             <span className="sr-only">Location</span>
-            <span className="">{navUpper.link.icon}</span>
+            <span>{navUpper.link.icon}</span>
             {navUpper.link.name}
           </Link>
+
           <Link
             href="/"
             className="block md:mr-50 md:w-32 w-18 aspect-square relative"
@@ -38,27 +91,29 @@ const WebSiteNavbar = () => {
               className="object-contain"
             />
           </Link>
+
           <span className="lg:flex hidden items-center gap-2 text-lg text-p2">
             <TemIcon />
             {temp?.toFixed(2)}°C
           </span>
+
           <button
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden flex items-center gap-2 text-lg text-p2"
           >
             <div className="sr-only">Menu</div>
-
             <MenuIcon />
           </button>
         </Container>
-        {/* nav links */}
+
+        {/* nav links (desktop only) */}
         <nav className="border-y-[0.5px] border-p5 lg:block hidden">
           <ul className="max_width flex items-center py-3 justify-between">
             {navLinks.map((link, index) => (
               <li key={index} className="md:text-lg text-p5 uppercase">
                 <Link
                   href={link.href}
-                  className={` ${
+                  className={`${
                     pathName === link.href ? "font-medium text-p1" : ""
                   }`}
                 >
@@ -70,7 +125,14 @@ const WebSiteNavbar = () => {
         </nav>
       </header>
 
-      <MobileNavbar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      {/* MOBILE MENU */}
+      <MobileNavbar
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+      />
+
+      {/* spacing ONLY for mobile/tablet */}
+      {isMobileOrTablet && <div className="pt-[80px] md:pt-[100px]" />}
     </>
   );
 };

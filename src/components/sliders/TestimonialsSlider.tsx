@@ -4,13 +4,14 @@ import { Autoplay, Navigation } from "swiper/modules";
 import TestimonialCard from "../cards/TestimonialCard";
 import SwiperCarousel from "./SwiperCarousel";
 import { TestimonialDataType } from "@/@types/type";
+import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 
 interface TestimonialsSliderProps {
   cards: TestimonialDataType["testimonials"];
 }
 const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
   return (
-    <>
+    <AnimateOnScroll direction="right">
       <SwiperCarousel
         data={cards}
         slidesPerView={1}
@@ -26,7 +27,7 @@ const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
         className="w-full"
         renderSlide={(card) => <TestimonialCard {...card} />}
       />
-    </>
+    </AnimateOnScroll>
   );
 };
 

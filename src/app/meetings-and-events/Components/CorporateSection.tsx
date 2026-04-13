@@ -2,6 +2,7 @@ import LinkButton from "@/components/buttons/LinkButton";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import CommonSlider from "@/components/sliders/CommonSlider";
 import { SectionHeading } from "@/components/typography";
+import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 
 interface CorporateSectionProps {
   title: string;
@@ -28,6 +29,7 @@ const CorporateSection: React.FC<CorporateSectionProps> = ({
         wrapperClassName="max-w-3xl mx-auto"
       />
       <CommonSlider images={images} title={title} />
+      <AnimateOnScroll direction="right">
       <div className="mt-8 space-y-3 max-w-4xl mx-auto text-center">
         {description.map((item, index) => (
           <p key={index} className="md:text-lg text-p2">
@@ -35,6 +37,7 @@ const CorporateSection: React.FC<CorporateSectionProps> = ({
           </p>
         ))}
       </div>
+      </AnimateOnScroll>
       <LinkButton
         href={link.href}
         label={link.label}

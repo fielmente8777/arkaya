@@ -1,0 +1,113 @@
+// Only apply on tablet + mobile
+// @media (max-width: 1024px) {
+//     .animate {
+//         transform: translateY(20px); // default state
+//         animation-duration: 0.6s;
+//         animation-timing-function: ease-out;
+//         animation-fill-mode: forwards; // keep final position
+//     }
+
+    // LEFT
+    // .animate-left {
+    //     transform: translateX(-20px);
+    //     animation: slideLeft 0.6s ease-out forwards;
+    // }
+
+    // RIGHT
+    // .animate-right {
+    //     transform: translateX(20px);
+    //     animation: slideRight 0.6s ease-out forwards;
+    // }
+
+    // BOTTOM
+    // .animate-bottom {
+    //     transform: translateY(20px);
+    //     animation: slideUp 0.6s ease-out forwards;
+    // }
+
+    // Keyframes (ONLY translate)
+//     @keyframes slideLeft {
+//         to {
+//             transform: translateX(0);
+//         }
+//     }
+
+//     @keyframes slideRight {
+//         to {
+//             transform: translateX(0);
+//         }
+//     }
+
+//     @keyframes slideUp {
+//         to {
+//             transform: translateY(0);
+//         }
+//     }
+// }
+
+// Disable animation on desktop
+// @media (min-width: 1025px) {
+//     .animate {
+//         opacity: 1;
+//         transform: none;
+//         animation: none;
+//     }
+// }
+
+
+.animate {
+  will-change: transform;
+}
+
+// Initial positions
+.animate-left {
+  transform: translateX(-20px);
+}
+
+.animate-right {
+  transform: translateX(50%);
+}
+
+.animate-bottom {
+  transform: translateY(30px);
+}
+
+// Active animation
+.animate-left.active {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.animate-right.active {
+  animation: slideRight 1s ease-out forwards;
+}
+
+.animate-bottom.active {
+  animation: slideUp 1s ease-out forwards;
+}
+
+// ❌ Disable on desktop by default
+@media (min-width: 1025px) {
+  .animate:not(.desktop-allowed) {
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+// Keyframes
+@keyframes slideLeft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}

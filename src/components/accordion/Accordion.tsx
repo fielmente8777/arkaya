@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
       }}
     >
       <div className="flex justify-between items-center  pb-4">
-        <h3 className="text-p2 text-[1.375rem] font-semibold">{question}</h3>
+        <h3 className="text-p2 text-base md:text-[1.375rem] font-semibold">{question}</h3>
         <DropDownIcon
           className={`transition-transform duration-300 ease-in-out ${isOpen ? "rotate-0" : "rotate-180"}`}
         />
@@ -37,7 +37,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
       >
         <div className="overflow-hidden">
           <p
-            className={` text-p2 text-lg bold-color ${isOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 ease-in-out`}
+            className={` text-p2 md:text-lg text-sm bold-color ${isOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 ease-in-out`}
             dangerouslySetInnerHTML={{ __html: answer }}
           />
         </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
 import "./style.scss";
+import "./animation.scss";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/footer/Footer";
 import Whatsapp from "@/components/ContactButton/WhatsApp";
@@ -50,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cinzel.variable} ${montserrat.variable} antialiased`}
+        className={`${cinzel.variable} ${montserrat.variable} antialiased overflow-x-clip`}
         suppressHydrationWarning={true}
       >
         <WebProvider>
@@ -61,7 +62,7 @@ export default function RootLayout({
           <Call callNumber={contact.phone[0]} />
           <PopUpForm />
         </WebProvider>
-        <Script id="chatbot-config" strategy="afterInteractive">
+        {/* <Script id="chatbot-config" strategy="afterInteractive">
           {`
             window.eazbotConfig = {
               ndid: "4c2f9cbf-5d53-4386-98a1-c571509a54c4",
@@ -72,7 +73,7 @@ export default function RootLayout({
         <Script
           src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
           strategy="afterInteractive"
-        />
+        /> */}
       </body>
     </html>
   );

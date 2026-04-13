@@ -1,6 +1,7 @@
 import LinkButton from "@/components/buttons/LinkButton";
 import { Section } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
+import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 import Image from "next/image";
 
 interface SpaProps {
@@ -25,14 +26,16 @@ const Spa: React.FC<SpaProps> = ({ title, description, image, link }) => {
       <div className="md:border-y border-b max-md:pb-8 border-p1 flex items-center justify-center">
         <div className="max-w-133.25 max-md:px-4 mx-auto ">
           <SectionHeading title={title} />
-          <div className="flex flex-col justify-between md:mt-8 mt-4">
-            {description.map((item, index) => (
-              <p key={index} className="text-lg text-p2 mb-4">
-                {item}
-              </p>
-            ))}
-            <LinkButton href={link.href} label={link.label} />
-          </div>
+          <AnimateOnScroll direction="right">
+            <div className="flex flex-col justify-between md:mt-8 mt-4">
+              {description.map((item, index) => (
+                <p key={index} className="text-lg text-p2 mb-4">
+                  {item}
+                </p>
+              ))}
+              <LinkButton href={link.href} label={link.label} />
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </Section>

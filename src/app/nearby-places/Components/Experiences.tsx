@@ -1,4 +1,5 @@
 import { SectionWithContainer } from "@/components/sectionComponants";
+import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 import Image from "next/image";
 import { JSX } from "react";
 
@@ -26,10 +27,14 @@ const Experiences: React.FC<ExperienceType> = ({ items }) => {
           <div
             className={`flex flex-col gap-6 ${index % 2 !== 0 ? "md:order-2" : ""}`}
           >
-            <div className="flex flex-col gap-2">
-              <h2 className="text-lg uppercase text-p1">{item.category}</h2>
-              <h3 className="font-primary text-3xl uppercase">{item.title}</h3>
-            </div>
+            <AnimateOnScroll direction="bottom">
+              <div className="flex flex-col gap-2">
+                <h2 className="text-lg uppercase text-p1">{item.category}</h2>
+                <h3 className="font-primary text-3xl uppercase">
+                  {item.title}
+                </h3>
+              </div>
+            </AnimateOnScroll>
             <div className="w-full relative aspect-4/3 md:hidden">
               <Image
                 src={item.image}
@@ -42,18 +47,22 @@ const Experiences: React.FC<ExperienceType> = ({ items }) => {
                 <span>{item.details[2].title}</span>
               </div>
             </div>
-            <p className="md:text-lg text-p2">{item.description}</p>
-            <ul className="flex items-center justify-center box-shadow divide-x-[0.5px] divide-p2 py-3 md:w-fit rounded-sm">
-              {item.details.slice(0, 2).map((detail, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-2.5 md:px-4 px-8.5"
-                >
-                  {detail.icon}
-                  <span>{detail.title}</span>
-                </li>
-              ))}
-            </ul>
+            <AnimateOnScroll direction="right">
+              <p className="md:text-lg text-p2">{item.description}</p>
+            </AnimateOnScroll>
+            <AnimateOnScroll direction="right">
+              <ul className="flex items-center justify-center box-shadow divide-x-[0.5px] divide-p2 py-3 md:w-fit rounded-sm">
+                {item.details.slice(0, 2).map((detail, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center text-nowrap max-sm:text-xs gap-2.5 md:px-4 px-8.5"
+                  >
+                    {detail.icon}
+                    <span>{detail.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </AnimateOnScroll>
           </div>
           <div className="w-full relative aspect-4/2 md:block hidden">
             <Image
