@@ -82,7 +82,7 @@ const WebSiteNavbar = () => {
 
           <Link
             href="/"
-            className="block md:mr-50 md:w-32 w-18 aspect-square relative"
+            className="block md:mr-80 md:w-32 w-18 aspect-square relative"
           >
             <Image
               src={navUpper.logo}
