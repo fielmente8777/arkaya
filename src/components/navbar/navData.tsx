@@ -3,7 +3,7 @@ import { FillLocationIcon } from "../../utils/icons";
 export const navUpper = {
   logo: "/arkaya-logo.png",
   link: {
-    name: " Dhanachuli ( Mukteshwar), Uttarakhand",
+    name: " Dhanachuli (Mukteshwar), Uttarakhand",
     href: contact.addressLink,
     icon: <FillLocationIcon />,
   },
