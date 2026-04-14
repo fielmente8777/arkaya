@@ -18,6 +18,7 @@ const WebSiteFooter = () => {
       <Container>
         <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] md:gap-10 gap-8">
           {/* LOGO */}
+
           <div className="flex flex-col max-sm:items-center gap-6 max-md:mb-4">
             <Link
               href="/"
@@ -91,7 +92,7 @@ const WebSiteFooter = () => {
 
               {/* DESKTOP */}
               <div className="hidden lg:flex flex-col gap-4">
-                <h2 className="text-[2rem] text-p2 font-primary uppercase">
+                <h2 className="text-2xl text-p2 font-primary uppercase">
                   {list.title}
                 </h2>
 
