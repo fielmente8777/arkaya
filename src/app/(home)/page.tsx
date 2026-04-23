@@ -11,6 +11,7 @@ import Form2 from "@/components/forms/Form2";
 export default function HomePage() {
   return (
     <main className="bg-background">
+      
       <SectionWithContainer defaultPadding={false} sectionClassName="md:py-12 py-8">
         <div className="relative w-full md:aspect-4/2 aspect-square">
         <Image src='/home/bnr.png' alt="bnr" fill className="object-cover" />
