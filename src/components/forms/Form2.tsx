@@ -88,7 +88,7 @@ const Form2 = ({ gridView }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${gridView ? "flex flex-col divide-y divide-p1" : "grid md:grid-cols-5 items-center gap-3.5 box-shadow"} py-3 px-4 bg-white  max-md:divide-y divide-p1`}
+      className={`${gridView ? "flex flex-col divide-y divide-p1" : "grid md:grid-cols-5 items-center gap-3.5 "} py-3 px-4 bg-white  max-md:divide-y divide-p1`}
     >
       {formFields.map((field, index) => (
         <>

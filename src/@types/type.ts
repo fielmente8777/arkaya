@@ -6,6 +6,10 @@ export interface AdventureDataType {
     title: string;
     image: string;
   }[];
+  cta?: {
+    label: string;
+    href: string;
+  };
 }
 
 export interface TestimonialDataType {
@@ -23,5 +27,9 @@ export interface ExperienceDataType {
     title: string;
     icon: JSX.Element;
   }[];
+  cta?: {
+    label: string;
+    href: string;
+  };
 }
 

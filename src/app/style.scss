@@ -1,4 +1,20 @@
 @layer utilities {
+  .custom-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+
+ 
+
+
   p {
     @media (width > 768px) {
       font-size: 1.125rem; // 18px
@@ -146,7 +162,6 @@
   // line-height: 1;
 }
 
-
 input:focus {
   outline: none;
   box-shadow: none;
@@ -162,9 +177,6 @@ input:focus {
   }
 }
 
-
-
-
 // custom swiper pagination styles
 
 .custom-pagination {
@@ -176,11 +188,10 @@ input:focus {
   }
 
   // .swiper-pagination-bullet-active {
-    
+
   //   background-color: transparent;
   // }
 }
-
 
 .blog-data {
   line-height: 1.7;
@@ -359,7 +370,6 @@ input:focus {
   }
 }
 
-
 .room-card,
 .near-by,
 .testimonial-card {
@@ -378,16 +388,30 @@ input:focus {
       color: var(--p1);
       width: 20px;
       height: 20px;
-
     }
     @media (width < 768px) {
       width: 32px;
       height: 32px;
-      svg{
+      svg {
         width: 12px;
         height: 12px;
       }
     }
-   
   }
 }
+
+ .room-custom-pagination {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+      border-radius: 50%;
+      opacity: 1;
+      border: 1px solid #E94128;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #E94128;
+      border: 1px solid #E94128;
+    }
+  }
