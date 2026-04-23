@@ -18,13 +18,13 @@ const RoomCard: React.FC<RoomsSectionProps["Cards"][0]> = ({
         <RoomImageSlider images={images} title={title} />
       </div>
       <div
-        className={`md:col-span-3 flex flex-col gap-4 md:gap-6 box-shadow rounded-3xl bg-background md:px-6 px-3.5 md:py-8.75 py-6`}
+        className={`md:col-span-3 flex flex-col gap-4 md:gap-5 justify-between box-shadow rounded-3xl bg-background md:px-6 px-3.5 md:py-6 py-6`}
       >
         <div className="space-y-2">
-          <p className="md:text-[2rem] text-[1.45rem] text-p1 font-primary uppercase abhayaLibre">
+          <p className="md:text-[1.7rem] text-[1.45rem] text-p1 font-primary uppercase abhayaLibre">
             {title}
           </p>
-          <p className="md:text-lg text-[#343434]">{subtitle}</p>
+          <p className="text-sm text-[#343434]">{subtitle}</p>
         </div>
 
         <div className="max-xl:block hidden">
@@ -48,7 +48,7 @@ const RoomCard: React.FC<RoomsSectionProps["Cards"][0]> = ({
 
         {/* room description */}
         <AnimateOnScroll direction="right">
-          <p className="md:text-lg text-p2">{description}</p>
+          <p className="md:text-base text-p2">{description}</p>
         </AnimateOnScroll>
         {/* secondary amenities */}
         <ul className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-3.5 border border-p1 bg-[#FFFFF3] rounded-xl p-4">

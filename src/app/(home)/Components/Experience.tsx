@@ -4,10 +4,10 @@ import { SectionHeading } from "@/components/typography";
 import ExperienceSlider from "./ExperienceSlider";
 import LinkButton from "@/components/buttons/LinkButton";
 
-const Experience: React.FC<ExperienceDataType> = ({ title, points, cta }) => {
+const Experience: React.FC<ExperienceDataType> = ({ title,description, points, cta }) => {
   return (
     <SectionWithContainer containerClassName="md:space-y-16 space-y-8">
-      <SectionHeading title={title} line />
+      <SectionHeading title={title} description={description} line />
       <div className="lg:flex hidden flex-wrap justify-center gap-x-36 gap-y-12">
         {points.map((item, index) => (
           <ExperienceCard key={index} title={item.title} icon={item.icon} />

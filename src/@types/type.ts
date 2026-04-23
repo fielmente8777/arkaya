@@ -2,6 +2,7 @@ import { JSX } from "react";
 
 export interface AdventureDataType {
   title: string;
+  description: string;
   items: {
     title: string;
     image: string;
@@ -23,6 +24,7 @@ export interface TestimonialDataType {
 
 export interface ExperienceDataType {
   title: string;
+  description: string;
   points: {
     title: string;
     icon: JSX.Element;

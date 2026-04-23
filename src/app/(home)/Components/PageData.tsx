@@ -37,48 +37,55 @@ export const homePageData = {
 
   experienceData: {
     title: "THE ARKAYA EXPERIENCE",
+    description:
+      "At Arkaya, experiences are crafted to mirror the rhythm of the mountains—unhurried, immersive, and quietly enriching. Whether you seek stillness or adventure, each moment here is designed to connect you with nature and yourself. Spend your time at ease with thoughtfully curated in-house experiences.",
     points: [
       {
-        title: "Private panoramic Himalayan views",
+        title: "Bonfire evenings under starlit skies",
         icon: <PrivatePanoramicHimalayanViews />,
       },
       {
-        title: "Boutique residences with bespoke detailing",
+        title: "Pool table for relaxed recreation",
         icon: <BoutiqueResidencesWithBespokeDetailing />,
       },
       {
-        title: "Elevated dining at 180° Restobar",
+        title: "Summit Gym for mindful movement",
         icon: <ElevatedDiningAt180Restobar />,
       },
       {
-        title: "Curated mountain and adventure experiences",
+        title: "Night sky gazing from scenic decks",
         icon: <CuratedMountainAndAdventureExperiences />,
       },
       {
-        title: "Seamless, attentive hospitality",
+        title: "Curated library at Himadri Lounge for quiet reflection",
         icon: <SeamlessAttentiveHospitality />,
       },
       {
-        title: "A rare balance of seclusion and accessibility",
+        title: "Board games for shared moments",
         icon: <BalanceSeclusionAccessibility />,
       },
-      { title: "A stay your pet will love too", icon: <StayPet /> },
+      {
+        title: "Shooting and archery for focused engagement",
+        icon: <StayPet />,
+      },
     ],
   },
 
   adventureData: {
     title: "ADVENTURE, REFINED",
+    description:
+      "For those seeking elevated thrills, we offer access to off-site adventures through our trusted local partners. Off-site activities are conducted by third-party partners and are available on a chargeable basis.",
     items: [
       {
-        title: "LOREM IPSUM",
+        title: "ZIP LINE",
         image: "/home/adventure-1.png",
       },
       {
-        title: "LOREM IPSUM",
+        title: "SKY CYCLING",
         image: "/home/adventure-2.png",
       },
       {
-        title: "LOREM IPSUM",
+        title: "WATERFALL SWIMMING",
         image: "/home/adventure-3.png",
       },
     ],

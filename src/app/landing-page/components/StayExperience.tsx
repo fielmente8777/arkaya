@@ -26,7 +26,7 @@ const StayExperience: React.FC<StayExperienceProps> = ({
         <div className="grid lg:grid-cols-[1.8fr_1fr] grid-cols-1 lg:gap-4.5 gap-3.5 items-center">
           <div className="space-y-6">
             <SectionHeading title={title} />
-            <div className="w-full relative aspect-[4/2.35] lg:block hidden">
+            <div className="w-full relative aspect-[4/2.38] lg:block hidden">
               <Image
                 src={images[0]}
                 alt="stay experience"
@@ -41,7 +41,7 @@ const StayExperience: React.FC<StayExperienceProps> = ({
               </AnimateOnScroll>
             </div>
           </div>
-          <div className="w-full relative aspect-4/6.25 lg:block hidden">
+          <div className="w-full relative aspect-4/6 lg:block hidden">
             <Image
               src={images[1]}
               alt="stay experience"

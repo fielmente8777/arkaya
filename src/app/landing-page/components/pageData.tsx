@@ -18,8 +18,8 @@ export const landingPageData = {
   introduction: {
     title: "Not Just a Stay, <br/>It’s An Experience",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Set high among the whispering forests of Mukteshwar, Arkaya unfolds with the grace of mountain light. Named after Arka, the sun, our retreat moves in harmony with dawn’s first glow and the lingering gold of evening.",
+      "Stay in residences inspired by the sacred peaks of Nandakot, Nanda Devi, Trishul, and Panchachuli. Stroll through Bugyal, our orchard garden of apple, plum, peach, persimmon, and walnut. Restore at Buransh Spa, strengthen at Summit Studio, gather with vision at Shikhar Hall, linger in stillness at Himadri Lounge, and dine suspended above the horizon at 180°.",
     ],
     images: ["/landing-page/intro-1.png", "/landing-page/intro-2.png"],
     cta: { label: "Book Now", href: contact.WhatsappCta },
@@ -44,9 +44,9 @@ export const landingPageData = {
           "/rooms/himalayan-vista/img-3.jpg",
         ],
         title: "Himalayan Vista Room",
-        subtitle: "Twin Room with Garden View",
+        subtitle: "1 Room | Twin / Double Bed | Garden + Oakwood Deck Access",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "A versatile and intimate space featuring two single beds that can be combined into a double. The garden and the Oakwood Deck, this room is ideal for guests who enjoy easy outdoor access and a relaxed setting.",
         commmonAmenities: [
           { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
           {
@@ -56,7 +56,7 @@ export const landingPageData = {
         ],
         amenities: [
           { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Bathtub", icon: <BathTubIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
           { label: "Himalayan View", icon: <HimalayanViewIcon /> },
           { label: "Lounge", icon: <LoungeIcon /> },
         ],
@@ -64,13 +64,17 @@ export const landingPageData = {
       },
       {
         images: [
-          "/rooms/himalayan-vista/img-4.jpg",
-          "/rooms/himalayan-vista/img-3.jpg",
+          "/rooms/himalayan-panorama/himalayan-panorama-2.jpeg",
+          "/rooms/himalayan-panorama/himalayan-panorama-3.jpeg",
+          "/rooms/himalayan-panorama/himalayan-panorama-4.jpeg",
+          "/rooms/himalayan-panorama/himalayan-panorama-5.jpeg",
+          "/rooms/himalayan-panorama/himalayan-panorama-6.jpeg",
+          
         ],
         title: "Himalayan Panorama Room",
-        subtitle: "Twin Room with Garden View",
+        subtitle: "5 Rooms | King Bed | Garden Access",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "Designed for quiet comfort, these rooms feature king size beds and open into garden spaces. A perfect blend of indoor warmth and outdoor freshness.",
         commmonAmenities: [
           { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
           {
@@ -80,7 +84,7 @@ export const landingPageData = {
         ],
         amenities: [
           { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Bathtub", icon: <BathTubIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
           { label: "Himalayan View", icon: <HimalayanViewIcon /> },
           { label: "Lounge", icon: <LoungeIcon /> },
         ],
@@ -92,9 +96,9 @@ export const landingPageData = {
           "/rooms/himalayan-vista/img-3.jpg",
         ],
         title: "Panoramic balcony Room",
-        subtitle: "Twin Room with Garden View",
+        subtitle: "14 Rooms | King Bed | Private Himalayan Balcony",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "Wake up to expansive Himalayan views from your own private balcony. These rooms are ideal for guests who want a personal outdoor space to soak in the landscape.",
         commmonAmenities: [
           { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
           {
@@ -104,7 +108,7 @@ export const landingPageData = {
         ],
         amenities: [
           { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Bathtub", icon: <BathTubIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
           { label: "Himalayan View", icon: <HimalayanViewIcon /> },
           { label: "Lounge", icon: <LoungeIcon /> },
         ],
@@ -116,9 +120,9 @@ export const landingPageData = {
           "/rooms/himalayan-vista/img-3.jpg",
         ],
         title: "Private deck residence",
-        subtitle: "Twin Room with Garden View",
+        subtitle: "2 Rooms | King Bed | Expansive Private Deck",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "A more elevated experience, these rooms open onto large private decks facing the Himalayas—perfect for slow mornings, sunset views, and complete privacy.",
         commmonAmenities: [
           { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
           {
@@ -128,7 +132,7 @@ export const landingPageData = {
         ],
         amenities: [
           { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Bathtub", icon: <BathTubIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
           { label: "Himalayan View", icon: <HimalayanViewIcon /> },
           { label: "Lounge", icon: <LoungeIcon /> },
         ],
@@ -140,9 +144,9 @@ export const landingPageData = {
           "/rooms/himalayan-vista/img-3.jpg",
         ],
         title: "Arkaya signature suite",
-        subtitle: "Twin Room with Garden View",
+        subtitle: "2 Suites | King Bed | Dry Kitchenette | Monal Deck",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "Our signature suites are designed for extended comfort, featuring a king bed, a dry kitchenette, and a private Himalaya-facing Monal Deck. Ideal for guests seeking space, privacy, and a more refined stay experience.",
         commmonAmenities: [
           { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
           {
@@ -152,7 +156,32 @@ export const landingPageData = {
         ],
         amenities: [
           { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Bathtub", icon: <BathTubIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
+          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
+          { label: "Lounge", icon: <LoungeIcon /> },
+        ],
+        cta: { label: "Book Now", href: contact.WhatsappCta },
+      },
+      {
+        images: [
+          "/rooms/himalayan-vista/img-4.jpg",
+          "/rooms/himalayan-vista/img-3.jpg",
+        ],
+        title: "Arkaya Signature Suite – Family Villa",
+        subtitle:
+          "1 Villa | One Bedroom | Living Room | Private Himalayan Deck",
+        description:
+          "A spacious family villa offering a separate bedroom and living room, along with a private deck facing the Himalayas. Perfect for families or longer stays that require both comfort and space.",
+        commmonAmenities: [
+          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
+          {
+            label: "Complimentary Breakfast",
+            icon: <ComplimentaryBreakfastIcon />,
+          },
+        ],
+        amenities: [
+          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
+          { label: "Housekeeping", icon: <BathTubIcon /> },
           { label: "Himalayan View", icon: <HimalayanViewIcon /> },
           { label: "Lounge", icon: <LoungeIcon /> },
         ],
@@ -171,6 +200,7 @@ export const landingPageData = {
 
   activitySection: {
     title: "Activities",
+    description: homePageData.adventureData.description,
     items: homePageData.adventureData.items,
     cta: {
       label: "Book Now",

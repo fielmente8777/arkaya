@@ -21,6 +21,8 @@ interface SectionHeadingDescProps {
   line2?: boolean;
   logo?: boolean;
   fontPrimary?: boolean;
+  description?: string;
+  descriptionClassName?: string;
 }
 
 const SectionHeading: React.FC<SectionHeadingDescProps> = ({
@@ -40,6 +42,8 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
   level,
   subLevel,
   fontPrimary = false,
+  description,
+  descriptionClassName,
 }) => {
   const titleLevel = level ?? 2;
   const subTitleLevel = subLevel ?? Math.min(titleLevel + 1, 6);
@@ -62,6 +66,13 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
                 titleColor ? `text-${titleColor}` : "text-primary"
               } md:text-5xl/tight text-[2rem] font-primary uppercase ${fontPrimary ? "primary-font" : "secondary-font"}`}
             />
+          )}
+          {description && (
+            <p
+              className={`text-[1.063rem] ${fontPrimary ? "primary-font" : "secondary-font"}  ${mdTextCenter ? "md:text-center" : ""} ${textCenter ? "text-center" : ""} ${smTextCenter ? "max-md:text-center" : ""} ${descriptionClassName}`}
+            >
+              {description}
+            </p>
           )}
           {logo && (
             <div className="w-16 aspect-square relative">
