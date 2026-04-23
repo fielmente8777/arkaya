@@ -35,6 +35,9 @@ export default function RoomsPage() {
           wrapperClassName="max-w-xl flex-wrap mx-auto"
           line
         />
+        <p className="text-center md:text-lg text-p2 mt-3">
+          {accommodationPageData.bannerData.description}
+        </p>
       </SectionWithContainer>
       <RoomSection {...accommodationPageData.roomsData} />
     </main>

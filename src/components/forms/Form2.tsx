@@ -6,7 +6,7 @@ import { CalendarIcon, CallIcon, MailIcon, UserIcon } from "@/utils/formIcons";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { getDateInputLimits } from "@/hooks/getDateInputLimits";
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
   gridView?: boolean;
@@ -91,7 +91,7 @@ const Form2 = ({ gridView }: Props) => {
       className={`${gridView ? "flex flex-col divide-y divide-p1" : "grid md:grid-cols-5 items-center gap-3.5 "} py-3 px-4 bg-white  max-md:divide-y divide-p1`}
     >
       {formFields.map((field, index) => (
-        <>
+        <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
               className={`flex items-center gap-2.5 ${gridView ? "py-4" : "max-md:pb-4 max-md:pt-2"}`}
@@ -166,7 +166,7 @@ const Form2 = ({ gridView }: Props) => {
           {errors[field.name] && (
             <p className="text-red-500">{errors[field.name]}</p>
           )}
-        </>
+        </React.Fragment>
       ))}
       <button type="submit" className="bg-p1  text-white text-lg py-3">
         {isSubmitting ? (

@@ -93,7 +93,7 @@ export const homePageData = {
 
   testimonialData: {
     title: "Guest Experiences",
-    image: "/testimonial.png",
+    image: "/home/testimonial.png",
     testimonials: [
       {
         text: "Arkaya Mukteshwar is easily one of the most serene luxury escapes I’ve experienced. Waking up to uninterrupted views of the snow-capped Himalayas from our room in Nanda Devi block felt surreal. Morning meditation at Brahmkamal deck was deeply grounding, and evenings at Oakwood deck with curated mocktails were just perfect. The attention to detail across the property is exceptional.",
