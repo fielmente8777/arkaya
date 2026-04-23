@@ -115,7 +115,7 @@ const LandingFooter = () => {
           <span className="text-p2">All Rights Reserved</span>
         </div>
         <p className="text-p2!">
-          Crafted with care by{" "}
+          Powered by{" "}
           <Link
             href="https://www.fielmente.com/"
             className="font-bold"
