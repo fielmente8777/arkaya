@@ -62,7 +62,7 @@ export default function RootLayout({
           <Call callNumber={contact.phone[0]} />
           <PopUpForm />
         </WebProvider>
-        {/* <Script id="chatbot-config" strategy="afterInteractive">
+        <Script id="chatbot-config" strategy="afterInteractive">
           {`
             window.eazbotConfig = {
               ndid: "4c2f9cbf-5d53-4386-98a1-c571509a54c4",
@@ -73,7 +73,7 @@ export default function RootLayout({
         <Script
           src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
           strategy="afterInteractive"
-        /> */}
+        />
       </body>
     </html>
   );
