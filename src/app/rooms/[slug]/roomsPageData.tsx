@@ -13,15 +13,15 @@ export const roomsPageData = [
     },
 
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A versatile and intimate space featuring two single beds that can be combined into a double. The garden and the Oakwood Deck, this room is ideal for guests who enjoy easy outdoor access and a relaxed setting.",
     ],
 
     roomHighlights: [
-      "212sqft",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Mountain View",
-      "Lorem ipsum",
+      "1 Room ",
+      "Twin / Double Bed",
+      "Garden + Oakwood Deck Access",
+      // "Mountain View",
+      // "Lorem ipsum",
     ],
 
     galleryData: {
@@ -55,20 +55,20 @@ export const roomsPageData = [
     bannerData: {
       title: "Himalayan panorama Room",
 
-      images: ["/rooms/himalayan-vista/bnr.jpg"],
+      images: [
+        "/rooms/himalayan-panorama/himalayan-panorama-2.jpeg",
+        "/rooms/himalayan-panorama/himalayan-panorama-3.jpeg",
+        "/rooms/himalayan-panorama/himalayan-panorama-4.jpeg",
+        "/rooms/himalayan-panorama/himalayan-panorama-5.jpeg",
+        "/rooms/himalayan-panorama/himalayan-panorama-6.jpeg",
+      ],
     },
 
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Designed for quiet comfort, these rooms feature king size beds and open into garden spaces. A perfect blend of indoor warmth and outdoor freshness.",
     ],
 
-    roomHighlights: [
-      "212sqft",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Mountain View",
-      "Lorem ipsum",
-    ],
+    roomHighlights: ["5 Rooms", "King Bed", "Garden Access"],
 
     galleryData: {
       images: [
@@ -105,15 +105,13 @@ export const roomsPageData = [
     },
 
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Wake up to expansive Himalayan views from your own private balcony. These rooms are ideal for guests who want a personal outdoor space to soak in the landscape.",
     ],
 
     roomHighlights: [
-      "212sqft",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Mountain View",
-      "Lorem ipsum",
+      "14 Rooms",
+      "King Bed",
+      "Private Himalayan Balcony",
     ],
 
     galleryData: {
@@ -151,15 +149,14 @@ export const roomsPageData = [
     },
 
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+     "A more elevated experience, these rooms open onto large private decks facing the Himalayas—perfect for slow mornings, sunset views, and complete privacy.",
     ],
 
     roomHighlights: [
-      "212sqft",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Mountain View",
-      "Lorem ipsum",
+      "2 Rooms",
+      "King Bed",
+      "Expansive Private Deck",
+      
     ],
 
     galleryData: {
@@ -197,15 +194,59 @@ export const roomsPageData = [
     },
 
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Our signature suites are designed for extended comfort, featuring a king bed, a dry kitchenette, and a private Himalaya-facing Monal Deck. Ideal for guests seeking space, privacy, and a more refined stay experience.",
     ],
 
     roomHighlights: [
-      "212sqft",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Mountain View",
-      "Lorem ipsum",
+      "2 Suites",
+      "King Bed",
+      "Dry Kitchenette",
+      "Monal Deck",
+    ],
+
+    galleryData: {
+      images: [
+        "/rooms/himalayan-vista/img-1.jpg",
+        "/rooms/himalayan-vista/img-2.jpg",
+        "/rooms/himalayan-vista/img-3.jpg",
+      ],
+      link: {
+        label: "BOOK NOW",
+        href: "#",
+      },
+    },
+
+    amenitiesData: {
+      items: [
+        "HIGH SPEED WIFI",
+        "daily House keeping",
+        "IN ROOM DINING",
+        "ENTERTAINMENT",
+      ],
+    },
+  },
+  {
+    slug: "arkaya-signature-suite-family-villa",
+    metaData: {
+      title: "Arkaya Signature Suite – Family Villa",
+      description:
+        "Stay in the Arkaya signature suite at Arkaya Mukteshwar offering elegant interiors, mountain views, and refined comfort in the Himalayas.",
+    },
+    bannerData: {
+      title: "Arkaya signature suite",
+
+      images: ["/rooms/himalayan-vista/bnr.jpg"],
+    },
+
+    description: [
+      "A spacious family villa offering a separate bedroom and living room, along with a private deck facing the Himalayas. Perfect for families or longer stays that require both comfort and space.",
+    ],
+
+    roomHighlights: [
+      "1 Villa",
+      "One Bedroom",
+      "Living Room",
+      "Private Himalayan Deck",
     ],
 
     galleryData: {

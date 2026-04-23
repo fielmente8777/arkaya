@@ -13,7 +13,7 @@ export default function HomePage() {
     <main className="bg-background">
       <SectionWithContainer defaultPadding={false} sectionClassName="md:py-12 py-8">
         <div className="relative w-full md:aspect-4/2 aspect-square">
-        <Image src='/home-banner.png' alt="bnr" fill className="object-cover" />
+        <Image src='/home/bnr.png' alt="bnr" fill className="object-cover" />
         </div>
         <Form2 />
       </SectionWithContainer>

@@ -5,7 +5,7 @@ export const nearbyPageData = {
   bannerData: {
     title: "EXPLORE <br/>NEARBY EXPERIENCES",
     description: ["Discover the Himalayan Neighborhood"],
-    images: ["/nearby/bnr.jpg"],
+    images: ["/nearby/bnr.png"],
     actions: [
       {
         label: "View on Map",

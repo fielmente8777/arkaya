@@ -35,7 +35,8 @@ export default function ContactUsPage() {
     <main>
       <Banner
         {...contactPageData.bannerData}
-        wrapperClassName="md:aspect-4/2"
+        wrapperClassName="md:aspect-[4/2.2]"
+        contentWrapperClassName="lg:mt-auto lg:mb-26"
       />
       <SectionWithContainer>
         <div className="grid md:grid-cols-[1fr_.95fr] grid-cols-1 gap-16 ">

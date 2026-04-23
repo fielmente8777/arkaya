@@ -74,7 +74,7 @@ const page = async (props: Params) => {
           </p>
         ))}
       </Container>
-      <ul className="my-8 max-w-7xl mx-auto flex max-md:flex-col items-center justify-between flex-wrap gap-4">
+      <ul className="my-8 max-w-fit mx-auto flex max-md:flex-col items-center justify-between flex-wrap gap-4">
         {pageProps?.roomHighlights?.map((item, index) => (
           <React.Fragment key={index}>
             <li
