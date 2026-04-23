@@ -42,8 +42,8 @@ export const accommodationPageData = {
         image: "/rooms/arkaya-signature-suite/arkaya-signature-suite-1.jpg",
       },
       {
-        title: "Arkaya Signature Suite",
-        description: "Private Deck, Balcony, Living Space, Dry Kitchen",
+        title: "Arkaya Signature Suite – Family Villa",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         image: "/rooms/arkaya-signature-suite/arkaya-signature-suite-1.jpg",
       },
     ],

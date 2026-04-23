@@ -20,21 +20,23 @@ const ExperienceSlider = ({ points }: ExperienceSliderProps) => {
           slidesPerView={1}
           spaceBetween={24}
           loop
-          modules={[Autoplay]}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // modules={[Autoplay]}
+          // autoplay={{
+          //   delay: 2500,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           breakpoints={{
             768: {
               slidesPerView: 2,
             },
           }}
-          className="max-sm:w-48.5 h-39"
+          className="max-sm:w-55!"
           renderSlide={(item) => (
             <div className="flex flex-col  items-center gap-4">
-              {item.icon}
+              <span>
+                {item.icon}
+              </span>
               <p className="text-lg text-center text-p2">{item.title}</p>
             </div>
           )}

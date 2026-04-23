@@ -28,11 +28,18 @@ export default RoomSection;
 
 export const RoomCard: React.FC<
   RoomSectionProps["items"][0] & { index: number }
-> = ({ title, description, image, index }) => {
+> = ({ title, description, image }) => {
+  const slugify = (str: string) =>
+    str
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .trim()
+      .replace(/\s+/g, "-");
   return (
     <Link
-      href={`/rooms/${title.replace(/\s/g, "-").toLowerCase()}`}
-      className={`w-full relative block ${index === 4 ? "md:col-span-2 md:aspect-4/1.5 aspect-4/3" : "aspect-4/3"}`}
+      href={`/rooms/${slugify(title)}`}
+      className={`w-full relative block aspect-4/3`}
+      // className={`w-full relative block ${index === 4 ? "md:col-span-2 md:aspect-4/1.5 aspect-4/3" : "aspect-4/3"}`}
     >
       <Image src={image} alt={title} fill className="object-cover" />
       <div className="absolute inset-0 bg-linear-to-t from-black/50 from-2% to-transparent" />

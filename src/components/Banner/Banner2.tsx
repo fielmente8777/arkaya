@@ -11,10 +11,10 @@ const Banner2: React.FC<Banner2Props> = ({ images, title }) => {
         images={images}
         wrapperClassName="md:aspect-4/2.25 aspect-4/4.5"
       />
-      <div className="absolute inset-0 bg-black/40 z-10" />
+      <div className="max-md:absolute max-md:inset-0 max-md:bg-black/40 z-10" />
       <div className="absolute md:inset-x-3.25 inset-x-1.5 inset-y-3 border border-white z-20">
-        <div className="max_width lg:mt-40 max-md:flex items-center justify-center h-full">
-          <h1 className="text-white md:text-5xl/tight md:max-w-md max-md:text-center text-3xl font-primary uppercase">{title}</h1>
+        <div className="max_width lg:mt-40 max-md:flex items-end  justify-center h-full">
+          <h1 className="text-white md:text-5xl/tight md:max-w-md max-md:mb-16 max-md:text-center text-3xl font-primary uppercase">{title}</h1>
         </div>
       </div>
     </section>
