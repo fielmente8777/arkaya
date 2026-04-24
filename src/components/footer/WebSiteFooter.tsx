@@ -14,7 +14,7 @@ const WebSiteFooter = () => {
   const contactList = websiteFooterData.lists[2];
 
   return (
-    <footer className="max_screen_width bg-background">
+    <footer className="max_screen_width bg-p4">
       <Container>
         <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[.8fr_.6fr_.6fr_1.2fr] md:gap-10 gap-8">
           {/* LOGO */}

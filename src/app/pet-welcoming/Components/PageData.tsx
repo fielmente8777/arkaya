@@ -72,7 +72,7 @@ export const petWelcomingPageData = {
 
   petPolicyFaq: {
     title: "Pet Hospitality – FAQs",
-    src: "/pet/img-2.png",
+    src: "/pet/img-3.png",
     items: [
       {
         question: "Does Arkaya allow pets?",

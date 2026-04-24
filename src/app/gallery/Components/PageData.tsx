@@ -57,8 +57,8 @@ export const galleryPageData = {
       { src: "/recep3.jpg", alt: "Reception" },
       { src: "/recep4.jpg", alt: "Reception" },
 
-      { src: "/gallery/gallery-1.jpg", alt: "Snow Season" },
-      { src: "/gallery/gallery-2.jpg", alt: "Experiences" },
+      // { src: "/gallery/gallery-1.jpg", alt: "Snow Season" },
+      // { src: "/gallery/gallery-2.jpg", alt: "Experiences" },
     ],
   },
 };

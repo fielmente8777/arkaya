@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/typography";
 import { LineIcon } from "@/components/typography/SectionHeading";
 import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 import Image from "next/image";
+import Link from "next/link";
 
 interface DiningProps {
   title: string;
@@ -40,7 +41,10 @@ const Dining: React.FC<DiningProps> = ({
           <Image src={images[0]} alt={title} fill className="object-cover" />
         </div>
         <AnimateOnScroll direction="right">
-          <div className="bg-background2 flex flex-col justify-center items-center gap-4 h-fit py-8 max-md:py-12 px-6  box-shadow mt-auto">
+          <div
+            id="menu"
+            className="bg-background2 flex flex-col justify-center items-center gap-4 h-fit py-8 max-md:py-12 px-6  box-shadow mt-auto"
+          >
             <span className="">
               <LineIcon />
             </span>
@@ -49,12 +53,16 @@ const Dining: React.FC<DiningProps> = ({
                 {item}
               </p>
             ))}
-            <LinkButton
+
+            <Link
               href={link.href}
-              label={link.label}
-              className="mx-auto"
-              downloaded
-            />
+              download={true}
+              className={`flex items-center text-nowrap gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 `}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </Link>
           </div>
         </AnimateOnScroll>
         <div className="w-full relative aspect-4/5.5">

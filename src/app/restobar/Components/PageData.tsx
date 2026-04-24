@@ -4,7 +4,7 @@ export const restobarPageData = {
     subtitle: "Crafted Cocktails Himalayan Views",
     images: ["/home/discovery.png"],
     actions: [
-      { label: "View Menu", href: "#" }
+      { label: "View Menu", href: "#menu" }
     ]
   },
 
@@ -23,7 +23,7 @@ export const restobarPageData = {
     ],
     link: {
       label: "Download Menu",
-      href: "#"
+      href: "/Arkaya Menu.pdf"
     }
   }
 };

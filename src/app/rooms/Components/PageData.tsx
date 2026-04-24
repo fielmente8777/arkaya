@@ -43,7 +43,7 @@ export const accommodationPageData = {
       },
       {
         title: "Arkaya Signature Suite – Family Villa",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        description: "Spacious suite, private views, elevated comfort, effortless luxury",
         image: "/rooms/arkaya-signature-suite/arkaya-signature-suite-1.jpg",
       },
     ],

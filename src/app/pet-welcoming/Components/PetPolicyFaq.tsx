@@ -17,7 +17,7 @@ const PetPolicyFaq: React.FC<PetPolicyFaqProps> = ({ title, src, items }) => {
   return (
     <Section className="">
       <SectionHeading title={title} line wrapperClassName="max-md:px-4" />
-      <div className="grid bg-white md:grid-cols-2 grid-cols-1 max-md:gap-6 md:mt-16 mt-10">
+      <div className="grid bg-white items-center md:grid-cols-2 grid-cols-1 max-md:gap-6 md:mt-16 mt-10">
         <div className="w-full relative aspect-4/3.5">
           <Image src={src} alt={title} fill className="object-cover" />
         </div>
