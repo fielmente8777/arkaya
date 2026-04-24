@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cinzel.variable} ${montserrat.variable} antialiased overflow-x-clip`}
+        className={`${cinzel.variable} ${montserrat.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <WebProvider>
