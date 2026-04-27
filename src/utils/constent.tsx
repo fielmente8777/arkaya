@@ -6,7 +6,7 @@ export const contact = {
   email: "reservations@arkayamukteshwar.com",
   mapUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.105160433119!2d79.6495805!3d29.3964796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0bd139cbe4ffb%3A0x535562e5dabb6279!2sArkaya%20Resort%20Mukteshwar!5e0!3m2!1sen!2sin!4v1773313853288!5m2!1sen!2sin",
-  phone: ["+91 88698 17528"],
+  phone: ["+91 88698 17528" , "+91 95579 09686"],
   address:
     "Dhanachuli Patti, Sunderkhal, Tehsil Dhari, Mukteshwar (Nainital), Uttarakhand 263137",
   addressLink: "https://maps.app.goo.gl/UNE7MTPTh84gEPhW7",

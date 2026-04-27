@@ -48,14 +48,22 @@ export default function ContactUsPage() {
             <AnimateOnScroll direction="right">
               <ul className="space-y-2 max-w-md">
                 {contactPageData.visitData.links.map((item, index) => (
-                  <li key={index}>
+                  <li key={index} className="flex gap-2.5">
                     <Link
                       href={item.href}
-                      className="flex gap-2.5 md:text-lg text-p2 text-wrap"
+                      className="flex gap-2 md:text-lg text-p2 text-wrap break-all"
                     >
-                      <span>{item.icon}</span>
+                      <span className="mt-1">{item.icon}</span>
                       {item.label}
                     </Link>
+                    {item.href2 && (
+                      <Link
+                        href={item.href2}
+                        className="flex gap-2.5 md:text-lg text-p2 text-wrap"
+                      >
+                        {item.label2}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

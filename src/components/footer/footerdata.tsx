@@ -106,12 +106,14 @@ export const websiteFooterData: WebsiteFooterData = {
           icon: <FillLocationIcon />,
         },
         {
-          label: "Call: " + contact.phone[0],
+          label:   contact.phone[0] + ",",
           href: `tel:${contact.phone[0]}`,
+          label2: contact.phone[1],
+          href2: "tel:" + contact.phone[1],
           icon: <FillCallIcon />,
         },
         {
-          label: "Email: " + contact.email,
+          label: contact.email,
           href: "mailto:" + contact.email,
           icon: <FillMailIcon />,
         },

@@ -125,22 +125,24 @@ const WebSiteFooter = () => {
 
             <ul className="flex flex-col gap-3">
               {contactList.links.map((item, i) => (
-                <li key={i}>
-                  {item.href ? (
+                <li key={i} className="flex gap-2">
+                  <Link
+                    href={item.href || ""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-2 text-p2 md:text-lg"
+                  >
+                    <span className="mt-1">{item.icon}</span>
+                    <span>{item.label}</span>
+                  </Link>
+
+                  {item.label2 && (
                     <Link
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex gap-2 text-p2 md:text-lg"
+                      href={item.href2 || ""}
+                      className="flex gap-2 text-p2"
                     >
-                      <span className="mt-1">{item.icon}</span>
-                      <span>{item.label}</span>
+                      {item.label2}
                     </Link>
-                  ) : (
-                    <span className="flex gap-2 text-p2">
-                      <span className="mt-1">{item.icon}</span>
-                      {item.label}
-                    </span>
                   )}
                 </li>
               ))}

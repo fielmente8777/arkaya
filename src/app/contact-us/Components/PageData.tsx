@@ -9,8 +9,13 @@ export const contactPageData = {
     ],
     images: ["/contact-banner.png"],
     actions: [
-      { label: "Check Availability", href: "#" , openPopUpForm: true},
-      { label: "Call Now", href: "tel:" + contact.phone[0], target: "_blank" , rel: "noreferrer"},
+      { label: "Check Availability", href: "#", openPopUpForm: true },
+      {
+        label: "Call Now",
+        href: "tel:" + contact.phone[0],
+        target: "_blank",
+        rel: "noreferrer",
+      },
     ],
   },
 
@@ -23,12 +28,14 @@ export const contactPageData = {
         icon: <FillLocationIcon />,
       },
       {
-        label: "Call: " + contact.phone[0],
+        label: contact.phone[0] +",",
         href: "tel:" + contact.phone[0],
+        label2: contact.phone[1],
+        href2: "tel:" + contact.phone[1],
         icon: <FillCallIcon />,
       },
       {
-        label: "Email: " + contact.email,
+        label: contact.email,
         href: "mailto:" + contact.email,
         icon: <FillMailIcon />,
       },
