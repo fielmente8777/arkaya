@@ -51,7 +51,7 @@ export default function ContactUsPage() {
                   <li key={index} className="flex gap-2.5">
                     <Link
                       href={item.href}
-                      className="flex gap-2 md:text-lg text-p2 text-wrap break-all"
+                      className="flex gap-2 md:text-lg text-p2 text-wrap"
                     >
                       <span className="mt-1">{item.icon}</span>
                       {item.label}
