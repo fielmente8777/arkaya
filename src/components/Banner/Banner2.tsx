@@ -6,7 +6,7 @@ interface Banner2Props {
 }
 const Banner2: React.FC<Banner2Props> = ({ images, title }) => {
   return (
-    <section className="relative max_screen_width">
+    <section className="relative max_screen_width overflow-hidden">
       <BannerSlider
         images={images}
         wrapperClassName="md:aspect-4/2.25 aspect-4/4.5"

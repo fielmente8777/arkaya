@@ -12,7 +12,7 @@ export default function LandingPage() {
   return (
     <main>
       <Banner2 {...landingPageData.banner} />
-      <SectionWithContainer containerClassName="border border-[#3A3939]">
+      <SectionWithContainer containerClassName="border border-[#3A3939] pointer-events-auto">
         <Form2 />
       </SectionWithContainer>
       <StayExperience {...landingPageData.introduction} />
