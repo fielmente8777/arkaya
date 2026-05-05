@@ -10,6 +10,7 @@ interface BookingFormData {
   email: string;
   checkIn?: string;
   checkOut?: string;
+  noOfPeople: number;
   message?: string;
 }
 
@@ -37,6 +38,7 @@ const initialFormData: BookingFormData = {
   email: "",
   checkIn: "",
   checkOut: "",
+  noOfPeople: 0,
   message: "",
 };
 
