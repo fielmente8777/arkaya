@@ -21,9 +21,11 @@ const Form3 = ({ gridView, className = "" }: Props) => {
     formData,
     handleChange,
     setFieldValue,
+    includeNoOfPeople,
   } = useBookingForm({
     includeCheckIn: true,
     includeCheckOut: true,
+    includeNoOfPeople: true,
     onSubmitSuccess: () => {},
   });
   const { min, max } = getDateInputLimits({
@@ -77,14 +79,18 @@ const Form3 = ({ gridView, className = "" }: Props) => {
       onChange: handleChange,
       icon: <MailIcon />,
     },
-    {
-      name: "noOfPeople",
-      label: "No. of People",
-      type: "string",
-      value: formData.noOfPeople,
-      onChange: handleChange,
-      icon: <PeopleIcon />,
-    },
+  ...(includeNoOfPeople
+    ? [
+        {
+          name: "noOfPeople",
+          label: "No. of People",
+          type: "number",
+          value: formData.noOfPeople,
+          onChange: handleChange,
+          icon: <PeopleIcon />,
+        },
+      ]
+    : []),
   ];
 
   return (
@@ -142,7 +148,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
+                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />
@@ -158,7 +164,8 @@ const Form3 = ({ gridView, className = "" }: Props) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
+                min={field.name === "noOfPeople" ? 1 : undefined}
+                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />

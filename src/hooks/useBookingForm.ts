@@ -10,7 +10,7 @@ interface BookingFormData {
   email: string;
   checkIn?: string;
   checkOut?: string;
-  noOfPeople: number;
+  noOfPeople: number | "";
   message?: string;
 }
 
@@ -27,6 +27,7 @@ interface UseBookingFormProps {
   includeCheckIn?: boolean;
   includeCheckOut?: boolean;
   includeMessage?: boolean;
+  includeNoOfPeople?: boolean;
   formHid?: string;
   onSubmitSuccess?: () => void;
 }
@@ -46,6 +47,7 @@ const useBookingForm = ({
   includeCheckIn,
   includeCheckOut,
   includeMessage,
+  includeNoOfPeople,
   formHid,
   onSubmitSuccess,
 }: UseBookingFormProps) => {
@@ -139,7 +141,13 @@ const useBookingForm = ({
       newErrors.checkOut = "Check-out date is required";
       isValid = false;
     }
-
+    if (
+      includeNoOfPeople &&
+      (!formData.noOfPeople || formData.noOfPeople < 1)
+    ) {
+      newErrors.noOfPeople = "Enter valid number of people";
+      isValid = false;
+    }
     setErrors(newErrors);
     return isValid;
   }, [formData, includeCheckIn, includeCheckOut]);
@@ -151,7 +159,8 @@ const useBookingForm = ({
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]:
+        name === "noOfPeople" ? (value === "" ? "" : Number(value)) : value,
     }));
     // Clear error for this field
     if (errors[name as keyof FormErrors]) {
@@ -251,6 +260,7 @@ const useBookingForm = ({
     includeCheckIn,
     includeCheckOut,
     includeMessage,
+    includeNoOfPeople,
     onSubmitSuccess,
     handleChange,
     setFieldValue,
