@@ -7,12 +7,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { getDateInputLimits } from "@/hooks/getDateInputLimits";
 import React, { useState } from "react";
+import { PeopleIcon, ReserveIcon } from "@/utils/landingPageIcons";
 
 interface Props {
   gridView?: boolean;
   className?: string;
 }
-const Form3 = ({ gridView ,className = ""}: Props) => {
+const Form3 = ({ gridView, className = "" }: Props) => {
   const {
     isSubmitting,
     errors,
@@ -79,10 +80,10 @@ const Form3 = ({ gridView ,className = ""}: Props) => {
     {
       name: "noOfPeople",
       label: "No. of People",
-      type: "number",
+      type: "string",
       value: formData.noOfPeople,
       onChange: handleChange,
-      icon: <CalendarIcon />,
+      icon: <PeopleIcon />,
     },
   ];
 
@@ -120,12 +121,12 @@ const Form3 = ({ gridView ,className = ""}: Props) => {
               <label className="text-white">{field.icon}</label>
               <div className="relative">
                 <select
-                 className="bg-transparent text-white px-2 appearance-none focus:outline-none [&>option]:text-black"
+                  className="bg-transparent text-white px-2 appearance-none focus:outline-none [&>option]:text-black"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
                   style={{ width: `${formData.countryCode.length * 2}ch` }}
-                   aria-label="Country Code"
+                  aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
                     <option key={index} value={country.code} className="">
@@ -176,7 +177,7 @@ const Form3 = ({ gridView ,className = ""}: Props) => {
           <span className="flex items-center justify-center gap-2.5">
             Reserve Table{" "}
             <span>
-              <ArrowUpIcons />
+              <ReserveIcon />
             </span>{" "}
           </span>
         )}

@@ -49,6 +49,8 @@ interface FooterData {
   }[];
 }
 
+
+
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/arkaya-logo.png",
   socialMedia: [
@@ -128,7 +130,44 @@ export const footerData: FooterData = {
     label: "Book Now",
     href: contact.WhatsappCta,
   },
+
   lists: [
+    {
+      title: "Contact us",
+      links: [
+        {
+          icon: <FillLocationIcon />,
+          label: contact.address,
+          href: contact.addressLink,
+        },
+        {
+          title: "Call: ",
+          icon: <FillCallIcon />,
+          label: contact.phone[0],
+          href: "tel:" + contact.phone[0],
+          label2: contact.phone[1],
+          href2: "tel:" + contact.phone[1],
+        },
+
+        {
+          title: "Email: ",
+          icon: <FillMailIcon />,
+          label: contact.email,
+          href: "mailto:" + contact.email,
+        },
+      ],
+    },
+  ],
+};
+ 
+export const restoFooterData = {
+   logo: "/180/logo.png",
+   button: {
+      label: "Reserve Table",
+      href: "/",
+    },
+
+ lists: [
     {
       title: "Contact us",
       links: [

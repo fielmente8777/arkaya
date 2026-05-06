@@ -6,7 +6,7 @@ import LazyLoadedMap from "../map/LazyLoadedMap";
 import LinkButton from "../buttons/LinkButton";
 import { contact } from "@/utils/constent";
 
-const LandingFooter = () => {
+const LandingFooter = ({ data = footerData }: any) => {
   return (
     <footer className="max_screen_width bg-p4">
       <Container>

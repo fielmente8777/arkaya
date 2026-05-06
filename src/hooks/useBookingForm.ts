@@ -38,7 +38,7 @@ const initialFormData: BookingFormData = {
   email: "",
   checkIn: "",
   checkOut: "",
-  noOfPeople: 0,
+  noOfPeople: "",
   message: "",
 };
 
