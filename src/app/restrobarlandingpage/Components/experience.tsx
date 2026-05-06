@@ -24,9 +24,9 @@ const Experience = () => {
   return (
     <SectionWithContainer
       sectionClassName="bg-background2 py-14"
-      containerClassName=" grid md:grid-cols-[408px_1fr_1fr] gap-5 max-w-[1200px] mx-auto"
+      containerClassName=" grid grid-cols-1 md:grid-cols-[408px_1fr_1fr] gap-5 max-w-[1200px] mx-auto px-4"
     >
-      <div className="  px-6 py-8 flex flex-col justify-between gap-8">
+      <div className="  px-6 py-8 flex flex-col gap-8">
         <div className="space-y-4">
           <p className="text-p1 text-sm tracking-wide">{data.tag}</p>
 
@@ -73,7 +73,7 @@ const Experience = () => {
       </div>
 
       {/* MOBILE SLIDER */}
-      <div className="md:hidden col-span-1 w-full">
+      <div className="md:hidden w-full mt-6 overflow-hidden">
         <SwiperCarousel
           data={data.images}
           slidesPerView={1.2}

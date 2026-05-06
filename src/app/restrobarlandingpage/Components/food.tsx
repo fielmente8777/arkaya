@@ -6,6 +6,7 @@ import { restoLandingPageData } from "./PageData";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { MenuIcon } from "@/utils/landingPageIcons";
 import { Autoplay } from "swiper/modules";
+
 const foodItems = restoLandingPageData.foodData;
 
 const Food = () => {
