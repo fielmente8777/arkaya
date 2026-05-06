@@ -19,7 +19,7 @@ const Hero = () => {
 
       <div className="pointer-events-none absolute inset-4 border border-white/40" />
 
-      <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-20 text-white">
+      <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-20 text-white overflow-hidden">
         <Image
           src={data.logo}
           alt="180 Restobar"
@@ -32,29 +32,27 @@ const Hero = () => {
           {data.subtitle}
         </p>
 
-        <h2 className="font-primary uppercase text-[80px] leading-[88px] font-normal mb-6 max-w-[600px]">
+        <h2 className="font-primary uppercase text-[64px] leading-[0.9] md:text-[80px] md:leading-[88px] font-normal mb-6 max-w-[280px] md:max-w-[600px] break-words">
           {data.title}
         </h2>
 
-       
-        <div className="flex gap-4">
+        <div className="flex flex-row flex-wrap gap-3">
           <LinkButton
             href={data.actions[0].href}
             label={data.actions[0].label}
-            className="bg-p1 text-white px-5 py-2"
-            icon= {<ReserveIcon />}
+            className="bg-p1 text-white  px-4 py-2 text-sm sm:px-5 sm:py-2"
+            icon={<ReserveIcon />}
           />
 
           <LinkButton
             href={data.actions[1].href}
             label={data.actions[1].label}
-            className="border border-white/60 text-white px-5 py-2 bg-transparent hover:bg-white/10"
+            className="border border-white/60 text-white px-4 py-2 bg-transparent hover:bg-white/10 sm:px-5 sm:py-2"
             icon={<MenuIcon />}
           />
         </div>
       </div>
 
-     
       <div className="absolute bottom-6 right-6 flex gap-2">
         <button className="bg-white/90 w-8 h-8 rounded-full flex items-center justify-center">
           ‹

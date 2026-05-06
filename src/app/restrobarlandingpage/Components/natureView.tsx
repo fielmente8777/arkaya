@@ -24,13 +24,13 @@ const NatureView = () => {
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* CENTERED CONTENT (1440px like Figma) */}
+      {/* CENTERED CONTENT */}
       <div className="absolute inset-0 flex items-center justify-center px-6">
         
-        <div className="w-full max-w-[1440px] flex items-center justify-between text-white">
+        <div className="w-full max-w-[1440px] flex flex-col items-start gap-6 text-white px-8 md:flex-row md:items-center md:justify-between">
           
           {/* LEFT */}
-          <div className="w-[441px] h-[164px] flex flex-col justify-between">
+          <div className="max-w-[260px] md:w-[441px] md:h-[164px] flex flex-col gap-5 md:justify-between">
             <h2 className="font-primary uppercase text-[48px] leading-tight">
               {data.title}
             </h2>

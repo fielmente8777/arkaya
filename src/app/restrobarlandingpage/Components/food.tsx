@@ -5,7 +5,7 @@ import { SectionWithContainer } from "@/components/sectionComponants";
 import { restoLandingPageData } from "./PageData";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { MenuIcon } from "@/utils/landingPageIcons";
-
+import { Autoplay } from "swiper/modules";
 const foodItems = restoLandingPageData.foodData;
 
 const Food = () => {
@@ -92,6 +92,12 @@ const Food = () => {
           slidesPerView={1.2}
           spaceBetween={12}
           loop
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          speed={800}
           className="w-full"
           renderSlide={(item) => {
             if (item.type === "video") {
@@ -124,17 +130,27 @@ const Food = () => {
 
             if (item.type === "card") {
               return (
-                <div className="bg-p1 text-white h-[320px] flex flex-col justify-center items-center text-center p-6 gap-4 rounded-lg">
-                  <h3 className="text-lg font-semibold tracking-wide">
-                    {item.title}
-                  </h3>
+                <div className="bg-p1 text-white h-[320px] flex flex-col justify-between text-center px-6 py-8 rounded-lg">
+                  <div className="flex flex-col items-center gap-5">
+                    <h3 className="font-primary text-[28px] leading-none uppercase">
+                      {item.title}
+                    </h3>
 
-                  <p className="text-sm opacity-90">{item.description}</p>
+                    <div className="relative w-[68px] h-[68px]">
+                     <div className="text-white [&>svg]:w-[80px] [&>svg]:h-[80px]">
+                      {item.icon}
+                    </div>
+                    </div>
+                    <p className="font-secondary text-[16px] leading-[24px] opacity-90">
+                      {item.description}
+                    </p>
+                  </div>
 
                   <LinkButton
                     label={item.button?.label || "Download Menu"}
                     href={item.button?.href || "/"}
-                    className="bg-white text-p1 px-4 py-2 mt-2"
+                    className="border border-white bg-transparent text-white py-3 w-full"
+                    icon={<MenuIcon />}
                   />
                 </div>
               );
