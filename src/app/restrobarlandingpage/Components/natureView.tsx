@@ -41,7 +41,6 @@ const NatureView = () => {
         priority
       />
 
-
       {/* OVERLAY */}
       <div className="md:absolute inset-0 bg-black/10 " />
 
