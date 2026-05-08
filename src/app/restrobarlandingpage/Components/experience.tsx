@@ -23,8 +23,8 @@ const Experience = () => {
 
   return (
     <SectionWithContainer
-      sectionClassName="bg-background2 py-14"
-      containerClassName=" grid grid-cols-1 md:grid-cols-[408px_1fr_1fr] gap-5 max-w-[1200px] mx-auto px-4"
+      sectionClassName="max_screen_width bg-p4 "
+      containerClassName=" grid grid-cols-1 md:grid-cols-[408px_1fr_1fr] gap-5 max-w-[1080px] mx-auto px-4 md:px-8"
     >
       <div className="  px-6 py-8 flex flex-col gap-8">
         <div className="space-y-4">

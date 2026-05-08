@@ -3,8 +3,8 @@ import { SpoonIcon } from "@/utils/landingPageIcons";
 export const restoLandingPageData = {
   foodData: [
     {
-      type: "image",
-      src: "/180/food1.jpg",
+      type: "video",
+      src: "/180/arkaya.mp4",
     },
     {
       type: "image",

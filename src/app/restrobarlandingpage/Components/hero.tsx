@@ -9,6 +9,7 @@ const Hero = () => {
 
   return (
     <Section defaultPadding={false} className="relative w-full h-[805px]">
+      {/* BACKGROUND IMAGE */}
       <Image
         src={data.image}
         alt="hero"
@@ -16,50 +17,50 @@ const Hero = () => {
         priority
         className="object-cover"
       />
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/40" />
+      {/* BORDER */}
+      <div className="pointer-events-none absolute inset-3 border border-white/40" />
 
-      <div className="pointer-events-none absolute inset-4 border border-white/40" />
-
-      <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-20 text-white overflow-hidden">
-        <Image
-          src={data.logo}
-          alt="180 Restobar"
-          width={169}
-          height={136}
-          className="mb-4"
-        />
-
-        <p className="flex items-center gap-2 mb-4 text-sm opacity-90 max-w-[387px]">
-          {data.subtitle}
-        </p>
-
-        <h2 className="font-primary uppercase text-[64px] leading-[0.9] md:text-[80px] md:leading-[88px] font-normal mb-6 max-w-[280px] md:max-w-[600px] break-words">
-          {data.title}
-        </h2>
-
-        <div className="flex flex-row flex-wrap gap-3">
-          <LinkButton
-            href={data.actions[0].href}
-            label={data.actions[0].label}
-            className="bg-p1 text-white  px-4 py-2 text-sm sm:px-5 sm:py-2"
-            icon={<ReserveIcon />}
+      {/* CONTENT */}
+      <div className="absolute inset-0 flex items-center px-4 md:px-[88px] text-white">
+        <div className="flex flex-col items-center text-center gap-4 md:gap-6 w-[280px] md:w-[552px] h-[493px] justify-center md:items-start md:text-left md:h-[460px]">
+          {/* LOGO */}
+          <Image
+            src={data.logo}
+            alt="180 Restobar"
+            width={169}
+            height={136}
+            className="w-[120px] h-auto md:w-[169px] md:h-[136px]"
           />
 
-          <LinkButton
-            href={data.actions[1].href}
-            label={data.actions[1].label}
-            className="border border-white/60 text-white px-4 py-2 bg-transparent hover:bg-white/10 sm:px-5 sm:py-2"
-            icon={<MenuIcon />}
-          />
+          {/* SUBTITLE */}
+          <p className="flex items-center gap-2 text-[16px] leading-[22px] md:text-[22px] md:leading-[26px] font-bold md:w-[387px]">
+            {data.subtitle}
+          </p>
+
+          {/* TITLE */}
+          <h2 className="font-primary uppercase text-[42px] leading-[46px] md:text-[80px] md:leading-[88px] font-normal md:w-[552px]">
+            {data.title}
+          </h2>
+
+          {/* BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 md:w-[468px]">
+            <LinkButton
+              href={data.actions[0].href}
+              label={data.actions[0].label}
+              className="bg-p1 text-white px-4 py-2 text-xs rounded-[4px] w-fit sm:w-auto md:w-[191px] md:h-[44px] md:px-6 md:py-3 md:text-sm"
+              icon={<ReserveIcon />}
+            />
+
+            <LinkButton
+              href={data.actions[1].href}
+              label={data.actions[1].label}
+              className="border border-white/60 text-white px-4 py-2 text-xs rounded-[4px] bg-transparent hover:bg-white/10 w-fit sm:w-auto md:w-[253px] md:h-[44px] md:px-6 md:py-3 md:text-sm"
+              icon={<MenuIcon />}
+            />
+          </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-6 right-6 flex gap-2">
-        <button className="bg-white/90 w-8 h-8 rounded-full flex items-center justify-center">
-          ‹
-        </button>
-        <button className="bg-white/90 w-8 h-8 rounded-full flex items-center justify-center">
-          ›
-        </button>
       </div>
     </Section>
   );

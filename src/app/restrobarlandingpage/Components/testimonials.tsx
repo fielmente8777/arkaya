@@ -9,7 +9,7 @@ const Testimonials: React.FC<TestimonialDataType> = ({
 }) => {
   return (
     <SectionWithContainer
-      sectionClassName="bg-background2 "
+      sectionClassName="bg-p4 "
       containerClassName="flex justify-center"
     >
       <div className="flex flex-col justify-between gap-6 max-w-7xl w-full text-center">

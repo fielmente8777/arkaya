@@ -6,6 +6,7 @@ import { restoLandingPageData } from "./PageData";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { MenuIcon } from "@/utils/landingPageIcons";
 import { Autoplay } from "swiper/modules";
+import { LazyLoadedVideo } from "@/components/Video";
 
 const foodItems = restoLandingPageData.foodData;
 
@@ -21,14 +22,12 @@ const Food = () => {
           if (item.type === "video") {
             return (
               <div key={index} className="relative h-full overflow-hidden">
-                <video
-                  src={item.src}
-                  className="absolute inset-0 w-full h-full object-cover"
+                <LazyLoadedVideo
+                  src={item.src!}
                   autoPlay
                   muted
                   loop
-                  playsInline
-                  preload="none"
+                  pauseOnScroll={false}
                 />
               </div>
             );
@@ -104,13 +103,12 @@ const Food = () => {
             if (item.type === "video") {
               return (
                 <div className="relative w-full h-[320px] overflow-hidden">
-                  <video
-                    src={item.src}
-                    className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  <LazyLoadedVideo
+                    src={item.src!}
                     autoPlay
                     muted
                     loop
-                    playsInline
+                    pauseOnScroll={false}
                   />
                 </div>
               );
@@ -138,9 +136,9 @@ const Food = () => {
                     </h3>
 
                     <div className="relative w-[68px] h-[68px]">
-                     <div className="text-white [&>svg]:w-[80px] [&>svg]:h-[80px]">
-                      {item.icon}
-                    </div>
+                      <div className="text-white [&>svg]:w-[80px] [&>svg]:h-[80px]">
+                        {item.icon}
+                      </div>
                     </div>
                     <p className="font-secondary text-[16px] leading-[24px] opacity-90">
                       {item.description}
