@@ -25,20 +25,20 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   return (
     <Link
       href={href}
-      className={`flex items-center text-nowrap gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
+      className={`flex items-center text-nowrap gap-3 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
       download={download}
       {...props}
     >
       {/* {whatsAppIcon && <WhatsAppIcon />} */}
       <span>{label}</span>
 
-{icon && <span className="flex items-center">{icon}</span>}
+      {icon && <span className="flex items-center">{icon}</span>}
 
-{arrowIcon && (
-  <span>
-    <ArrowIcon />
-  </span>
-)}
+      {arrowIcon && (
+        <span>
+          <ArrowIcon />
+        </span>
+      )}
 
       {/* {getDirectionIcon && <GetDirections />}  */}
     </Link>

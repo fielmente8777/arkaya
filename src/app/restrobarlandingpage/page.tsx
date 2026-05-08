@@ -55,14 +55,21 @@ export default function RestobarPage() {
         />
       </Section> */}
       <Hero />
-      <div className="mt-10 ">
+      <div className="my-14 ">
         <Form3 />
       </div>
       <Experience />
-      <NatureView />
+      <div className="md:mt-16 ">
+        <NatureView />
+
+      </div>
       <Food />
       <Gallery />
-      <Testimonials {...restoLandingPageData.testimonialData} />
+      <div className="my-14 ">
+        <Testimonials {...restoLandingPageData.testimonialData} />
+
+
+      </div>
       <div className="mt-10 mb-12">
         <Form3 />
       </div>

@@ -19,7 +19,7 @@ export const restoLandingPageData = {
       title: "SIGNATURE OFFERINGS",
       description:
         "Explore a menu that celebrates taste, creativity and the mountains.",
-        icon:<SpoonIcon/>,
+      icon: <SpoonIcon />,
       button: {
         label: "Download Menu",
         href: "/Arkaya Menu.pdf",
@@ -90,11 +90,12 @@ export const restoLandingPageData = {
     },
   },
   natureViewData: {
-    title: "SUNSET MOMENTS",
+    title: "SUNSET",
+    highlight: "MOMENTS",
     description:
       "Watch the sky transform as your glass fills, this is where evenings become memories.",
     image: "/180/view.jpg",
-    button : {
+    button: {
       label: "Reserve Table",
       href: "/",
     },
@@ -106,9 +107,9 @@ export const restoLandingPageData = {
     description:
       "More than a restobar, 180° is an elevated sensory escape, where handcrafted cocktails, curated cuisine, and uninterrupted valley views come together.",
     features: [
-      { label: "180° Panoramic Views", icon:"view"},
-      { label: "Curated Music & Vibe",icon:"music" },
-      { label: "Sunset to Starlight", icon:"sunset" },
+      { label: "180° Panoramic Views", icon: "view" },
+      { label: "Curated Music & Vibe", icon: "music" },
+      { label: "Sunset to Starlight", icon: "sunset" },
     ],
     button: {
       label: "Reserve Table",
@@ -117,21 +118,21 @@ export const restoLandingPageData = {
     images: ["/180/exp1.jpg", "/180/exp2.jpg"],
   },
   heroData: {
-  image: "/180/hero.jpg",
-  logo: "/180/logo.png", 
-  title: "DINE ABOVE EVERYTHING",
-  subtitle: "Crafted Drinks • Himalayan Views",
-  actions: [
-    {
-      label: "Reserve Table",
-      href: "/",
-      variant: "primary",
-    },
-    {
-      label: "Download Menu",
-      href: "/Arkaya Menu.pdf",
-      variant: "secondary",
-    },
-  ],
-},
+    image: "/180/hero.jpg",
+    logo: "/180/180new.png",
+    title: "DINE ABOVE EVERYTHING",
+    subtitle: "Crafted Drinks • Himalayan Views",
+    actions: [
+      {
+        label: "Reserve Table",
+        href: "/",
+        variant: "primary",
+      },
+      {
+        label: "Download Menu",
+        href: "/Arkaya Menu.pdf",
+        variant: "secondary",
+      },
+    ],
+  },
 };

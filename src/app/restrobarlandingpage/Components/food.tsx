@@ -85,13 +85,52 @@ const Food = () => {
         })}
       </div>
 
+
+
+      <div className="grid grid-cols-1 gap-5 md:hidden">
+
+        <div className="relative w-full h-[520px] overflow-hidden">
+          <LazyLoadedVideo
+            src={foodItems[0].src!}
+            autoPlay
+            muted
+            loop
+            pauseOnScroll={false}
+          />
+        </div>
+
+        <div className="bg-p1 text-white flex flex-col justify-between text-center px-6 py-8 gap-5 ">
+          <div className="flex flex-col items-center gap-5">
+            <h3 className="font-primary text-[28px] uppercase px-10">
+              {foodItems[3].title}
+            </h3>
+
+            <div className="">
+              <div className="text-white [&>svg]:w-[100px] [&>svg]:h-[100px] ">
+                {foodItems[3].icon}
+              </div>
+            </div>
+            <p className="font-secondary text-[16px] leading-[24px] opacity-90">
+              {foodItems[3].description}
+            </p>
+          </div>
+
+          <LinkButton
+            label={foodItems[3].button?.label || "Download Menu"}
+            href={foodItems[3].button?.href || "/"}
+            className="border border-white bg-transparent text-white py-3  w-full flex justify-center"
+            icon={<MenuIcon />}
+          />
+        </div>
+      </div>
+
       {/* 🔹 MOBILE SLIDER */}
       <div className="md:hidden w-full mt-6">
         <SwiperCarousel
           data={foodItems}
-          slidesPerView={1.2}
+          slidesPerView={1}
           spaceBetween={12}
-          loop
+          // loop
           modules={[Autoplay]}
           autoplay={{
             delay: 2500,
@@ -100,62 +139,23 @@ const Food = () => {
           speed={800}
           className="w-full"
           renderSlide={(item) => {
-            if (item.type === "video") {
-              return (
-                <div className="relative w-full h-[320px] overflow-hidden">
-                  <LazyLoadedVideo
-                    src={item.src!}
-                    autoPlay
-                    muted
-                    loop
-                    pauseOnScroll={false}
-                  />
-                </div>
-              );
-            }
 
             if (item.type === "image") {
               return (
-                <div className="relative w-full h-[320px]">
+                <div className="relative w-full h-[520px]">
                   <Image
                     src={item.src!}
                     alt="restobar"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                   />
                 </div>
               );
             }
+            else {
+              return null;
 
-            if (item.type === "card") {
-              return (
-                <div className="bg-p1 text-white h-[320px] flex flex-col justify-between text-center px-6 py-8 rounded-lg">
-                  <div className="flex flex-col items-center gap-5">
-                    <h3 className="font-primary text-[28px] leading-none uppercase">
-                      {item.title}
-                    </h3>
-
-                    <div className="relative w-[68px] h-[68px]">
-                      <div className="text-white [&>svg]:w-[80px] [&>svg]:h-[80px]">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <p className="font-secondary text-[16px] leading-[24px] opacity-90">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  <LinkButton
-                    label={item.button?.label || "Download Menu"}
-                    href={item.button?.href || "/"}
-                    className="border border-white bg-transparent text-white py-3 w-full"
-                    icon={<MenuIcon />}
-                  />
-                </div>
-              );
             }
-
-            return null;
           }}
         />
       </div>

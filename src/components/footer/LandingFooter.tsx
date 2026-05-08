@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { Container } from "../sectionComponants";
 import Image from "next/image";
-import { footerData } from "./footerdata";
 import LazyLoadedMap from "../map/LazyLoadedMap";
 import LinkButton from "../buttons/LinkButton";
 import { contact } from "@/utils/constent";
+import { FooterData } from "./footerdata";
+import { ReserveIcon } from "@/utils/landingPageIcons";
 
-const LandingFooter = ({ data = footerData }: any) => {
+const LandingFooter = ({ footerData }: { footerData: FooterData }) => {
   return (
     <footer className="max_screen_width bg-p4">
       <Container>
@@ -26,11 +27,12 @@ const LandingFooter = ({ data = footerData }: any) => {
             </div>
 
             <LinkButton
-              href={footerData.cta.href}
-              label={footerData.cta.label}
+              href={footerData?.cta?.href || ""}
+              label={footerData?.cta?.label || ""}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex justify-center text-white uppercase rounded-full max-md:mx-auto"
+              icon={<ReserveIcon />}
             />
           </div>
 
@@ -50,11 +52,10 @@ const LandingFooter = ({ data = footerData }: any) => {
                     key={suIndex}
                   >
                     <span
-                      className={`mt-1 ${
-                        index === 1
-                          ? "text-p2 flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
-                          : "text-p2 inline-block"
-                      }`}
+                      className={`mt-1 ${index === 1
+                        ? "text-p2 flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
+                        : "text-p2 inline-block"
+                        }`}
                     >
                       {item.icon}
                       <span className="sr-only">{item.label}</span>
@@ -67,11 +68,10 @@ const LandingFooter = ({ data = footerData }: any) => {
                       className="flex gap-2"
                     >
                       <span
-                        className={`${
-                          index === 1
-                            ? "text-p2 font-mont text-2xl my-auto"
-                            : "md:text-lg text-p2 inline-block"
-                        }`}
+                        className={`${index === 1
+                          ? "text-p2 font-mont text-2xl my-auto"
+                          : "md:text-lg text-p2 inline-block"
+                          }`}
                       >
                         {item.label}
                       </span>
@@ -85,11 +85,10 @@ const LandingFooter = ({ data = footerData }: any) => {
                         className="flex gap-2 max-md:ml-0"
                       >
                         <span
-                          className={`${
-                            index === 1
-                              ? "text-p2 font-aboreto text-2xl my-auto"
-                              : "md:text-lg text-p2"
-                          }`}
+                          className={`${index === 1
+                            ? "text-p2 font-aboreto text-2xl my-auto"
+                            : "md:text-lg text-p2"
+                            }`}
                         >
                           {item.label2}
                         </span>
@@ -118,7 +117,7 @@ const LandingFooter = ({ data = footerData }: any) => {
           Powered by{" "}
           <Link
             href="https://www.fielmente.com/"
-            className="font-bold"
+            className="font-semibold"
             target="_blank"
           >
             Fielmente

@@ -30,11 +30,11 @@ interface WebsiteFooterData {
   }[];
 }
 
-interface FooterData {
+export interface FooterData {
   logo: string;
-  cta: {
-    label: string;
-    href: string;
+  cta?: {
+    label?: string;
+    href?: string;
   };
   lists: {
     title?: string;
@@ -108,7 +108,7 @@ export const websiteFooterData: WebsiteFooterData = {
           icon: <FillLocationIcon />,
         },
         {
-          label:   contact.phone[0] + ",",
+          label: contact.phone[0] + ",",
           href: `tel:${contact.phone[0]}`,
           label2: contact.phone[1],
           href2: "tel:" + contact.phone[1],
@@ -159,15 +159,15 @@ export const footerData: FooterData = {
     },
   ],
 };
- 
-export const restoFooterData = {
-   logo: "/180/logo.png",
-   button: {
-      label: "Reserve Table",
-      href: "/",
-    },
 
- lists: [
+export const restoFooterData: FooterData = {
+  logo: "/180/180new.png",
+  cta: {
+    label: "Reserve Table",
+    href: "/",
+  },
+
+  lists: [
     {
       title: "Contact us",
       links: [
