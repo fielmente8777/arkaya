@@ -118,6 +118,7 @@ const Food = () => {
           <LinkButton
             label={foodItems[3].button?.label || "Download Menu"}
             href={foodItems[3].button?.href || "/"}
+            download={true}
             className="border border-white bg-transparent text-white py-3  w-full flex justify-center"
             icon={<MenuIcon />}
           />

@@ -3,7 +3,6 @@ import LinkButton from "@/components/buttons/LinkButton";
 import { Section } from "@/components/sectionComponants";
 import { restoLandingPageData } from "./PageData";
 import { MenuIcon, ReserveIcon } from "@/utils/landingPageIcons";
-import Link from "next/link";
 
 const Hero = () => {
   const data = restoLandingPageData.heroData;
@@ -54,14 +53,13 @@ const Hero = () => {
               icon={<ReserveIcon />}
             />
 
-            <Link
+            <LinkButton
               href={data.actions[1].href}
-              className="flex items-center text-nowrap gap-3 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95  border font-semibold items-center gap-3 border-white/60 text-white px-4 flex justify-center py-2 text-xs rounded-[4px] max-md:w-[191px] md:h-[44px] bg-transparent hover:bg-white/10 w-fit sm:w-auto md:px-6 md:py-3 md:text-sm"
-            // icon={}
-            >
-              {data.actions[1].label}<MenuIcon />
-
-            </Link>
+              label={data.actions[1].label}
+              download={true}
+              className="border border-white/60 text-white px-4 flex justify-center py-2 text-xs rounded-[4px] max-md:w-[191px] md:h-[44px] bg-transparent hover:bg-white/10 w-fit sm:w-auto md:px-6 md:py-3 md:text-sm"
+              icon={<MenuIcon />}
+            />
           </div>
         </div>
       </div>
