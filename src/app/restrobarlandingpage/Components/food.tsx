@@ -9,6 +9,7 @@ import { Autoplay } from "swiper/modules";
 import { LazyLoadedVideo } from "@/components/Video";
 
 const foodItems = restoLandingPageData.foodData;
+const imageItems = foodItems.filter((item) => item.type === "image");
 
 const Food = () => {
   return (
@@ -32,7 +33,8 @@ const Food = () => {
               </div>
             );
           }
-
+ 
+          
           if (item.type === "image") {
             return (
               <div key={index} className="relative h-full">
@@ -85,10 +87,7 @@ const Food = () => {
         })}
       </div>
 
-
-
       <div className="grid grid-cols-1 gap-5 md:hidden">
-
         <div className="relative w-full h-[520px] overflow-hidden">
           <LazyLoadedVideo
             src={foodItems[0].src!}
@@ -127,7 +126,7 @@ const Food = () => {
       {/* 🔹 MOBILE SLIDER */}
       <div className="md:hidden w-full mt-6">
         <SwiperCarousel
-          data={foodItems}
+          data={imageItems}
           slidesPerView={1}
           spaceBetween={12}
           // loop
@@ -139,10 +138,9 @@ const Food = () => {
           speed={800}
           className="w-full"
           renderSlide={(item) => {
-
             if (item.type === "image") {
               return (
-                <div className="relative w-full h-[520px]">
+                <div className="relative w-full h-[420px]">
                   <Image
                     src={item.src!}
                     alt="restobar"
@@ -151,10 +149,8 @@ const Food = () => {
                   />
                 </div>
               );
-            }
-            else {
+            } else {
               return null;
-
             }
           }}
         />
