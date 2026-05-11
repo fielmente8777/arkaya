@@ -23,10 +23,8 @@ const Form3 = ({ gridView, className = "" }: Props) => {
     setFieldValue,
     includeNoOfPeople,
   } = useBookingForm({
-    includeCheckIn: true,
-    includeCheckOut: true,
     includeNoOfPeople: true,
-    onSubmitSuccess: () => {},
+    onSubmitSuccess: () => { },
   });
   const { min, max } = getDateInputLimits({
     showPast: false,
@@ -79,8 +77,8 @@ const Form3 = ({ gridView, className = "" }: Props) => {
       onChange: handleChange,
       icon: <MailIcon />,
     },
-  ...(includeNoOfPeople
-    ? [
+    ...(includeNoOfPeople
+      ? [
         {
           name: "noOfPeople",
           label: "No. of People",
@@ -90,7 +88,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
           icon: <PeopleIcon />,
         },
       ]
-    : []),
+      : []),
   ];
 
   return (

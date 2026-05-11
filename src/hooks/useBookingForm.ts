@@ -195,6 +195,7 @@ const useBookingForm = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    console.log("jhjgfxc")
     if (!validateForm()) return;
 
     setIsSubmitting(true);
