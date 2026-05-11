@@ -5,6 +5,7 @@ interface LinkButtonProps {
   className?: string;
   whatsAppIcon?: boolean;
   arrowIcon?: boolean;
+  icon?: React.ReactNode;
   getDirectionIcon?: boolean;
   [key: string]: unknown;
   showSecureBadge?: boolean;
@@ -18,17 +19,20 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   className = "",
   arrowIcon = false,
   download = false,
+  icon,
   ...props
 }) => {
   return (
     <Link
       href={href}
-      className={`flex items-center text-nowrap gap-6 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
+      className={`flex items-center text-nowrap gap-3 bg-p1 text-white rounded-sm w-fit px-4 py-2 font-semibold hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
       download={download}
       {...props}
     >
       {/* {whatsAppIcon && <WhatsAppIcon />} */}
-      {label}
+      <span>{label}</span>
+
+      {icon && <span className="flex items-center">{icon}</span>}
 
       {arrowIcon && (
         <span>

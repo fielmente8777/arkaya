@@ -30,11 +30,11 @@ interface WebsiteFooterData {
   }[];
 }
 
-interface FooterData {
+export interface FooterData {
   logo: string;
-  cta: {
-    label: string;
-    href: string;
+  cta?: {
+    label?: string;
+    href?: string;
   };
   lists: {
     title?: string;
@@ -48,6 +48,8 @@ interface FooterData {
     }[];
   }[];
 }
+
+
 
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/arkaya-logo.png",
@@ -106,7 +108,7 @@ export const websiteFooterData: WebsiteFooterData = {
           icon: <FillLocationIcon />,
         },
         {
-          label:   contact.phone[0] + ",",
+          label: contact.phone[0] + ",",
           href: `tel:${contact.phone[0]}`,
           // label2: contact.phone[1],
           // href2: "tel:" + contact.phone[1],
@@ -128,6 +130,43 @@ export const footerData: FooterData = {
     label: "Book Now",
     href: contact.WhatsappCta,
   },
+
+  lists: [
+    {
+      title: "Contact us",
+      links: [
+        {
+          icon: <FillLocationIcon />,
+          label: contact.address,
+          href: contact.addressLink,
+        },
+        {
+          title: "Call: ",
+          icon: <FillCallIcon />,
+          label: contact.phone[0],
+          href: "tel:" + contact.phone[0],
+          label2: contact.phone[1],
+          href2: "tel:" + contact.phone[1],
+        },
+
+        {
+          title: "Email: ",
+          icon: <FillMailIcon />,
+          label: contact.email,
+          href: "mailto:" + contact.email,
+        },
+      ],
+    },
+  ],
+};
+
+export const restoFooterData: FooterData = {
+  logo: "/180/180new.png",
+  cta: {
+    label: "Reserve Table",
+    href: "/",
+  },
+
   lists: [
     {
       title: "Contact us",

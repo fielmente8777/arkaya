@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import LandingFooter from "./LandingFooter";
 import WebSiteFooter from "./WebSiteFooter";
+import { footerData, restoFooterData } from "./footerdata";
 
 const Footer = () => {
   const pathName = usePathname();
@@ -9,7 +10,9 @@ const Footer = () => {
     case "/thank-you/":
       return null;
     case "/landing-page/":
-      return <LandingFooter />;
+      return <LandingFooter footerData={footerData} />;
+    case "/restrobarlandingpage/":
+      return <LandingFooter footerData={restoFooterData} />;
     default:
       return <WebSiteFooter />;
   }

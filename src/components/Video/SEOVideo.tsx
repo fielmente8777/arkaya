@@ -1,4 +1,5 @@
 "use client";
+import { PlayIcon } from "@/utils/landingPageIcons";
 import { useEffect, useRef, useState } from "react";
 
 interface SEOVideoProps {
@@ -68,18 +69,39 @@ const SEOVideo: React.FC<SEOVideoProps> = ({
   }, [isVisible, pauseOnScroll, autoPlay, src]);
 
   return (
-    <div ref={containerRef} className="w-full h-full">
+    <div
+      ref={containerRef}
+      className="w-full h-full relative group overflow-hidden"
+      onMouseEnter={() => {
+        if (videoRef.current) {
+          videoRef.current.play().catch(() => {});
+        }
+      }}
+      onMouseLeave={() => {
+        if (videoRef.current) {
+          videoRef.current.pause();
+          videoRef.current.currentTime = 0;
+        }
+      }}
+    >
       <video
         ref={videoRef}
         poster={poster}
         muted={muted}
         loop={loop}
-        controls={controls}
+        controls={false}
         playsInline
         preload="metadata"
         controlsList="nodownload"
         className="w-full h-full object-cover"
       />
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/30 transition-opacity duration-300 group-hover:bg-black/10" />
+
+      {/* PLAY ICON */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
+        <PlayIcon />
+      </div>
     </div>
   );
 };
