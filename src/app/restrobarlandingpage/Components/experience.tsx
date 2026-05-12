@@ -27,7 +27,7 @@ const Experience = () => {
       containerClassName=" grid grid-cols-1 md:grid-cols-[408px_1fr_1fr] gap-5 max-w-[1080px] mx-auto max-md:px-0! md:px-8"
     >
       <div className=" px-2 flex flex-col gap-10 max-md:px-4">
-        
+
         <div className="space-y-5">
           <p className="text-p1 text-md tracking-wide">{data.tag}</p>
 
@@ -38,10 +38,9 @@ const Experience = () => {
           <p className="text-[18px] text-gray-600 max-w-[380px] mt-8!">
             {data.description}
           </p>
-        </div>
       </div>
       {/* MOBILE SLIDER */}
-      <div className="md:hidden w-full mt-6 overflow-hidden">
+     <div className="md:hidden w-screen relative left-1/2 -translate-x-1/2 mt-6 overflow-hidden">
         <SwiperCarousel
           data={data.images}
           slidesPerView={1}
@@ -61,6 +60,7 @@ const Experience = () => {
           )}
         />
       </div>
+
       <div className=" flex flex-col gap-10 w-full max-md:px-4">
         <div className="grid grid-cols-3 gap text-center">
           {data.features.map((item, i) => (
@@ -83,6 +83,7 @@ const Experience = () => {
           className="bg-p1 text-white px-5 py-3 w-full flex justify-center"
           icon={<ReserveIcon />}
         />
+      </div>
       </div>
       {/* DESKTOP IMAGES */}
       <div className="hidden md:contents">
