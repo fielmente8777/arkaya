@@ -14,7 +14,7 @@ const Gallery = () => {
   return (
     <SectionWithContainer
       sectionClassName="py-[14px]!"
-      containerClassName="flex flex-col items-center gap-[24px] md:gap-[56px] max-w-[1264px] mx-auto"
+      containerClassName="flex flex-col items-center gap-[24px] md:gap-[56px] max-w-[1264px] mx-auto max-md:px-0!"
     >
       <SectionHeading
         textCenter
@@ -36,24 +36,20 @@ const Gallery = () => {
           data={images}
           slidesPerView={1}
           spaceBetween={12}
+          loop
           loopAdditionalSlides={images.length}
           modules={[Autoplay, Navigation]}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            // pauseOnMouseEnter: true,
           }}
-          speed={1000}
+          speed={700}
           className="w-full"
           navigation
           renderSlide={(img) => (
             <div className="relative w-full h-[350px]">
-              <Image
-                src={img}
-                alt="restobar"
-                fill
-                className="object-cover"
-              />
+              <Image src={img} alt="restobar" fill className="object-cover" />
             </div>
           )}
         />
@@ -70,13 +66,14 @@ const Gallery = () => {
           </button>
         </div> */}
       </div>
-
-      <LinkButton
-        label={restoLandingPageData.galleryData.button.label}
-        href={restoLandingPageData.galleryData.button.href}
-        className="bg-p1 text-white px-6 py-3 max-md:w-full max-md:flex max-md:justify-center"
-        icon={<ReserveIcon />}
-      />
+      <div className="px-4 w-full">
+        <LinkButton
+          label={restoLandingPageData.galleryData.button.label}
+          href={restoLandingPageData.galleryData.button.href}
+          className="bg-p1 text-white px-6 py-3 max-md:w-full max-md:flex max-md:justify-center"
+          icon={<ReserveIcon />}
+        />
+      </div>
     </SectionWithContainer>
   );
 };

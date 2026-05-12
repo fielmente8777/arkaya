@@ -11,17 +11,18 @@ const NatureView = () => {
 
   return (
     <Section className="relative bg-white w-full md:h-[600px] flex justify-center">
-      <div className="max-md:relative max-md:block hidden space-y-3">
+      <div className="max-md:relative max-md:block hidden space-y-3 w-full">
         {/* <p className="text-p1 text-md tracking-wide">{data.title}</p> */}
+        <div className="w-full px-4">
+          <h2 className="font-primary uppercase text-[32px] gap-5">
+            {data.title}
+            <span className="text-p1 ml-2">{data.highlight}</span>
+          </h2>
 
-        <h2 className="font-primary uppercase text-[32px] gap-5">
-          {data.title}
-          <span className="text-p1 ml-2">{data.highlight}</span>
-        </h2>
-
-        <p className="text-[18px] text-gray-600 max-w-[380px] mt-4!">
-          {data.description}
-        </p>
+          <p className="text-[18px] text-gray-600 max-w-[380px] mt-4!">
+            {data.description}
+          </p>
+        </div>
         <div className="relative h-[300px] mt-8">
           <Image
             src={data.image}
@@ -29,6 +30,15 @@ const NatureView = () => {
             fill
             className="object-cover"
             priority
+          />
+        </div>
+        {/* MOBILE BUTTON */}
+        <div className="flex justify-center mt-6">
+          <LinkButton
+            label={data.button.label}
+            href={data.button.href}
+            className="bg-p1 text-white px-9 py-3"
+            icon={<ReserveIcon />}
           />
         </div>
       </div>
