@@ -28,7 +28,7 @@ const Food = () => {
                   autoPlay
                   muted
                   loop
-                  pauseOnScroll={false}
+                  pauseOnScroll={true}
                 />
               </div>
             );
@@ -94,7 +94,7 @@ const Food = () => {
             autoPlay
             muted
             loop
-            pauseOnScroll={false}
+            pauseOnScroll={true}
           />
         </div>
 
@@ -129,7 +129,7 @@ const Food = () => {
           data={imageItems}
           slidesPerView={1}
           spaceBetween={12}
-          // loop
+          loop
           modules={[Autoplay]}
           autoplay={{
             delay: 2500,
@@ -137,10 +137,12 @@ const Food = () => {
           }}
           speed={800}
           className="w-full"
-          renderSlide={(item) => {
+          renderSlide={(item,index) => {
             if (item.type === "image") {
               return (
-                <div className="relative w-full h-[420px]">
+                <div
+                 key={item.src || index}
+                 className="relative w-full h-[420px]">
                   <Image
                     src={item.src!}
                     alt="restobar"

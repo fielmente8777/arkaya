@@ -32,6 +32,7 @@ interface WebsiteFooterData {
 
 export interface FooterData {
   logo: string;
+  logoClassName?: string;
   cta?: {
     label?: string;
     href?: string;
@@ -162,9 +163,10 @@ export const footerData: FooterData = {
 
 export const restoFooterData: FooterData = {
   logo: "/180/180new.png",
+   logoClassName: "max-w-[200px] mx-auto",
   cta: {
     label: "Reserve Table",
-    href: "/",
+    href: contact.WhatsappCta,
   },
 
   lists: [

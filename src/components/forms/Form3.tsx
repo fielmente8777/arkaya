@@ -79,18 +79,18 @@ const Form3 = ({ gridView, className = "" }: Props) => {
       onChange: handleChange,
       icon: <MailIcon />,
     },
-  ...(includeNoOfPeople
-    ? [
-        {
-          name: "noOfPeople",
-          label: "No. of People",
-          type: "number",
-          value: formData.noOfPeople,
-          onChange: handleChange,
-          icon: <PeopleIcon />,
-        },
-      ]
-    : []),
+    ...(includeNoOfPeople
+      ? [
+          {
+            name: "noOfPeople",
+            label: "No. of People",
+            type: "number",
+            value: formData.noOfPeople,
+            onChange: handleChange,
+            icon: <PeopleIcon />,
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -115,7 +115,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
                 minDate={minDate}
                 maxDate={maxDate}
                 placeholderText={field.label}
-                className={`${gridView ? "" : "border-p1  md:border-r"} outline-none w-full h-full bg-transparent text-base text-dark  placeholder:text-white focus:outline-none text-p2 `}
+                className={`${gridView ? "" : "border-p1  md:border-r"} outline-none w-full h-full bg-transparent text-base text-dark  placeholder:text-white focus:outline-none text-p2 uppercase `}
                 wrapperClassName="w-full h-full !flex items-center"
               />
             </div>
@@ -127,7 +127,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
               <label className="text-white">{field.icon}</label>
               <div className="relative">
                 <select
-                  className="bg-transparent text-white px-2 appearance-none focus:outline-none [&>option]:text-black"
+                  className="bg-transparent text-white px-2 uppercase appearance-none focus:outline-none [&>option]:text-black"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
@@ -148,7 +148,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
+                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 uppercase ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />
@@ -165,7 +165,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
                 name={field.name}
                 placeholder={field.label}
                 min={field.name === "noOfPeople" ? 1 : undefined}
-                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 ${gridView ? "" : "border-p1 md:border-r"}`}
+                className={`w-full text-white appearance-none placeholder:text-white focus:outline-none text-p2 uppercase ${gridView ? "" : "border-p1 md:border-r"}`}
                 value={field.value}
                 onChange={field.onChange}
               />

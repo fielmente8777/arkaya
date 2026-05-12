@@ -1,3 +1,4 @@
+import { contact } from "@/utils/constent";
 import { SpoonIcon } from "@/utils/landingPageIcons";
 
 export const restoLandingPageData = {
@@ -86,7 +87,7 @@ export const restoLandingPageData = {
     ],
     button: {
       label: "Reserve Table",
-      href: "/",
+      href: contact.WhatsappCta,
     },
   },
   natureViewData: {
@@ -97,7 +98,7 @@ export const restoLandingPageData = {
     image: "/180/view.jpg",
     button: {
       label: "Reserve Table",
-      href: "/",
+      href: contact.WhatsappCta,
     },
   },
   experienceData: {
@@ -113,7 +114,7 @@ export const restoLandingPageData = {
     ],
     button: {
       label: "Reserve Table",
-      href: "/",
+      href: contact.WhatsappCta,
     },
     images: ["/180/exp1.jpg", "/180/exp2.jpg"],
   },
@@ -125,7 +126,7 @@ export const restoLandingPageData = {
     actions: [
       {
         label: "Reserve Table",
-        href: "/",
+        href: contact.WhatsappCta,
         variant: "primary",
       },
       {
