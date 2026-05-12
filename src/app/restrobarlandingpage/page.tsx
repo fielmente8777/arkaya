@@ -1,19 +1,12 @@
-import LinkButton from "@/components/buttons/LinkButton";
-import { Section } from "@/components/sectionComponants";
-import { restoLandingPageData } from "./Components/PageData";
-import Image from "next/image";
-import Testimonials from "./Components/testimonials";
-import NatureView from "./Components/natureView";
-import { Metadata } from "next";
-import { seoMetadata } from "@/utils/metadata";
 import Form3 from "@/components/forms/Form3";
+import NatureView from "./Components/natureView";
+import { restoLandingPageData } from "./Components/PageData";
+import Testimonials from "./Components/testimonials";
 
+import Experience from "./Components/experience";
 import Food from "./Components/food";
 import Gallery from "./Components/gallery";
-import Experience from "./Components/experience";
-import { PeopleIcon } from "@/utils/landingPageIcons";
 import Hero from "./Components/hero";
-import { restoFooterData } from "@/components/footer/footerdata";
 // export const metadata: Metadata = {
 //   title: seoMetadata.restobar.title,
 //   description: seoMetadata.restobar.description,

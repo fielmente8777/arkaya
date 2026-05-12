@@ -24,7 +24,7 @@ const Form3 = ({ gridView, className = "" }: Props) => {
     includeNoOfPeople,
   } = useBookingForm({
     includeNoOfPeople: true,
-    onSubmitSuccess: () => { },
+    onSubmitSuccess: () => {},
   });
   const { min, max } = getDateInputLimits({
     showPast: false,
@@ -79,17 +79,6 @@ const Form3 = ({ gridView, className = "" }: Props) => {
     },
     ...(includeNoOfPeople
       ? [
-<<<<<<< HEAD
-        {
-          name: "noOfPeople",
-          label: "No. of People",
-          type: "number",
-          value: formData.noOfPeople,
-          onChange: handleChange,
-          icon: <PeopleIcon />,
-        },
-      ]
-=======
           {
             name: "noOfPeople",
             label: "No. of People",
@@ -99,7 +88,6 @@ const Form3 = ({ gridView, className = "" }: Props) => {
             icon: <PeopleIcon />,
           },
         ]
->>>>>>> eb059fcbcd318c3cf40fe438cf9930a0a67c1399
       : []),
   ];
 

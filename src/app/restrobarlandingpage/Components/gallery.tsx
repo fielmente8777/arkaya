@@ -70,7 +70,7 @@ const Gallery = () => {
         <LinkButton
           label={restoLandingPageData.galleryData.button.label}
           href={restoLandingPageData.galleryData.button.href}
-          className="bg-p1 text-white px-6 py-3 max-md:w-full max-md:flex max-md:justify-center"
+          className="bg-p1 text-white px-6 py-3 mx-auto max-md:w-full max-md:flex max-md:justify-center"
           icon={<ReserveIcon />}
         />
       </div>
