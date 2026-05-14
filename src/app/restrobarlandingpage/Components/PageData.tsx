@@ -32,44 +32,28 @@ export const restoLandingPageData = {
     image: "/home/testimonial.png",
     testimonials: [
       {
-        text: "Arkaya Mukteshwar is easily one of the most serene luxury escapes I’ve experienced. Waking up to uninterrupted views of the snow-capped Himalayas from our room in Nanda Devi block felt surreal. Morning meditation at Brahmkamal deck was deeply grounding, and evenings at Oakwood deck with curated mocktails were just perfect. The attention to detail across the property is exceptional.",
-        name: "Ananya Kapoor, New Delhi",
+        text: "The moment the sun began setting over the Himalayas, 180° Restobar turned magical. Between the mountain breeze, handcrafted mocktails, and warm lighting, the entire evening felt cinematic. Easily one of the most memorable dining experiences we’ve had in Mukteshwar.",
+        name: "Aditi Mehra, Delhi",
       },
       {
-        text: "The property is beautifully spread out, giving each residential block its own character. We stayed in Trishul and loved the privacy. The Himadri Lounge quickly became our favorite spot—with its thoughtful library and stunning valley views. Kudos to Mr. Ramesh Mehta and his team for impeccable hospitality.",
-        name: "Rohit Bansal, Gurugram",
+        text: "180° Restobar perfectly balances atmosphere and food. The panoramic valley views paired with beautifully curated dishes made us stay far longer than planned. Their Kumaoni-inspired flavours and signature beverages were exceptional.",
+        name: "Raghav Khanna, Chandigarh",
       },
       {
-        text: "A rare combination of luxury and soul. The Phool Dei deck, surrounded by flowers, was where we spent our afternoons soaking in the sun. The food at 180° Restobar was outstanding—especially the Kumaoni dishes curated by Chef Mahesh. Every meal felt like a culinary experience.",
-        name: "Shreya Sen, Kolkata",
+        text: "Watching the sky change colours while dining above the mountains was unforgettable. Every detail — from the music to the service — felt thoughtful and elevated. The sunset here is truly the highlight of the experience.",
+        name: "Ishita Roy, Kolkata",
       },
       {
-        text: "Arkaya is not just a stay, it’s an experience. The altitude, the silence, the views—it all comes together beautifully. Our suite had access to the Monal deck, which made the stay feel incredibly exclusive. Perfect for anyone looking to disconnect in style.",
-        name: "Karan Malhotra, Mumbai",
+        text: "The rooftop setting at 180° Restobar is stunning. We spent the evening enjoying handcrafted drinks, slow conversations, and uninterrupted Himalayan views. It’s the kind of place that makes you pause and stay present.",
+        name: "Kunal Arora, Gurugram",
       },
       {
-        text: "I was impressed by how seamlessly luxury meets spirituality here. The in-house mandir adds a calming presence, and the morning sessions at Brahmkamal deck were truly rejuvenating. Temperature-controlled rooms ensured absolute comfort despite the altitude.",
-        name: "Dr. Nidhi Arora, Chandigarh",
+        text: "The vibe at 180° Restobar feels intimate yet luxurious. Beautiful lighting, incredible views, and food that genuinely surprised us. The chef’s attention to presentation and flavours made the experience feel premium throughout.",
+        name: "Mehak Sharma, Jaipur",
       },
       {
-        text: "The layout of Arkaya Mukteshwar is brilliant—25 rooms across distinct blocks give it a boutique yet expansive feel. The valley-facing design of every space, including the Himadri Lounge, ensures you’re always connected to the breathtaking landscape.",
-        name: "Vikram Singh, Jaipur",
-      },
-      {
-        text: "What stood out for me was the thoughtful curation of spaces—the Oakwood deck for evenings, Phool Dei for daytime relaxation, and Monal deck for private moments. Each space has its own mood. The service team was warm, intuitive, and highly professional.",
-        name: "Ritika Shah, Ahmedabad",
-      },
-      {
-        text: "The 180° Restobar is a highlight in itself. From global cuisine to authentic Kumaoni flavors, everything was executed beautifully. Pair that with handcrafted mocktails and a Himalayan sunset—simply unforgettable.",
-        name: "Aditya Mehra, Bangalore",
-      },
-      {
-        text: "Our stay in Panchachuli block was peaceful and luxurious. The architecture blends perfectly with the natural surroundings. Even indoors, the panoramic Himalayan views remain the star. It’s rare to find a place that feels this exclusive yet so connected to nature.",
-        name: "Pooja Khanna, Lucknow",
-      },
-      {
-        text: "Arkaya Mukteshwar delivers understated luxury at its finest. No overcrowding, no noise—just pristine views, elegant spaces, and exceptional hospitality. Special mention to GM Ramesh Mehta for ensuring every detail of our stay was flawless.",
-        name: "Sandeep Verma, Pune",
+        text: "From sunset to starlit skies, every hour here feels different and beautiful in its own way. The cocktails, mountain air, and relaxed atmosphere make 180° Restobar one of the finest rooftop dining experiences in Uttarakhand.",
+        name: "Aditya Sinha, Mumbai",
       },
     ],
   },
