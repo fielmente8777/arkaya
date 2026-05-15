@@ -11,7 +11,7 @@ const Footer = () => {
       return null;
     case "/landing-page/":
       return <LandingFooter footerData={footerData} />;
-    case "/restrobarlandingpage/":
+    case "/restobar-landing-page/":
       return <LandingFooter footerData={restoFooterData} />;
     default:
       return <WebSiteFooter />;
