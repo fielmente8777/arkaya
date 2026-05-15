@@ -10,7 +10,7 @@ const NavBar = () => {
       return null;
     case "/landing-page/":
       return <LandingNavbar />;
-    case "/restrobarlandingpage/":
+    case "/restobar-landing-page/":
       return null;  
     default:
       return <WebSiteNavbar />;
