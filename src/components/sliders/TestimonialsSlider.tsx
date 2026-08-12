@@ -1,10 +1,13 @@
 "use client";
 import { FC } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
-import TestimonialCard from "../cards/TestimonialCard";
+
 import SwiperCarousel from "./SwiperCarousel";
-import { TestimonialDataType } from "@/@types/type";
+
 import AnimateOnScroll from "@/hooks/AnimateOnScroll";
+import TestimonialCard from "../cards/TestimonialCard";
+import { TestimonialDataType } from "@/@types/type";
+
 
 interface TestimonialsSliderProps {
   cards: TestimonialDataType["testimonials"];

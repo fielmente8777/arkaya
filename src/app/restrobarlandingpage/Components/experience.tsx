@@ -51,6 +51,7 @@ const Experience = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
+          
           speed={800}
           className="w-full"
           renderSlide={(img) => (
