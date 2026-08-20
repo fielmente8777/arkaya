@@ -2,7 +2,7 @@
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
 import { SectionWithContainer } from "@/components/sectionComponants";
-import { restoLandingPageData } from "./PageData";
+
 import {
   ReserveIcon,
   ViewIcon,
@@ -11,6 +11,7 @@ import {
 } from "@/utils/landingPageIcons";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { Autoplay } from "swiper/modules";
+import { restoLandingPageData } from "@/app/restobar-landing-page/Components/PageData";
 
 const iconMap = {
   view: <ViewIcon />,

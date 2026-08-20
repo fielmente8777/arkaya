@@ -1,12 +1,12 @@
 "use client";
-import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
 import { SectionWithContainer } from "@/components/sectionComponants";
-import { SectionHeading } from "@/components/typography";
-import { restoLandingPageData } from "./PageData";
-import { ReserveIcon } from "@/utils/landingPageIcons";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { SectionHeading } from "@/components/typography";
+import { ReserveIcon } from "@/utils/landingPageIcons";
+import Image from "next/image";
+import { Autoplay, Navigation } from "swiper/modules";
+import { restoLandingPageData } from "./PageData";
 
 const images = restoLandingPageData.galleryData.images;
 
@@ -18,7 +18,7 @@ const Gallery = () => {
     >
       <SectionHeading
         textCenter
-        title={'A Glimpse of <span class="text-p1">180° RESTROBAR</span>'}
+        title={'A Glimpse of <span class="text-p1 uppercase">180° restobar</span>'}
       />
 
       {/* DESKTOP GRID */}
@@ -70,7 +70,7 @@ const Gallery = () => {
         <LinkButton
           label={restoLandingPageData.galleryData.button.label}
           href={restoLandingPageData.galleryData.button.href}
-          className="bg-p1 text-white px-6 py-3 max-md:w-full max-md:flex max-md:justify-center"
+          className="bg-p1 text-white px-6 py-3 mx-auto max-md:w-full max-md:flex max-md:justify-center"
           icon={<ReserveIcon />}
         />
       </div>

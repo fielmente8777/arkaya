@@ -56,6 +56,7 @@ const Hero = () => {
             <LinkButton
               href={data.actions[1].href}
               label={data.actions[1].label}
+              download={true}
               className="border border-white/60 text-white px-4 flex justify-center py-2 text-xs rounded-[4px] max-md:w-[191px] md:h-[44px] bg-transparent hover:bg-white/10 w-fit sm:w-auto md:px-6 md:py-3 md:text-sm"
               icon={<MenuIcon />}
             />

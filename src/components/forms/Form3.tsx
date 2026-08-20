@@ -23,8 +23,6 @@ const Form3 = ({ gridView, className = "" }: Props) => {
     setFieldValue,
     includeNoOfPeople,
   } = useBookingForm({
-    includeCheckIn: true,
-    includeCheckOut: true,
     includeNoOfPeople: true,
     onSubmitSuccess: () => {},
   });

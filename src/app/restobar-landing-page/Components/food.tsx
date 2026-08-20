@@ -75,6 +75,7 @@ const Food = () => {
                 <LinkButton
                   label={item.button?.label || "Download Menu"}
                   href={item.button?.href || "/"}
+                  download={true}
                   className="border border-white bg-transparent
         text-white px-8 py-3 w-full"
                   icon={<MenuIcon />}
@@ -117,6 +118,7 @@ const Food = () => {
           <LinkButton
             label={foodItems[3].button?.label || "Download Menu"}
             href={foodItems[3].button?.href || "/"}
+            download={true}
             className="border border-white bg-transparent text-white py-3  w-full flex justify-center"
             icon={<MenuIcon />}
           />
