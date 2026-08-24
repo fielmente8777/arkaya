@@ -42,7 +42,7 @@ export default function AboutUsPage() {
           </div>
         </AnimateOnScroll>
       </section>
-      {/* <Spa {...aboutPageData.spaData} /> */}
+      <Spa {...aboutPageData.spaData} />
     </main>
   );
 }

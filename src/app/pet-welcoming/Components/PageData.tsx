@@ -92,7 +92,7 @@ export const petWelcomingPageData = {
       {
         question: "Are pets allowed throughout the resort?",
         answer:
-          "Pets are allowed in guest rooms and outdoor walking areas on leash. They are not permitted in restaurants, kitchens, or service zones.",
+          "Pets are allowed in guest rooms and outdoor walking areas on leash. They are not permitted in restaurants, spa areas, kitchens, or service zones.",
       },
       {
         question: "Can pets be left alone in the room?",
