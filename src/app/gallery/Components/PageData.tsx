@@ -39,7 +39,7 @@ export const galleryPageData = {
       { src: "/aboutus4.jpg", alt: "The Property" },
 
       { src: "/gallery5_11zon.jpg", alt: "180° Restobar" },
-      { src: "/gallery5_11zon.jpg", alt: "180° Restobar" },
+      // { src: "/gallery5_11zon.jpg", alt: "180° Restobar" },
       { src: "/gallery6_11zon.jpg", alt: "180° Restobar" },
       { src: "/gallery7_11zon.jpg", alt: "180° Restobar" },
       { src: "/gallery8_11zon.jpg", alt: "180° Restobar" },
