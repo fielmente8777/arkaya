@@ -78,6 +78,15 @@ const Grid: React.FC<GalleryPageData> = ({ title, link, galleryImages }) => {
             </div>
           ))}
         </div>
+
+        {/* Bottom Contact Us Button */}
+        <div className="flex justify-center pt-8 pb-4">
+          <LinkButton
+            href="/contact-us/"
+            label="Contact Us"
+            className="px-8 py-3 text-base font-bold shadow-md hover:shadow-xl"
+          />
+        </div>
       </SectionWithContainer>
     </>
   );

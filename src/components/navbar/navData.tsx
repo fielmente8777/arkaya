@@ -18,6 +18,7 @@ export const navLinks = [
   { name: "Meeting & Events", href: "/meetings-and-events/" },
   { name: "Pet Welcoming", href: "/pet-welcoming/" },
   { name: "180° Restobar", href: "/restobar/" },
+  { name: "Gallery", href: "/gallery/" },
   { name: "Nearby Places", href: "/nearby-places/" },
   { name: "Contact Us", href: "/contact-us/" },
 ];

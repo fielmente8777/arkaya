@@ -15,7 +15,7 @@ export const restobarPageData = {
       "The 65 seater space is designed for slow breakfasts, relaxed afternoons, and warm evening gatherings.",
       "At 180° Restobar, the view is vast and so is the experience.",
     ],
-    images: ["/180/180-1.png", "/180/180-2.png"],
+    images: ["/180-Degree-restaurant.jpg", "/180-Degree-restaurant1.jpg"],
     link: {
       label: "Download Menu",
       href: "/Arkaya Menu.pdf",

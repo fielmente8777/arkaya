@@ -4,7 +4,8 @@ import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
 import AnimateOnScroll from "@/hooks/AnimateOnScroll";
 import Image from "next/image";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
+import { BtnIcon } from "@/app/rooms/[slug]/GallerySlider";
 
 interface Props {
   title: string;
@@ -21,26 +22,46 @@ const Banner: React.FC<Props> = ({ title, description, images }) => {
           {description}
         </p>
       </AnimateOnScroll>
-      <div className="lg:grid hidden grid-cols-4 gap-6 mt-14">
-        {images.map((image, index) => (
-          <div key={index} className="w-full relative aspect-4/5.5">
-            <Image src={image} alt={title} fill className="object-cover" />
-          </div>
-        ))}
-      </div>
-      <div className="lg:hidden w-full mt-12">
+
+      <div className="relative mt-12 w-full">
+        <button
+          className="about-banner-prev absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 aspect-square bg-p1 rounded-full cursor-pointer hover:scale-105 transition-transform shadow-md"
+          aria-label="Previous Slide"
+        >
+          <BtnIcon />
+        </button>
+        <button
+          className="about-banner-next absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 aspect-square bg-p1 rounded-full rotate-180 cursor-pointer hover:scale-105 transition-transform shadow-md"
+          aria-label="Next Slide"
+        >
+          <BtnIcon />
+        </button>
+
         <AnimateOnScroll direction="right">
           <SwiperCarousel
             data={images}
             slidesPerView={1}
-            spaceBetween={0}
-            modules={[Autoplay]}
-            loop
-            autoplay={{ delay: 2500 }}
+            spaceBetween={16}
+            loop={true}
+            modules={[Autoplay, Navigation]}
+            navigation={{
+              nextEl: ".about-banner-next",
+              prevEl: ".about-banner-prev",
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            speed={700}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 16 },
+              768: { slidesPerView: 3, spaceBetween: 20 },
+              1024: { slidesPerView: 4, spaceBetween: 24 },
+            }}
             className="w-full"
             renderSlide={(src) => (
-              <div className="w-full relative aspect-4/5">
-                <Image src={src} alt="Image" fill className="object-cover" />
+              <div className="w-full relative aspect-4/5.5 overflow-hidden">
+                <Image src={src} alt={title} fill className="object-cover" />
               </div>
             )}
           />

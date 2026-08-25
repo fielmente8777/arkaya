@@ -9,6 +9,21 @@ import {
 import { contact } from "@/utils/constent";
 import { HimalayanViewIcon } from "../../../utils/amenitiesIcons";
 
+const defaultCommonAmenities = [
+  { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
+  {
+    label: "Complimentary Breakfast",
+    icon: <ComplimentaryBreakfastIcon />,
+  },
+];
+
+const defaultAmenities = [
+  { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
+  { label: "Housekeeping", icon: <BathTubIcon /> },
+  { label: "Himalayan View", icon: <HimalayanViewIcon /> },
+  { label: "Lounge", icon: <LoungeIcon /> },
+];
+
 export const landingPageData = {
   banner: {
     images: ["/landing-page/bnr-1.png", "/landing-page/bnr-2.png"],
@@ -47,19 +62,8 @@ export const landingPageData = {
         subtitle: "1 Room | Twin / Double Bed | Garden + Oakwood Deck Access",
         description:
           "A versatile and intimate space featuring two single beds that can be combined into a double. The garden and the Oakwood Deck, this room is ideal for guests who enjoy easy outdoor access and a relaxed setting.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
       {
@@ -69,25 +73,14 @@ export const landingPageData = {
           "/rooms/himalayan-panorama/himalayan-panorama-4.jpeg",
           "/rooms/himalayan-panorama/himalayan-panorama-5.jpeg",
           "/rooms/himalayan-panorama/himalayan-panorama-6.jpeg",
-          
+
         ],
         title: "Himalayan Panorama Room",
         subtitle: "5 Rooms | King Bed | Garden Access",
         description:
           "Designed for quiet comfort, these rooms feature king size beds and open into garden spaces. A perfect blend of indoor warmth and outdoor freshness.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
       {
@@ -99,19 +92,8 @@ export const landingPageData = {
         subtitle: "14 Rooms | King Bed | Private Himalayan Balcony",
         description:
           "Wake up to expansive Himalayan views from your own private balcony. These rooms are ideal for guests who want a personal outdoor space to soak in the landscape.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
       {
@@ -123,19 +105,8 @@ export const landingPageData = {
         subtitle: "2 Rooms | King Bed | Expansive Private Deck",
         description:
           "A more elevated experience, these rooms open onto large private decks facing the Himalayas—perfect for slow mornings, sunset views, and complete privacy.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
       {
@@ -147,19 +118,8 @@ export const landingPageData = {
         subtitle: "2 Suites | King Bed | Dry Kitchenette | Monal Deck",
         description:
           "Our signature suites are designed for extended comfort, featuring a king bed, a dry kitchenette, and a private Himalaya-facing Monal Deck. Ideal for guests seeking space, privacy, and a more refined stay experience.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
       {
@@ -172,19 +132,8 @@ export const landingPageData = {
           "1 Villa | One Bedroom | Living Room | Private Himalayan Deck",
         description:
           "A spacious family villa offering a separate bedroom and living room, along with a private deck facing the Himalayas. Perfect for families or longer stays that require both comfort and space.",
-        commmonAmenities: [
-          { label: "Early Check-in *", icon: <EarlyCheckInIcon /> },
-          {
-            label: "Complimentary Breakfast",
-            icon: <ComplimentaryBreakfastIcon />,
-          },
-        ],
-        amenities: [
-          { label: "Free & Fast Wi-Fi", icon: <FreeWiFiIcon /> },
-          { label: "Housekeeping", icon: <BathTubIcon /> },
-          { label: "Himalayan View", icon: <HimalayanViewIcon /> },
-          { label: "Lounge", icon: <LoungeIcon /> },
-        ],
+        commmonAmenities: defaultCommonAmenities,
+        amenities: defaultAmenities,
         cta: { label: "Book Now", href: contact.WhatsappCta },
       },
     ],
@@ -209,7 +158,6 @@ export const landingPageData = {
   },
 
   testimonialSection: {
-    title: "Guest Experiences",
-    testimonials: homePageData.testimonialData.testimonials,
+    ...homePageData.testimonialData,
   },
 };

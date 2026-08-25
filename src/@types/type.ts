@@ -15,7 +15,8 @@ export interface AdventureDataType {
 
 export interface TestimonialDataType {
   title: string;
-  image: string;
+  image?: string;
+  images?: string[];
   testimonials: {
     text: string;
     name: string;

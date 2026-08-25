@@ -61,13 +61,11 @@ const WebSiteNavbar = () => {
       {/* HEADER */}
       <header
         className={`max_screen_width bg-background max-md:border-b-[0.5px] border-p5 
-        ${
-          isMobileOrTablet
-            ? `fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
-                showNavbar ? "translate-y-0" : "-translate-y-full"
-              }`
+        ${isMobileOrTablet
+            ? `fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${showNavbar ? "translate-y-0" : "-translate-y-full"
+            }`
             : "relative"
-        }`}
+          }`}
       >
         {/* upper nav */}
         <Container className="flex items-center justify-between py-4">
@@ -110,12 +108,11 @@ const WebSiteNavbar = () => {
         <nav className="border-y-[0.5px] border-p5 lg:block hidden">
           <ul className="max_width flex items-center py-3 justify-between">
             {navLinks.map((link, index) => (
-              <li key={index} className="md:text-lg text-p5 uppercase">
+              <li key={index} className="md:text-base text-p5 uppercase">
                 <Link
                   href={link.href}
-                  className={`${
-                    pathName === link.href ? "font-medium text-p1" : ""
-                  }`}
+                  className={`${pathName === link.href ? "font-medium text-p1" : ""
+                    }`}
                 >
                   {link.name}
                 </Link>

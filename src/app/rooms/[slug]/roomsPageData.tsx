@@ -145,25 +145,25 @@ export const roomsPageData = [
     bannerData: {
       title: "Private deck residence",
 
-      images: ["/rooms/himalayan-vista/bnr.jpg"],
+      images: ["/private-Deck-rooms5.jpg"],
     },
 
     description: [
-     "A more elevated experience, these rooms open onto large private decks facing the Himalayas—perfect for slow mornings, sunset views, and complete privacy.",
+      "A more elevated experience, these rooms open onto large private decks facing the Himalayas—perfect for slow mornings, sunset views, and complete privacy.",
     ],
 
     roomHighlights: [
       "2 Rooms",
       "King Bed",
       "Expansive Private Deck",
-      
+
     ],
 
     galleryData: {
       images: [
-        "/rooms/himalayan-vista/img-1.jpg",
-        "/rooms/himalayan-vista/img-2.jpg",
-        "/rooms/himalayan-vista/img-3.jpg",
+        "/private-Deck-rooms1.jpg",
+        "/private-Deck-rooms2.jpg",
+        "/private-Deck-rooms3.jpg",
       ],
       link: {
         label: "BOOK NOW",
@@ -190,7 +190,7 @@ export const roomsPageData = [
     bannerData: {
       title: "Arkaya signature suite",
 
-      images: ["/rooms/himalayan-vista/bnr.jpg"],
+      images: ["/signature-suite1.jpg"],
     },
 
     description: [
@@ -206,9 +206,10 @@ export const roomsPageData = [
 
     galleryData: {
       images: [
-        "/rooms/himalayan-vista/img-1.jpg",
-        "/rooms/himalayan-vista/img-2.jpg",
-        "/rooms/himalayan-vista/img-3.jpg",
+        "/signature-suite2.jpg",
+        "/signature-suite3.jpg",
+        "/signature-suite4.jpg",
+
       ],
       link: {
         label: "BOOK NOW",

@@ -1,28 +1,8 @@
-import { Section, SectionWithContainer } from "@/components/sectionComponants";
-import TestimonialsSlider from "@/components/sliders/TestimonialsSlider";
-import { SectionHeading } from "@/components/typography";
+import Testimonials from "@/app/(home)/Components/Testimonials";
+import { TestimonialDataType } from "@/@types/type";
 
-interface GuestExperiencesProps {
-  title: string;
-  testimonials: {
-    text: string;
-    name: string;
-  }[];
-}
-
-const GuestExperiences: React.FC<GuestExperiencesProps> = ({
-  title,
-  testimonials,
-}) => {
-  return (
-    <SectionWithContainer
-        sectionClassName="box-shadow bg-[#FFF9F0]"
-      containerClassName="md:space-y-16 space-y-8"
-    >
-      <SectionHeading title={title} line />
-      <TestimonialsSlider cards={testimonials} />
-    </SectionWithContainer>
-  );
+const GuestExperiences: React.FC<TestimonialDataType> = (props) => {
+  return <Testimonials {...props} />;
 };
 
 export default GuestExperiences;

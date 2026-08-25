@@ -11,7 +11,7 @@ export const accommodationPageData = {
               </div>
     </span>
     `,
-    description:"Framed by the quiet grandeur of the Himalayas, every room at Arkaya Mukteshwar is designed to offer a seamless connection with the mountains. Spread across four distinct residential blocks, each space opens to uninterrupted north-facing Himalayan views, bringing light, air, and landscape into every stay."
+    description: "Framed by the quiet grandeur of the Himalayas, every room at Arkaya Mukteshwar is designed to offer a seamless connection with the mountains. Spread across four distinct residential blocks, each space opens to uninterrupted north-facing Himalayan views, bringing light, air, and landscape into every stay."
   },
 
   roomsData: {
@@ -34,12 +34,12 @@ export const accommodationPageData = {
       {
         title: "Private Deck Residence",
         description: "Room with Balcony and Personal Deck",
-        image: "/rooms/private-deck/private-deck-1.jpg",
+        image: "/private-Deck-rooms4.jpg",
       },
       {
         title: "Arkaya Signature Suite",
         description: "Private Deck, Balcony, Living Space, Dry Kitchen",
-        image: "/rooms/arkaya-signature-suite/arkaya-signature-suite-1.jpg",
+        image: "/signature-suite2.jpg",
       },
       {
         title: "Arkaya Signature Suite – Family Villa",

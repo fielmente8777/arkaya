@@ -6,15 +6,19 @@ export const aboutPageData = {
     ],
     images: [
       "/about-us/about-banner-1.png",
+      "/aboutus1.jpg",
       "/about-us/about-banner-2.png",
+      "/aboutus2.jpg",
       "/about-us/about-banner-3.png",
-      "/about-us/about-banner-4.png"
+      "/aboutus3.jpg",
+      "/about-us/about-banner-4.png",
+      "/aboutus4.jpg"
     ]
   },
 
   residentialBlocksData: {
     title: "Our Residential Blocks",
-    subTitle:"DECKS & LOUNGES",
+    subTitle: "DECKS & LOUNGES",
     description: [
       "Our four residential blocks are named after the majestic Himalayan peaks visible from the property: <b>Mount Nandakot, Mount Nanda Devi, Mount Trishul, and Mount Panchachuli</b>. Each inspires tranquility, grounding your experience in the rhythm of nature."
     ],
@@ -64,7 +68,13 @@ export const aboutPageData = {
       "Inspired by the flame hued Buransh that colors the Himalayan slopes each spring, this sanctuary reflects gentle strength and renewal.",
       "Here, warmth melts fatigue, breath steadies, and wellbeing returns, naturally, quietly, deeply."
     ],
-    image: "/about-us/buransh-spa.png",
+    image: "/buranshSpa.jpg",
+    images: [
+      "/buranshSpa.jpg",
+      "/buranshSpa1.jpg",
+      "/buranshSpa2.jpg",
+      "/buranshSpa3.jpg",
+    ],
     link: {
       label: "Contact us",
       href: "/contact-us/"
