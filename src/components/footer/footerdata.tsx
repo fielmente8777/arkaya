@@ -50,8 +50,6 @@ export interface FooterData {
   }[];
 }
 
-
-
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/arkaya-logo.png",
   socialMedia: [
@@ -79,7 +77,7 @@ export const websiteFooterData: WebsiteFooterData = {
         { label: "About Us", href: "/about-us/" },
         { label: "Rooms", href: "/rooms/" },
         { label: "Gallery", href: "/gallery/" },
-
+        { label: "Blogs", href: "/blogs/" },
         { label: "Contact Us", href: "/contact-us/" },
       ],
     },
@@ -163,7 +161,7 @@ export const footerData: FooterData = {
 
 export const restoFooterData: FooterData = {
   logo: "/180/180new.png",
-   logoClassName: "max-w-[200px] mx-auto",
+  logoClassName: "max-w-[200px] mx-auto",
   cta: {
     label: "Reserve Table",
     href: contact.WhatsappCta,
