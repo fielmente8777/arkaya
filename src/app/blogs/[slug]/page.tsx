@@ -7,15 +7,12 @@ import { cache } from "react";
 import ArticleContent from "../components/ArticleContent";
 import { articles, getArticle, getRelatedArticles, SITE_URL } from "../components/pagedata";
 
-/** Route: /blogs/[slug] – e.g. /blogs/romantic-getaway-mukteshwar */
 type PageProps = { params: Promise<{ slug: string }> };
 
-// only slugs present in pagedata are valid; anything else goes straight to 404
 export const dynamicParams = false;
 
 export const generateStaticParams = () => articles.map(({ slug }) => ({ slug }));
 
-// one lookup shared by generateMetadata + the page within a request
 const getPost = cache((slug: string) => getArticle(slug));
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

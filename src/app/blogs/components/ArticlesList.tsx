@@ -4,12 +4,10 @@ import { ArticlesListType } from "@/@types/articlesPage";
 import BlogCard from "@/components/cards/BlogCard";
 import { useMemo, useState } from "react";
 
-/** "Latest Stories": heading + category chips, card grid and pagination. */
 const ArticlesList: React.FC<ArticlesListType> = ({ title, allLabel, pageSize, posts }) => {
   const [category, setCategory] = useState(allLabel);
   const [page, setPage] = useState(1);
 
-  // chips come from the data, so a post with a new category adds a chip
   const categories = useMemo(
     () => [allLabel, ...Array.from(new Set(posts.map((p) => p.category)))],
     [allLabel, posts]

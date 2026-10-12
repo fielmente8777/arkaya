@@ -2,6 +2,7 @@ import { ArticleBlock, ArticleType } from "@/@types/articlesPage";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE_URL } from "./pagedata";
+import { contact } from "@/utils/constent";
 
 const CONTACT_URL = `${SITE_URL}/contact-us/`;
 
@@ -63,10 +64,6 @@ const renderBlock = (block: ArticleBlock, i: number) => {
   }
 };
 
-/**
- * Article text + sticky sidebar. Renders two siblings (<article>, <aside>) so the parent
- * grid in the page decides the two-column layout.
- */
 const ArticleContent: React.FC<Pick<ArticleType, "intro" | "sections" | "tags">> = ({
   intro,
   sections,
@@ -116,7 +113,7 @@ const ArticleContent: React.FC<Pick<ArticleType, "intro" | "sections" | "tags">>
           Share your dates and Arkaya will help shape the stay around your plans.
         </p>
         <Link
-          href={CONTACT_URL}
+          href={contact.WhatsappCta}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex h-10 items-center border border-white px-5 text-[11px] uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-p1"
