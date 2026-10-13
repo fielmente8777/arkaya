@@ -24,8 +24,8 @@ const ArticlesList: React.FC<ArticlesListType> = ({ title, allLabel, pageSize, p
 
   return (
     <>
-      <div className="flex flex-col gap-4 border-b border-p6/30 pb-4 lg:flex-row lg:items-center lg:justify-between">
-        <h2 className="font-primary text-2xl text-p2 md:text-3xl">{title}</h2>
+      <div className="flex flex-col gap-4 border-b border-p6/30 pb-6 lg:flex-row lg:items-center lg:justify-between">
+        {/* <h2 className="font-primary text-2xl text-p2 md:text-3xl">{title}</h2> */}
 
         <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 lg:pb-0">
           {categories.map((c) => (
@@ -35,7 +35,7 @@ const ArticlesList: React.FC<ArticlesListType> = ({ title, allLabel, pageSize, p
               onClick={() => selectCategory(c)}
               aria-pressed={c === category}
               className={`shrink-0 px-4 py-2 text-[11px] uppercase tracking-widest transition-colors ${
-                c === category ? "bg-p1 text-white" : "bg-p3 text-p2 hover:text-p1"
+                c === category ? "bg-p1 text-white" : "bg-p4 text-p2 hover:text-p1"
               }`}
             >
               {c}
