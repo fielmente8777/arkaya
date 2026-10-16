@@ -27,7 +27,7 @@ const ArticlesList: React.FC<ArticlesListType> = ({ title, allLabel, pageSize, p
       <div className="flex flex-col gap-4 border-b border-p6/30 pb-6 lg:flex-row lg:items-center lg:justify-between">
         {/* <h2 className="font-primary text-2xl text-p2 md:text-3xl">{title}</h2> */}
 
-        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 lg:pb-0">
+        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-3 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 lg:pb-0">
           {categories.map((c) => (
             <button
               key={c}
