@@ -32,7 +32,9 @@ const WebSiteFooter = () => {
                 className="object-contain"
               />
             </Link>
-
+            <p className="text-p2 text-sm max-sm:text-center">
+              {websiteFooterData.companyName}
+            </p>
             <ul className="flex items-center gap-4">
               {websiteFooterData.socialMedia.map((item, index) => (
                 <li key={index}>
@@ -126,7 +128,7 @@ const WebSiteFooter = () => {
             <ul className="flex flex-col gap-3">
               {contactList.links.map((item, i) => (
                 <li key={i} className="flex gap-2">
-                  <Link
+                  {/* <Link
                     href={item.href || ""}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -134,8 +136,20 @@ const WebSiteFooter = () => {
                   >
                     <span className="mt-1">{item.icon}</span>
                     <span>{item.label}</span>
-                  </Link>
-
+                  </Link> */}
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex gap-2 text-p2 md:text-lg"
+                    >
+                      <span className="mt-1">{item.icon}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  ) : (
+                    <p className="text-p2 md:text-lg">{item.label}</p>
+                  )}
                   {item.label2 && (
                     <Link
                       href={item.href2 || ""}

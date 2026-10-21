@@ -25,7 +25,9 @@ const LandingFooter = ({ footerData }: { footerData: FooterData }) => {
                 className="object-contain"
               />
             </div>
-
+            <p className="text-p2 text-sm max-sm:text-center">
+              {footerData.companyName}
+            </p>
             <LinkButton
               href={footerData?.cta?.href || ""}
               label={footerData?.cta?.label || ""}
@@ -47,37 +49,99 @@ const LandingFooter = ({ footerData }: { footerData: FooterData }) => {
 
               <ul className={`flex flex-col md:gap-2 gap-4`}>
                 {list.links.map((item, suIndex) => (
+                  // <li
+                  //   className={`flex gap-2 ${suIndex === 1 ? "flex-wrap" : ""}`}
+                  //   key={suIndex}
+                  // >
+                  //   <span
+                  //     className={`mt-1 ${
+                  //       index === 1
+                  //         ? "text-p2 flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
+                  //         : "text-p2 inline-block"
+                  //     }`}
+                  //   >
+                  //     {item.icon}
+                  //     <span className="sr-only">{item.label}</span>
+                  //   </span>
+
+                  //   <Link
+                  //     target="_blank"
+                  //     rel="noopener noreferrer"
+                  //     href={item.href}
+                  //     className="flex gap-2"
+                  //   >
+                  //     <span
+                  //       className={`${
+                  //         index === 1
+                  //           ? "text-p2 font-mont text-2xl my-auto"
+                  //           : "md:text-lg text-p2 inline-block"
+                  //       }`}
+                  //     >
+                  //       {item.label}
+                  //     </span>
+                  //   </Link>
+                  //   {item.label2 && <span className="text-p2 -ml-1">,</span>}
+                  //   {item.label2 && item.href2 && (
+                  //     <Link
+                  //       target="_blank"
+                  //       rel="noopener noreferrer"
+                  //       href={item.href2}
+                  //       className="flex gap-2 max-md:ml-0"
+                  //     >
+                  //       <span
+                  //         className={`${
+                  //           index === 1
+                  //             ? "text-p2 font-aboreto text-2xl my-auto"
+                  //             : "md:text-lg text-p2"
+                  //         }`}
+                  //       >
+                  //         {item.label2}
+                  //       </span>
+                  //     </Link>
+                  //   )}
+                  // </li>
                   <li
                     className={`flex gap-2 ${suIndex === 1 ? "flex-wrap" : ""}`}
                     key={suIndex}
                   >
-                    <span
-                      className={`mt-1 ${
-                        index === 1
-                          ? "text-p2 flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
-                          : "text-p2 inline-block"
-                      }`}
-                    >
-                      {item.icon}
-                      <span className="sr-only">{item.label}</span>
-                    </span>
-
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={item.href}
-                      className="flex gap-2"
-                    >
+                    {item.icon && (
                       <span
-                        className={`${
+                        className={`mt-1 ${
                           index === 1
-                            ? "text-p2 font-mont text-2xl my-auto"
-                            : "md:text-lg text-p2 inline-block"
+                            ? "text-p2 flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
+                            : "text-p2 inline-block"
                         }`}
                       >
+                        {item.icon}
+                        <span className="sr-only">{item.label}</span>
+                      </span>
+                    )}
+
+                    {/* MAIN LINK (guarded) */}
+                    {item.href ? (
+                      <Link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={item.href}
+                        className="flex gap-2"
+                      >
+                        <span
+                          className={`${
+                            index === 1
+                              ? "text-p2 font-mont text-2xl my-auto"
+                              : "md:text-lg text-p2 inline-block"
+                          }`}
+                        >
+                          {item.label}
+                        </span>
+                      </Link>
+                    ) : (
+                      <span className="md:text-lg text-p2 inline-block">
                         {item.label}
                       </span>
-                    </Link>
+                    )}
+
+                    {/* SECOND NUMBER */}
                     {item.label2 && <span className="text-p2 -ml-1">,</span>}
                     {item.label2 && item.href2 && (
                       <Link

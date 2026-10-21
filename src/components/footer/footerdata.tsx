@@ -11,6 +11,7 @@ import { JSX } from "react";
 
 interface WebsiteFooterData {
   logo: string;
+  companyName?: string;
   socialMedia: {
     label: string;
     href: string;
@@ -32,6 +33,7 @@ interface WebsiteFooterData {
 
 export interface FooterData {
   logo: string;
+  companyName?: string;
   logoClassName?: string;
   cta?: {
     label?: string;
@@ -41,9 +43,9 @@ export interface FooterData {
     title?: string;
     links: {
       title?: string;
-      icon: React.ReactNode;
+      icon?: React.ReactNode;
       label: string;
-      href: string;
+      href?: string;
       label2?: string;
       href2?: string;
     }[];
@@ -52,6 +54,7 @@ export interface FooterData {
 
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/arkaya-logo.png",
+  companyName: "Arkaya Mukteshwar by Super Glitz Resorts Pvt. Ltd.",
   socialMedia: [
     {
       label: "Facebook",
@@ -118,6 +121,10 @@ export const websiteFooterData: WebsiteFooterData = {
           href: "mailto:" + contact.email,
           icon: <FillMailIcon />,
         },
+        {
+          title: "GST",
+          label: "GST: 05AAUCS9691L1Z8",
+        },
       ],
     },
   ],
@@ -125,6 +132,8 @@ export const websiteFooterData: WebsiteFooterData = {
 
 export const footerData: FooterData = {
   logo: "/arkaya-logo.png",
+  companyName: "Arkaya Mukteshwar by Super Glitz Resorts Pvt. Ltd.",
+
   cta: {
     label: "Book Now",
     href: contact.WhatsappCta,
@@ -154,6 +163,10 @@ export const footerData: FooterData = {
           label: contact.email,
           href: "mailto:" + contact.email,
         },
+        {
+          title: "GST",
+          label: "GST: 05AAUCS9691L1Z8",
+        },
       ],
     },
   ],
@@ -161,6 +174,7 @@ export const footerData: FooterData = {
 
 export const restoFooterData: FooterData = {
   logo: "/180/180new.png",
+  companyName: "Arkaya Mukteshwar by Super Glitz Resorts Pvt. Ltd.",
   logoClassName: "max-w-[200px] mx-auto",
   cta: {
     label: "Reserve Table",
@@ -190,6 +204,9 @@ export const restoFooterData: FooterData = {
           icon: <FillMailIcon />,
           label: contact.email,
           href: "mailto:" + contact.email,
+        },
+        {
+          label: "GST: 05AAUCS9691L1Z8",
         },
       ],
     },
