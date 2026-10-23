@@ -12,7 +12,7 @@ export const articles: ArticleType[] = [
     "description": "Two relaxed nights in the hills with views, short walks and plenty of unhurried time.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-01.jpg",
+    "bannerImage": "/blogs/Blog 1.jpeg",
     "bannerAlt": "Illustrated Himalayan valley view for a three-day Mukteshwar itinerary",
     "metaData": {
       "title": "Mukteshwar Itinerary for 3 Days | Arkaya",
@@ -111,7 +111,7 @@ export const articles: ArticleType[] = [
     "description": "Choose the best time to visit Mukteshwar for your travel style, with seasonal planning tips, packing advice and ideas for a relaxed Arkaya stay.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-02.jpg",
+    "bannerImage": "/blogs/Blog 2.jpeg",
     "bannerAlt": "Illustrated Mukteshwar landscape across the seasons",
     "metaData": {
       "title": "Best Time to Visit Mukteshwar | Seasonal Guide",
@@ -213,7 +213,7 @@ export const articles: ArticleType[] = [
     "description": "Plan your Delhi to Mukteshwar road trip with sensible breaks, route checks, hill-driving preparation and arrival tips for your stay at Arkaya.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-03.jpg",
+    "bannerImage": "/blogs/Blog 3.jpeg",
     "bannerAlt": "Illustrated hill road winding from the plains towards Mukteshwar",
     "metaData": {
       "title": "Delhi to Mukteshwar Road Trip | Arkaya Guide",
@@ -304,7 +304,7 @@ export const articles: ArticleType[] = [
     "description": "Find the right luxury stay in Mukteshwar by comparing room layouts, views, dining and experiences. Discover what to ask before booking Arkaya.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-04.jpg",
+    "bannerImage": "/blogs/Blog 4.jpeg",
     "bannerAlt": "Illustrated luxury mountain retreat with valley views",
     "metaData": {
       "title": "Luxury Stay in Mukteshwar | Choosing Your Retreat",
@@ -406,7 +406,7 @@ export const articles: ArticleType[] = [
     "description": "Plan a romantic getaway in Mukteshwar with a relaxed two-night itinerary, scenic outings and time together at Arkaya’s Himalayan retreat.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-05.jpg",
+    "bannerImage": "/blogs/Blog 5.jpeg",
     "bannerAlt": "Illustrated romantic evening in the Kumaon hills",
     "metaData": {
       "title": "Romantic Getaway in Mukteshwar | Two Night Guide",
@@ -514,7 +514,7 @@ export const articles: ArticleType[] = [
     "description": "Planning Mukteshwar with your pet? Learn Arkaya’s room approval requirements, pet fee and access rules, plus practical packing and travel tips.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-06.jpg",
+    "bannerImage": "/blogs/Blog 6.jpeg",
     "bannerAlt": "Illustrated mountain stay with a pet-friendly setting",
     "metaData": {
       "title": "Pet Friendly Stay in Mukteshwar | Arkaya Guide",
@@ -620,7 +620,7 @@ export const articles: ArticleType[] = [
     "description": "Explore things to do in Mukteshwar, from temple visits and viewpoints to village walks and local shopping, with time to relax at Arkaya.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-07.jpg",
+    "bannerImage": "/blogs/Blog 7.jpeg",
     "bannerAlt": "Illustrated Mukteshwar landmarks, temple and forest trails",
     "metaData": {
       "title": "Things to Do in Mukteshwar | Arkaya Travel Guide",
@@ -730,7 +730,7 @@ export const articles: ArticleType[] = [
     "description": "Discover 180° Restobar at Arkaya Mukteshwar, with Himalayan and valley views, relaxed dining and practical tips for planning your visit.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-08.jpg",
+    "bannerImage": "/blogs/Blog 8.jpeg",
     "bannerAlt": "Illustrated dining terrace facing the Himalayas",
     "metaData": {
       "title": "Dining in Mukteshwar | Arkaya’s 180° Restobar",
@@ -832,7 +832,7 @@ export const articles: ArticleType[] = [
     "description": "Plan a corporate retreat in Mukteshwar with a focused agenda, practical venue checks and time for your team to reconnect at Arkaya.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-09.jpg",
+    "bannerImage": "/blogs/Blog 9.jpeg",
     "bannerAlt": "Illustrated corporate team retreat in the mountains",
     "metaData": {
       "title": "Corporate Retreat in Mukteshwar | Offsite Guide",
@@ -938,7 +938,7 @@ export const articles: ArticleType[] = [
     "description": "Plan an intimate destination wedding in Mukteshwar for 40–60 guests, with room allocation, celebration schedules and venue questions for Arkaya.",
     "publishedAt": "October 1, 2026",
     "author": "Arkaya Mukteshwar",
-    "bannerImage": "/blogs/blog-10.jpg",
+    "bannerImage": "/blogs/Blog 10.jpeg",
     "bannerAlt": "Illustrated intimate mountain wedding celebration",
     "metaData": {
       "title": "Intimate Wedding in Mukteshwar | Arkaya Guide",
