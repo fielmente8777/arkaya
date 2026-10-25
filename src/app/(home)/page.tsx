@@ -14,7 +14,8 @@ export default function HomePage() {
       
       <SectionWithContainer defaultPadding={false} sectionClassName="md:py-12 py-8">
         <div className="relative w-full md:aspect-4/2 aspect-square">
-        <Image src='/home/bnr.png' alt="bnr" fill className="object-cover" />
+        <Image src='/home/bnr.png' alt="Arkaya Mukteshwar boutique Himalayan retreat" fill className="object-cover" priority />
+          <h1 className="sr-only">Arkaya Mukteshwar – Boutique Himalayan Retreat in Uttarakhand</h1>
         </div>
         <Form2 />
       </SectionWithContainer>
@@ -23,7 +24,7 @@ export default function HomePage() {
         <div className="w-full relative md:aspect-4/2.25 aspect-4/5">
           <Image
             src={homePageData.discoveryData.image}
-            alt="Image"
+            alt="Discover Arkaya Mukteshwar Himalayan retreat and mountain experiences"
             fill
             className="object-cover"
           />

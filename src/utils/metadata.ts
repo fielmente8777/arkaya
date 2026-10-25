@@ -2,7 +2,7 @@ export const seoMetadata = {
   home: {
     title: "Arkaya Mukteshwar | Boutique Himalayan Retreat",
     description:
-      "Arkaya Mukteshwar is a boutique Himalayan retreat offering luxury residences, panoramic mountain views, curated experiences, and elevated dining in the heart of Uttarakhand.",
+      "Discover Arkaya Mukteshwar, a boutique Himalayan retreat with mountain views, elegant stays, curated adventures and refined dining in Uttarakhand.",
     keywords: [
       "Arkaya Mukteshwar",
       "luxury resort Mukteshwar",
@@ -11,7 +11,7 @@ export const seoMetadata = {
       "mountain resort Mukteshwar",
       "luxury stay Mukteshwar"
     ],
-    canonical: "https://arkaya.com/",
+    canonical: "https://www.arkayamukteshwar.com/",
     ogImage: "/seo/home.webp"
   },
 
@@ -26,7 +26,7 @@ export const seoMetadata = {
       "Arkaya resort Mukteshwar",
       "Himalayan boutique hotel"
     ],
-    canonical: "https://arkaya.com/about",
+    canonical: "https://www.arkayamukteshwar.com/about",
     ogImage: "/seo/about.webp"
   },
 
@@ -41,7 +41,7 @@ export const seoMetadata = {
       "Arkaya accommodation",
       "best stay Mukteshwar"
     ],
-    canonical: "https://arkaya.com/accommodation",
+    canonical: "https://www.arkayamukteshwar.com/accommodation",
     ogImage: "/seo/accommodation.webp"
   },
 
@@ -55,7 +55,7 @@ export const seoMetadata = {
       "mountain view hotel room",
       "Arkaya Mukteshwar rooms"
     ],
-    canonical: "https://arkaya.com/rooms/himalayan-vista-room",
+    canonical: "https://www.arkayamukteshwar.com/rooms/himalayan-vista-room",
     ogImage: "/seo/himalayan-vista.webp"
   },
 
@@ -71,7 +71,7 @@ export const seoMetadata = {
       "Bhimtal lake",
       "Mukteshwar sightseeing"
     ],
-    canonical: "https://arkaya.com/nearby-places",
+    canonical: "https://www.arkayamukteshwar.com/nearby-places",
     ogImage: "/seo/nearby.webp"
   },
 
@@ -86,7 +86,7 @@ export const seoMetadata = {
       "Arkaya restobar",
       "Mukteshwar restaurant"
     ],
-    canonical: "https://arkaya.com/restobar",
+    canonical: "https://www.arkayamukteshwar.com/restobar",
     ogImage: "/seo/restobar.webp"
   },
 
@@ -100,7 +100,7 @@ export const seoMetadata = {
       "Himalayan resort images",
       "Arkaya Mukteshwar photos"
     ],
-    canonical: "https://arkaya.com/gallery",
+    canonical: "https://www.arkayamukteshwar.com/gallery",
     ogImage: "/seo/gallery.webp"
   },
 
@@ -115,7 +115,7 @@ export const seoMetadata = {
       "Arkaya events",
       "team offsite Uttarakhand"
     ],
-    canonical: "https://arkaya.com/meetings-events",
+    canonical: "https://www.arkayamukteshwar.com/meetings-events",
     ogImage: "/seo/events.webp"
   },
 
@@ -129,7 +129,7 @@ export const seoMetadata = {
       "stay with pets Mukteshwar",
       "Arkaya pet friendly stay"
     ],
-    canonical: "https://arkaya.com/pet-welcoming",
+    canonical: "https://www.arkayamukteshwar.com/pet-welcoming",
     ogImage: "/seo/pet.webp"
   },
 
@@ -143,7 +143,7 @@ export const seoMetadata = {
       "book hotel Mukteshwar",
       "Arkaya reservations"
     ],
-    canonical: "https://arkaya.com/contact",
+    canonical: "https://www.arkayamukteshwar.com/contact",
     ogImage: "/seo/contact.webp"
   }
 };
