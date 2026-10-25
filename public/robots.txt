@@ -12,4 +12,4 @@ Allow: /images/
 Allow: /assets/
 
 # Sitemap
-Sitemap: https://arkaya.com/sitemap.xml
+Sitemap: https://www.arkayamukteshwar.com/sitemap.xml
