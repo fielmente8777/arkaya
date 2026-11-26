@@ -67,7 +67,8 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-Y37G5CTR4X');`}
+          gtag('config', 'G-Y37G5CTR4X');
+          gtag('config', 'G-GLCXC3RZYP');`}
         </Script>
         <Script
           id="google-tag-manager"
